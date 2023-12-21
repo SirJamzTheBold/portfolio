@@ -1,0 +1,10 @@
+uuid: 83421934-7be5-497c-a2da-1ea9ea6b837e
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: aHSGWQuhWvWfyVf--QNOR7ODDFYLD59IlmPwVsGVv64
+id: csk_interior_header
+label: 'CSK Interior Header'
+revision: 0
+description: 'A header used for interior pages. Consists of two columns. The right column has text while the left column has an image.'

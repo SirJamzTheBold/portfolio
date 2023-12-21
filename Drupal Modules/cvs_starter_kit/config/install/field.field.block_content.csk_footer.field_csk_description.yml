@@ -1,0 +1,23 @@
+uuid: 5ac75d83-a924-4a14-a264-3b559e5db207
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_footer
+    - field.storage.block_content.field_csk_description
+  module:
+    - text
+_core:
+  default_config_hash: m6iHaIAJVbHJ3BURmwgkE-zHVDjkfLZ26IYzTqxUbRY
+id: block_content.csk_footer.field_csk_description
+field_name: field_csk_description
+entity_type: block_content
+bundle: csk_footer
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

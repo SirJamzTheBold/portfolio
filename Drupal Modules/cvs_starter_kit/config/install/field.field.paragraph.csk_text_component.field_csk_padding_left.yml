@@ -1,0 +1,23 @@
+uuid: 1f3eb904-fe19-4513-979c-ab6ad811c7fe
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_padding_left
+    - paragraphs.paragraphs_type.csk_text_component
+  module:
+    - options
+id: paragraph.csk_text_component.field_csk_padding_left
+field_name: field_csk_padding_left
+entity_type: paragraph
+bundle: csk_text_component
+label: 'Padding Left'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: padding-left-0
+default_value_callback: ''
+settings: {  }
+field_type: list_string

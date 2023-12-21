@@ -1,0 +1,30 @@
+uuid: ab3882c1-cfe1-4dde-b48a-d53bd24fa7df
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_csk_width
+field_name: field_csk_width
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: width-narrow
+      label: Narrow
+    -
+      value: width-medium
+      label: Medium
+    -
+      value: width-full
+      label: Full
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

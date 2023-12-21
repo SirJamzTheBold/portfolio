@@ -1,0 +1,11 @@
+name: 'CVS Common Header'
+type: module
+description: 'Common Header for CVS sites'
+core_version_requirement: ^8.8 || ^9
+version: 1.3.13
+package: 'CVS'
+configure: cvs_common_header.admin.config
+dependencies:
+  - menu_item_extras:menu_item_extras
+  - twig_tweak:twig_tweak
+  - block_content_machine_name:block_content_machine_name

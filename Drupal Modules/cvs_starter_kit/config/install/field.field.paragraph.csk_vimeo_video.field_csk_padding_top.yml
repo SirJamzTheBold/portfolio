@@ -1,0 +1,23 @@
+uuid: ed4f5363-1480-4b69-9d6b-c3a7be7c7a2f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_padding_top
+    - paragraphs.paragraphs_type.csk_vimeo_video
+  module:
+    - options
+id: paragraph.csk_vimeo_video.field_csk_padding_top
+field_name: field_csk_padding_top
+entity_type: paragraph
+bundle: csk_vimeo_video
+label: 'Padding Top'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: padding-top-0
+default_value_callback: ''
+settings: {  }
+field_type: list_string

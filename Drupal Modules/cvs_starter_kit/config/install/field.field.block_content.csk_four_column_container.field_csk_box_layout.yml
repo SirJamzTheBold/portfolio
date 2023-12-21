@@ -1,0 +1,23 @@
+uuid: 7cbdc974-f1b5-4dbb-8f45-3a7358f75a1e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_four_column_container
+    - field.storage.block_content.field_csk_box_layout
+  module:
+    - options
+id: block_content.csk_four_column_container.field_csk_box_layout
+field_name: field_csk_box_layout
+entity_type: block_content
+bundle: csk_four_column_container
+label: 'Box Layout'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: no-box-layout
+default_value_callback: ''
+settings: {  }
+field_type: list_string

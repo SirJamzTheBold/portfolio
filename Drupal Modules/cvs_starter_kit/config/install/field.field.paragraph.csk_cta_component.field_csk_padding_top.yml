@@ -1,0 +1,25 @@
+uuid: 8bf34bc2-34ab-4334-a96c-3cb3c441eeae
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_padding_top
+    - paragraphs.paragraphs_type.csk_cta_component
+  module:
+    - options
+_core:
+  default_config_hash: Br-gojeWHuEd3XI3mJ5aF1rOK8329M9QnptfG5uIX-0
+id: paragraph.csk_cta_component.field_csk_padding_top
+field_name: field_csk_padding_top
+entity_type: paragraph
+bundle: csk_cta_component
+label: 'Padding Top'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: padding-top-0
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,25 @@
+uuid: f2b7508f-095b-4fe4-bb80-753062a7a5dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_view
+    - paragraphs.paragraphs_type.csk_view_component
+_core:
+  default_config_hash: KpmShCT5_jw-CiKDi7VQ_zSwtD61nHNax3L2B4rZj9s
+id: paragraph.csk_view_component.field_csk_view
+field_name: field_csk_view
+entity_type: paragraph
+bundle: csk_view_component
+label: View
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:view'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: entity_reference

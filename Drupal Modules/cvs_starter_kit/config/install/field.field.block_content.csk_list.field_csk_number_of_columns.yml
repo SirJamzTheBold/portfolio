@@ -1,0 +1,23 @@
+uuid: 60994fc9-15a7-43a4-9b41-f1eb9df0d027
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_list
+    - field.storage.block_content.field_csk_number_of_columns
+  module:
+    - options
+id: block_content.csk_list.field_csk_number_of_columns
+field_name: field_csk_number_of_columns
+entity_type: block_content
+bundle: csk_list
+label: 'Number of Columns'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: one-column
+default_value_callback: ''
+settings: {  }
+field_type: list_string

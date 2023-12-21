@@ -1,0 +1,23 @@
+uuid: 1b9bb9bb-8039-404d-b682-633f5fb72e98
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_interior_header
+    - field.storage.block_content.field_csk_text
+  module:
+    - text
+_core:
+  default_config_hash: IoodYCozDnBLmYSFw070X_9BHoZbUcvR8gUmmsKN7Zc
+id: block_content.csk_interior_header.field_csk_text
+field_name: field_csk_text
+entity_type: block_content
+bundle: csk_interior_header
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

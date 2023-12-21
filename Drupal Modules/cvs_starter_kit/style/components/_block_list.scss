@@ -1,0 +1,64 @@
+.block-list {
+  ul, ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0px;
+  }
+
+  &.one-column {
+    ul, ol {
+      li {
+        width: 100%;
+      }
+    }
+  }
+
+  &.two-column {
+    ul, ol {
+      li {
+        width: 50%;
+      }
+    }
+  }
+
+  &.three-column {
+    ul, ol {
+      li {
+        width: 33.33%;
+      }
+    }
+  }
+
+  &.four-column {
+    ul, ol {
+      li {
+        width: 25%;
+      }
+    }
+  }
+
+  &.five-column {
+    ul, ol {
+      li {
+        width: 20%;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .block-list {  
+    &.one-column,
+    &.two-column,
+    &.three-column,
+    &.four-column,
+    &.five-column {
+      ul, ol {
+        li {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

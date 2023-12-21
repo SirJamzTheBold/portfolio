@@ -1,0 +1,20 @@
+uuid: 1e55dfbe-9c82-4f89-a912-8f08b8515ec5
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: jMW7LH2-KjTKJgF0JZEDMdjRgZH0Lk5AuT34Dvx487o
+id: block_content.field_csk_display_border
+field_name: field_csk_display_border
+entity_type: block_content
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

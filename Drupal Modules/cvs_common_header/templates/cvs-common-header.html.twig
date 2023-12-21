@@ -1,0 +1,96 @@
+<script type="text/javascript">
+  var cvs_common_header_breakpoint = {{ data.breakpoint }};
+</script>
+
+<div class="cvs-common-header-shadow"></div>
+<div id="cvs-common-header">
+  <div id="cvs-common-header-inner">
+    {# Set the logo if it is intended to be shown. #}
+    {% if data.show_logo %}
+    <div class="site-logo-container">
+      {% if is_front and data.show_logo_h1 %}
+        <h1>
+      {% endif %}
+        <a href="/" class="site-logo-link">
+          <img class="site-logo" src="{{ data.logo_url }}" alt="{{ data.site_name }}">
+        </a>
+      {% if is_front and data.show_logo_h1 %}
+        </h1>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    <div class="desktop-menu hide-menu">
+      <div class="container-menu utility-menu">
+      {# Set the secondary / utility menu #}
+      {% if data.secondary_menu.markup|render %}
+        <nav aria-labelledby="secondary-menu-block">
+          <div id="secondary-menu-block" class="visually-hidden">{{ data.secondary_menu.label }}</div>
+          {{ data.secondary_menu.markup }}
+        </nav>
+        {% if data.search_menu %}
+        <div class="menu menu-level-0 search-menu">
+          <div class="search-button-wrapper" role="search">
+            <button class="open-search" aria-label="open search">Search</button>
+          </div>
+        </div>
+        {% endif %}
+      {% endif %}
+      </div>
+
+      {# Set the primary / main menu #}
+      {% if data.primary_menu.markup|render %}
+      <nav class="container-menu main-menu" aria-labelledby="primary-menu-block">
+        {# If there is no secondary / utility menu, add spacing #}
+        {% if data.secondary_menu.markup|render is empty %}
+          <div class="spacing-if-no-menu"></div>
+        {% endif %}
+        <div id="primary-menu-block" class="visually-hidden">{{ data.primary_menu.label }}</div>
+        {{ data.primary_menu.markup }}
+      </nav>
+      {% endif %}
+    </div>
+  </div>  {# end #cvs-common-header-inner #}
+
+  <button class="open-mobile-menu" aria-label="open main menu"><div class="open-mobile-menu-inner"></div></button>
+  <button class="mobile-back-button" aria-label="Go to previous menu level">Back</button>
+
+  <div class="container-menu mobile-menu">
+    {# Set the primary / main menu #}
+    {% if data.primary_menu.markup|render %}
+    <nav class="main-menu" aria-labelledby="primary-menu-block-mobile">
+      <div id="primary-menu-block-mobile" class="visually-hidden">{{ data.primary_menu.label }}</div>
+      {{ data.primary_menu.markup }}
+    </nav>
+    {% endif %}
+
+    {# Set the secondary / utility menu #}
+    {% if data.secondary_menu.markup|render %}
+      <nav class="container-menu utility-menu" aria-labelledby="secondary-menu-block-mobile">
+        <div id="secondary-menu-block-mobile" class="visually-hidden">{{ data.secondary_menu.label }}</div>
+        {{ data.secondary_menu.markup }}
+      </nav>
+      {% if data.search_menu %}
+      <div class="menu menu-level-0 search-menu">
+        <div class="menu-item search-button-wrapper" role="search">
+          <button id="cvs-common-header-search" class="open-search" aria-label="open search">Search</button>
+        </div>
+      </div>
+      {% endif %}
+    {% endif %}
+  </div>
+
+  <button class="close-mobile-menu" aria-label="close main menu"><div class="close-mobile-menu-inner"></div></a>
+</div>
+{# For Search Block Display etc. Should normally be hidden. #}
+{% if data.search_menu %}
+  <div class="search-popup-container large-dialog" aria-hidden="true" aria-modal="true" role="dialog" aria-labelledby="cvs-common-header-search" aria-describedby="cvs-common-header-search">
+    <div class="search-popup">
+      <div class="search-popup-inner">
+        {{ drupal_block(data.search_menu) }}
+      </div>
+
+      <button class="search-popup-close" aria-label="close search"></button>
+    </div>
+  </div>
+{% endif %}

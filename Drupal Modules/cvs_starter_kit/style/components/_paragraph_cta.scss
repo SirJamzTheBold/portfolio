@@ -1,0 +1,67 @@
+.paragraph--type--csk-cta-component {
+  .white_btn,
+  .red_btn,
+  .black_btn,
+  .adaptive_btn {
+    border: 1px solid;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 24px;
+    padding-left: 24px;
+    text-decoration: none;
+  }
+
+  &.align-left {
+    float: none;
+    text-align: left;
+  }
+
+  &.align-center {
+    float: none;
+    text-align: center;
+  }
+
+  &.align-right {
+    float: none;
+    text-align: right;
+  }
+
+  .white_btn {
+    border-color: $black;
+    background-color: $white;
+    color: $black;
+  }
+
+  .white_btn:hover {
+    border-color: $white;
+    background-color: $black;
+    color: $white;
+    text-decoration: underline;
+  }
+
+  .black_btn {
+    border-color: $white;
+    background-color: $black;
+    color: $white;
+  }
+
+  .black_btn:hover {
+    border-color: $black;
+    background-color: $white;
+    color: $black;
+    text-decoration: underline;
+  }
+
+  .red_btn {
+    border-color: $white;
+    background-color: $cvs-red;
+    color: $white;
+  }
+
+  .red_btn:hover {
+    border-color: $cvs-red;
+    background-color: $white;
+    color: $cvs-red;
+    text-decoration: underline;
+  }
+}

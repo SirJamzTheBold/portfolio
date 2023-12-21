@@ -1,0 +1,85 @@
+// Styling for webform body layout
+  .page-node-type-webform {
+  // Custom checkbox styling
+  input.form-checkbox {
+    position: relative;
+    padding: 0; // reset
+    width: 25px !important;
+    height: 25px !important;
+    margin-right: 10px;
+    border: 1px solid $black;
+
+    // Label text
+    & + label {
+      cursor: pointer;
+      font-size: 18px;
+      font-weight: normal;
+      padding: 0;
+      position: relative;
+      // Make this match checkbox height
+      height: 24px;
+      line-height: 24px;
+    }
+
+    // Checkbox square
+    & + label:before {
+      background-color: $white;
+      border: none;
+      content: '';
+      display: inline-block;
+      margin-right: 10px;
+      vertical-align: top;
+      // Sizing
+      width: 24px;
+      height: 24px;
+    }
+
+    // Checkbox square, hover
+    &:hover + label:before {
+      // ...
+    }
+
+    // Checkbox square, focus
+    &:focus + label:before {
+      box-shadow: 0 0 5px $cvs-focus-outline;
+    }
+
+    // Checkbox square, while checked (checkmark itself is below)
+    &:checked + label:before {
+      // ...
+    }
+
+    // Disabled checkbox's label
+    &:disabled + label {
+      opacity: 0.75; // FIXME: something better?
+    }
+
+    // Disabled checkbox square
+    &:disabled + label:before {
+      opacity: 0.75; // FIXME: something better?
+    }
+
+    // Checkbox's checkmark (when checked)
+    &:checked + label:after {
+      background: $black;
+      content: '';
+      // Effect
+      box-shadow:
+        2px   0   0 $black,
+        4px   0   0 $black,
+        4px  -2px 0 $black,
+        4px  -4px 0 $black,
+        4px  -6px 0 $black,
+        4px  -8px 0 $black,
+        4px -10px 0 $black;
+      transform: rotate(40deg);
+      // Positioning
+      position: absolute;
+      left: 5px;
+      top: 11px;
+      // Sizing
+      width: 3px;
+      height: 3px;
+    }
+  }
+}

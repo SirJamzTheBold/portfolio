@@ -1,0 +1,63 @@
+uuid: ec3c0450-c8b0-4c48-a86f-967f56e3675e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_footer
+    - field.field.block_content.csk_footer.field_csk_copyright
+    - field.field.block_content.csk_footer.field_csk_description
+    - field.field.block_content.csk_footer.field_csk_primary_links
+    - field.field.block_content.csk_footer.field_csk_secondary_links
+  module:
+    - link
+    - text
+_core:
+  default_config_hash: nFuvkgaIHA7wXheBm8E-mdkhoAWF93EFF9G--TTM4T4
+id: block_content.csk_footer.default
+targetEntityType: block_content
+bundle: csk_footer
+mode: default
+content:
+  field_csk_copyright:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_csk_description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_csk_primary_links:
+    type: link_default
+    weight: 2
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  field_csk_secondary_links:
+    type: link_default
+    weight: 3
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+  info:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  machine_name: true
+  template_suggestion: true

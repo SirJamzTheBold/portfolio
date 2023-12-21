@@ -1,0 +1,10 @@
+uuid: ae1c1bcd-a069-4ef6-b31d-d114a8577083
+langcode: en
+status: true
+dependencies: {  }
+id: csk_vimeo_video
+label: 'CSK Vimeo Video'
+icon_uuid: null
+icon_default: null
+description: 'Embeds a Vimeo Video player.'
+behavior_plugins: {  }

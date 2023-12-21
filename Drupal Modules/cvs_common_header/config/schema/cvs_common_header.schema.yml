@@ -1,0 +1,19 @@
+cvs_common_header.settings:
+  type: config_object
+  label: 'CVS Common Header config'
+  mapping:
+    primary_menu:
+      type: text
+      label: 'Primary Menu'
+    secondary_menu:
+      type: text
+      label: 'Secondary Menu'
+    search_menu:
+      type: text
+      label: 'Search Menu'
+    show_logo:
+      type: boolean
+      label: 'Show Logo'
+    show_logo_h1:
+      type: boolean
+      label: 'Wrap logo with H1 on frontpage'

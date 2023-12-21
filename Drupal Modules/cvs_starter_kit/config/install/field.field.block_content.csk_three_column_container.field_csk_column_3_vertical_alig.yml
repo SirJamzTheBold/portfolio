@@ -1,0 +1,25 @@
+uuid: d9a121cd-b5a0-408e-a258-e512a555b474
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_three_column_container
+    - field.storage.block_content.field_csk_column_3_vertical_alig
+  module:
+    - options
+_core:
+  default_config_hash: LLfPYZiEPOMPMvpZuKfQ8_gZB-rP9GMq75vlTDMyvdQ
+id: block_content.csk_three_column_container.field_csk_column_3_vertical_alig
+field_name: field_csk_column_3_vertical_alig
+entity_type: block_content
+bundle: csk_three_column_container
+label: 'Column 3 Vertical Alignment'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: align-middle
+default_value_callback: ''
+settings: {  }
+field_type: list_string

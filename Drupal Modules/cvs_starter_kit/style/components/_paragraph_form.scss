@@ -1,0 +1,281 @@
+.paragraph--type--csk-form-component {
+  .webform-confirmation {
+    margin-top: 30px;
+  }
+
+  .supplemental-error-message {
+    color: #a51b00;
+  }
+
+  .form-type-email,
+  .form-type-textfield,
+  .form-type-tel {
+    label {
+      width: 100%;
+      display: block;
+    }
+
+    input {
+      width: 100%;
+    }
+  }
+
+  #csk-form-error {
+    color:#a51b00;
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    margin-top: 0px;
+  }
+
+  .form-required:after {
+    display: none;
+  }
+
+  input.form-checkbox,
+  input.form-radio {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+// Body text above webform (e.g. "Connect with us")
+.paragraph--type--csk-form-component {
+  .node__content {
+    max-width: 1200px;
+    width: calc(100% - 80px);
+    margin: 0 auto;
+
+    @include for-phone-only {
+      width: calc(100% - 40px);
+    }
+
+    .field--name-body.field--type-text-with-summary {
+      max-width: 800px;
+    }
+  }
+}
+
+/*----- Start webform sect -----*/
+.paragraph--type--csk-form-component {
+  // Text for "All mandatory fields..."
+  #edit-markup {
+    color: $cvs-red;
+  }
+
+  // Phone number and ext side-by-each
+  .form-wrapper {
+    display: flex;
+  }
+
+  .webform-type-webform-telephone legend span {
+    font-weight: 400;
+  }
+
+  select {
+    height: 54px;
+  }
+
+  input {
+    color: $black;
+    height: 54px;
+    max-width: 600px;
+    width: 100%;
+
+    &.form-checkbox {
+      appearance: none; // Gets rid of default checkbox outline
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:checked {
+        background-color: $black;
+
+        &::after {
+          background: $white;
+          content: '';
+          // Effect
+          box-shadow:
+            2px   0   0 $white,
+            4px   0   0 $white,
+            4px  -2px 0 $white,
+            4px  -4px 0 $white,
+            4px  -6px 0 $white,
+            4px  -8px 0 $white,
+            4px -10px 0 $white;
+          transform: rotate(40deg);
+          // Positioning
+          position: absolute;
+          left: 5px;
+          top: 11px;
+          // Sizing
+          width: 3px;
+          height: 3px;
+        }
+      }
+    }
+  }
+
+  .form-item {
+    font-size: 18px;
+    line-height: 1.5em;
+
+    label.form-required:after {
+      display: none;
+    }
+  }
+
+  .form-type-textfield label,
+  .form-item-phone-number label,
+  .form-type-email label,
+  .form-type-number label {
+    display: flex;
+    margin-bottom: 15px;
+  }
+
+  .form-type-radio {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    // &:checked {
+    input.form-radio+label::before {
+      border: 1px solid $black;
+    }
+
+    input.form-radio:checked+label::before {
+      width: 7px;
+      height: 7px;
+      border-radius: 15px;
+      left: -1px;
+      position: absolute;
+      background-color: $white;
+      content: '';
+      display: inline-block;
+      visibility: visible;
+      border: 8px solid $black;
+    }
+  }
+
+  input.form-radio {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .form-required:after {
+    vertical-align: baseline;
+    background-image: none;
+    content: ''; // Asterisk is already there view .required-symbol class
+    color: $cvs-red;
+    margin-left: 5px;
+  }
+
+  input.webform-button--submit {
+    background-color: $cvs-red;
+    color: $white;
+    border: 1px solid $white;
+    font-weight: 400;
+    max-width: 110px;
+  }
+
+  input.webform-button--submit:hover {
+    background-color: $black;
+    color: $white;
+  }
+
+  .js-form-item-phone-number {
+    display: inline-block;
+    width: 50%;
+
+    @media only screen and (max-width: 900px) {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .required-symbol {
+    color: $cvs-red;
+  }
+
+  .js-form-item-extension {
+    display: inline-block;
+    width: calc(25% - 20px);
+    margin-left: 20px;
+
+    @media only screen and (max-width: 900px) {
+      margin-left: 0px;
+      width: 100%;
+    }
+  }
+
+  #edit-telephone-container {
+    display: flex;
+
+    @media only screen and (max-width: 900px) {
+      display: block;
+    }
+  }
+
+  .webform-tableselect-wrapper {
+    columns: 4;
+    max-width: 1200px;
+    width: 1200px;
+    padding-top: 20px;
+
+    @media only screen and (max-width: 1350px) {
+      columns: 2;
+      width: 100%;
+    }
+
+    @include for-tablet-portrait-only {
+      columns: 1;
+    }
+
+    @include for-phone-only {
+      columns: 1;
+    }
+
+    table {
+      display: block;
+
+      tbody {
+        display: block;
+
+        tr {
+          display: block;
+
+          // Removes default yellow select
+          &.selected {
+            td {
+              background: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.form-wrapper-container {
+  @include verne-fluid-padding-top(40px, 30px);
+  @include verne-fluid-padding-bottom(40px, 30px);
+
+  @include for-phone-only {
+    width: 100%;
+  }
+}
+
+.webform-confirmation {
+  .webform-confirmation__back {
+    display: none;
+  }
+}
+/*----- End webform sect -----*/

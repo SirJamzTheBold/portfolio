@@ -1,0 +1,171 @@
+uuid: ec1be5a8-e8f2-4fb3-a97f-82d2812299d0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_two_column_container
+    - field.field.block_content.csk_two_column_container.field_csk_anchor_link
+    - field.field.block_content.csk_two_column_container.field_csk_background_color
+    - field.field.block_content.csk_two_column_container.field_csk_box_layout
+    - field.field.block_content.csk_two_column_container.field_csk_column_1_components
+    - field.field.block_content.csk_two_column_container.field_csk_column_1_vertical_alig
+    - field.field.block_content.csk_two_column_container.field_csk_column_2_components
+    - field.field.block_content.csk_two_column_container.field_csk_column_2_vertical_alig
+    - field.field.block_content.csk_two_column_container.field_csk_column_gutter
+    - field.field.block_content.csk_two_column_container.field_csk_column_widths
+    - field.field.block_content.csk_two_column_container.field_csk_display_border
+    - field.field.block_content.csk_two_column_container.field_csk_inner_background_color
+    - field.field.block_content.csk_two_column_container.field_csk_inner_padding_bottom
+    - field.field.block_content.csk_two_column_container.field_csk_inner_padding_left
+    - field.field.block_content.csk_two_column_container.field_csk_inner_padding_right
+    - field.field.block_content.csk_two_column_container.field_csk_inner_padding_top
+    - field.field.block_content.csk_two_column_container.field_csk_padding_bottom
+    - field.field.block_content.csk_two_column_container.field_csk_padding_top
+    - field.field.block_content.csk_two_column_container.field_csk_width
+  module:
+    - entity_reference_revisions
+    - options
+_core:
+  default_config_hash: oJLYMdp3s5g46oTmP6uzmngueruCoZkDUlarbuOJz8I
+id: block_content.csk_two_column_container.default
+targetEntityType: block_content
+bundle: csk_two_column_container
+mode: default
+content:
+  field_csk_anchor_link:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_csk_background_color:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_csk_box_layout:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_csk_column_1_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_csk_column_1_vertical_alig:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_csk_column_2_components:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_csk_column_2_vertical_alig:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_csk_column_gutter:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_csk_column_widths:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_csk_display_border:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_csk_inner_background_color:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 13
+    region: content
+  field_csk_inner_padding_bottom:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 17
+    region: content
+  field_csk_inner_padding_left:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 15
+    region: content
+  field_csk_inner_padding_right:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 16
+    region: content
+  field_csk_inner_padding_top:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 14
+    region: content
+  field_csk_padding_bottom:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_csk_padding_top:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_csk_width:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 11
+    region: content
+hidden: {  }

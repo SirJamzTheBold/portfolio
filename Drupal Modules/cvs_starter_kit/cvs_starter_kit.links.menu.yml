@@ -1,0 +1,6 @@
+cvs_starter_kit.admin_settings:
+  title: 'Starter Kit configuration'
+  route_name: cvs_starter_kit.admin_settings
+  description: 'Configuration for items displayed in starter kit'
+  parent: system.admin_config_system
+  weight: 99

@@ -1,0 +1,63 @@
+uuid: 35daae2f-9d0e-4132-a403-85019d62e98a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_statistics
+    - paragraphs.paragraphs_type.csk_statistic_component
+    - paragraphs.paragraphs_type.csk_statistics_component
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: Znd5oLI9FSBLJFoXWtRKM1ZHE5CKnJrxw10OhI53tRY
+id: paragraph.csk_statistics_component.field_csk_statistics
+field_name: field_csk_statistics
+entity_type: paragraph
+bundle: csk_statistics_component
+label: Statistics
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      csk_statistic_component: csk_statistic_component
+    negate: 0
+    target_bundles_drag_drop:
+      csk_image_component:
+        weight: 14
+        enabled: false
+      csk_raw_html_component:
+        weight: 15
+        enabled: false
+      csk_statistic_component:
+        weight: 17
+        enabled: true
+      csk_statistics_component:
+        weight: 16
+        enabled: false
+      csk_text_component:
+        weight: 18
+        enabled: false
+      form_component:
+        weight: 19
+        enabled: false
+      image_component:
+        weight: 20
+        enabled: false
+      raw_html_component:
+        weight: 21
+        enabled: false
+      statistic_component:
+        weight: 23
+        enabled: false
+      statistics_component:
+        weight: 22
+        enabled: false
+      text_component:
+        weight: 24
+        enabled: false
+field_type: entity_reference_revisions

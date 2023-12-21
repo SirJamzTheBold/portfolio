@@ -1,0 +1,21 @@
+uuid: e2a6720d-749c-400f-96d8-25f222a804f6
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_footer
+    - field.storage.block_content.field_csk_copyright
+_core:
+  default_config_hash: hkuuUZt6S42h93hIpUyDl9KyuvbVBKlr5i-ZQsU65e4
+id: block_content.csk_footer.field_csk_copyright
+field_name: field_csk_copyright
+entity_type: block_content
+bundle: csk_footer
+label: Copyright
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

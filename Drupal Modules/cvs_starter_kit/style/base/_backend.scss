@@ -1,0 +1,103 @@
+#layout-builder-modal {  
+  .form-item {
+    select {
+      background-image: none;
+      display: block;
+    }
+  }
+
+  .form-submit:hover,
+  button:hover {
+    background-color: black;
+    color: white;
+  }
+
+  .form-submit[value="Remove"] {
+    float: right;
+    margin-bottom: 10px;
+  }
+
+  input.form-checkbox+label {
+    top: -5px;
+  }
+
+  input.form-checkbox+label:before {
+    display: none;
+  }
+
+  input.form-checkbox:checked+label:after {
+    display: none;
+  }
+
+  .form-item label.form-required:after {
+    display: none;
+  }
+
+  .paragraphs-dropbutton-wrapper {
+    margin-left: 43px;
+
+    .dropbutton--small {
+      min-height: 50px;
+
+      .field-add-more-submit {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+  }
+
+  table.field-multiple-table {
+    width: 100%;
+
+    tr {
+      border: solid 1px;
+
+      th {
+        .paragraphs-actions {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  .paragraphs-tabs-wrapper {
+    .tabledrag-toggle-weight-wrapper {
+      height: 68px;
+
+      button {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+        padding: 10px;
+        border: solid 1px;
+      }
+    }
+
+    .form-item {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+
+    .clearfix {
+      padding-bottom: 10px;
+    }
+  }
+}
+
+#media-library-wrapper {
+  .form-item {
+    select {
+      background-image: none;
+    }
+  }
+
+  .js-media-library-view {
+    .view-filters {
+      .button {
+        margin-top: 24px;
+        margin-left: 10px;
+      }
+    }
+  }
+}

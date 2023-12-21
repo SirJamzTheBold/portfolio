@@ -1,0 +1,32 @@
+uuid: baa090df-3721-456d-9bc2-d46ecd33efb6
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: uBLM5Kcesj6VGQH0HCYPmkb7kYO2IkvK3GY_yqajusk
+id: block_content.field_csk_column_3_vertical_alig
+field_name: field_csk_column_3_vertical_alig
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: align-top
+      label: Top
+    -
+      value: align-middle
+      label: Middle
+    -
+      value: align-bottom
+      label: Bottom
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

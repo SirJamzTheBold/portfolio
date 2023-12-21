@@ -1,0 +1,25 @@
+uuid: 3b217e1e-6f0d-4dc4-8174-3b98c815de69
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_two_column_container
+    - field.storage.block_content.field_csk_column_gutter
+  module:
+    - options
+_core:
+  default_config_hash: CO0tm05i-ytkzuXPfZkTeVwTgngLKmoucbWUTVCEZOg
+id: block_content.csk_two_column_container.field_csk_column_gutter
+field_name: field_csk_column_gutter
+entity_type: block_content
+bundle: csk_two_column_container
+label: 'Column Gutter'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: column-gutter-40
+default_value_callback: ''
+settings: {  }
+field_type: list_string

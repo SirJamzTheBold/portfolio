@@ -1,0 +1,38 @@
+uuid: 29a5135d-3a3e-4242-a72b-7483dd6cdac5
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: dWBpca5N36Skkl7KFUP8HOB7ns980YlOBTMiYtIvv8E
+id: block_content.field_csk_4_column_widths
+field_name: field_csk_4_column_widths
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: column-widths-25-25-25-25
+      label: 25-25-25-25
+    -
+      value: column-widths-40-20-20-20
+      label: 40-20-20-20
+    -
+      value: column-widths-20-40-20-20
+      label: 20-40-20-20
+    -
+      value: column-widths-20-20-40-20
+      label: 20-20-40-20
+    -
+      value: column-widths-20-20-20-40
+      label: 20-20-20-40
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

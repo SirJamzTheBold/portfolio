@@ -1,0 +1,57 @@
+uuid: f0939c1c-31b8-44de-8563-45992872145f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csk_text_component.field_csk_padding_bottom
+    - field.field.paragraph.csk_text_component.field_csk_padding_left
+    - field.field.paragraph.csk_text_component.field_csk_padding_right
+    - field.field.paragraph.csk_text_component.field_csk_padding_top
+    - field.field.paragraph.csk_text_component.field_csk_text
+    - paragraphs.paragraphs_type.csk_text_component
+  module:
+    - options
+    - text
+_core:
+  default_config_hash: ptSekNEW7Xnzc6hYcCqMG2Y_u9tPZ4oLnPC42NY4L7g
+id: paragraph.csk_text_component.default
+targetEntityType: paragraph
+bundle: csk_text_component
+mode: default
+content:
+  field_csk_padding_bottom:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_csk_padding_left:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_csk_padding_right:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_csk_padding_top:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_csk_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden: {  }

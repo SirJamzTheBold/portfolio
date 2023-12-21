@@ -1,0 +1,25 @@
+uuid: 7c8233dd-6131-45d2-a709-8b8a3d4af556
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_padding_bottom
+    - paragraphs.paragraphs_type.csk_image_component
+  module:
+    - options
+_core:
+  default_config_hash: 1kZu5VkWViSUP92re73ZxBh9XeFzBomzGUsdIAp8QKo
+id: paragraph.csk_image_component.field_csk_padding_bottom
+field_name: field_csk_padding_bottom
+entity_type: paragraph
+bundle: csk_image_component
+label: 'Padding Bottom'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: padding-bottom-0
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,25 @@
+uuid: 978ba492-a082-43f6-8f08-97d0e38bff8f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_four_column_container
+    - field.storage.block_content.field_csk_display_border
+_core:
+  default_config_hash: YwsFZ2WQp2ilRJdpaIH09lw2z9k6BgDKiAv4VCTBKPM
+id: block_content.csk_four_column_container.field_csk_display_border
+field_name: field_csk_display_border
+entity_type: block_content
+bundle: csk_four_column_container
+label: 'Display Border'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

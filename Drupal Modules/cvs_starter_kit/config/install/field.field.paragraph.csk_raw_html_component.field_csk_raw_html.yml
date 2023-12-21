@@ -1,0 +1,21 @@
+uuid: 20ab1146-28cb-4a10-b68b-4af10223a75a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_raw_html
+    - paragraphs.paragraphs_type.csk_raw_html_component
+_core:
+  default_config_hash: lROCkQQ36yoy3GSxz4SIzVlzi3ZazfLHH5J8sFXusgE
+id: paragraph.csk_raw_html_component.field_csk_raw_html
+field_name: field_csk_raw_html
+entity_type: paragraph
+bundle: csk_raw_html_component
+label: 'Raw HTML'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

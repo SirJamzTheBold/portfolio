@@ -1,0 +1,22 @@
+uuid: cf76a9b7-6b53-4102-9098-a87c8cd3208f
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - webform
+_core:
+  default_config_hash: PCmKVucjdKo42RwEhjle5VI4q3WfkhcXpdfWqqkn8jY
+id: paragraph.field_csk_webform
+field_name: field_csk_webform
+entity_type: paragraph
+type: webform
+settings:
+  target_type: webform
+module: webform
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

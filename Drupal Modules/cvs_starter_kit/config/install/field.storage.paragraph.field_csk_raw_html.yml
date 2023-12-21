@@ -1,0 +1,21 @@
+uuid: 5cdc6c62-33d2-44d6-af34-091222ee9678
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: 2Z3m1sMB3TGFu-LX-YYEGA4bmffCKW3gJMTavLROhDc
+id: paragraph.field_csk_raw_html
+field_name: field_csk_raw_html
+entity_type: paragraph
+type: string_long
+settings:
+  case_sensitive: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

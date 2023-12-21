@@ -1,0 +1,21 @@
+uuid: c21dafe8-9e55-4fac-9ffc-502bfad4c76b
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+_core:
+  default_config_hash: PhOrl-dI3Z4WCfW33jMHpzdAP4MeFCwEpA3yOrRln28
+id: block_content.field_csk_text
+field_name: field_csk_text
+entity_type: block_content
+type: text_long
+settings: {  }
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,19 @@
+uuid: 5c30e0d1-a5ae-495b-b87f-4afa20f0f7bc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_vimeo_video
+    - paragraphs.paragraphs_type.csk_vimeo_video
+id: paragraph.csk_vimeo_video.field_csk_vimeo_video
+field_name: field_csk_vimeo_video
+entity_type: paragraph
+bundle: csk_vimeo_video
+label: 'Vimeo Video'
+description: "Use the following format:\r\n\r\nhttps://player.vimeo.com/video/[VIMEO ID]?h=[VIMEO H VALUE]\r\n\r\nYou can get the ID and the H value from the video's page on vimeo, click the share button and it should be right at the start of the embed code."
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

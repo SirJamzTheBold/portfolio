@@ -1,0 +1,22 @@
+uuid: d003a11b-4054-4976-991d-cb12496f3523
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csk_raw_html_component.field_csk_raw_html
+    - paragraphs.paragraphs_type.csk_raw_html_component
+_core:
+  default_config_hash: AHB8aTlLQ5lvMN3qfKpBHEezOvCYdcJVqJYj9JJ_2xM
+id: paragraph.csk_raw_html_component.default
+targetEntityType: paragraph
+bundle: csk_raw_html_component
+mode: default
+content:
+  field_csk_raw_html:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

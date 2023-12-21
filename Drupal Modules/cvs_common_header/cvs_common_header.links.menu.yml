@@ -1,0 +1,6 @@
+cvs_common_header.admin_settings:
+  title: 'Common Header configuration'
+  route_name: cvs_common_header.admin_settings
+  description: 'Configuration for items displayed in common header'
+  parent: system.admin_config_system
+  weight: 99

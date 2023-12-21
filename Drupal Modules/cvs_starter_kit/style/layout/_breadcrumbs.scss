@@ -1,0 +1,48 @@
+/*
+* Breadcrumbs styling
+*/
+.block-system-breadcrumb-block {
+  position: absolute;
+  z-index: 1;
+  background-color: inherit;
+  max-width: 1600px;
+  margin: 0 auto;
+  @include verne-fluid-padding-left(20px, 60px);
+  @include verne-fluid-padding-right(20px, 60px);
+
+  nav.breadcrumb {
+    ul {
+      @include verne-fluid-padding-top(5px, 10px);
+      padding-left: 0;
+
+      @include for-phone-only {
+        padding-left: 0;
+      }
+
+      li {
+        font-size: 14px;
+        line-height: 32px;
+
+        &::before {
+          content: "\203A";
+        }
+
+        &:first-child::before {
+          content: none;
+        }
+
+        a {
+          font-size: 14px;
+          line-height: 32px;
+
+          &:hover,
+          &:focus,
+          &:visited {
+            text-decoration: none;
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+}

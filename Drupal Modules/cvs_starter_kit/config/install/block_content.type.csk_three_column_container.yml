@@ -1,0 +1,10 @@
+uuid: dba82cba-2301-4fc4-b45b-1fc8fbf5be35
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: l9sYw1OKbhVOP_9paXy3SKNmtCqdgooPXroQy7w3hf0
+id: csk_three_column_container
+label: 'CSK Three Column Container'
+revision: 0
+description: 'Content arranged in a three columns column. Side by side at desktop and one after another on mobile. Each column contain an arbitrary amount of images/text/videos.'

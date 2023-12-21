@@ -1,0 +1,8 @@
+uuid: ec1139c9-96bc-4422-8da6-bc396bd916c0
+langcode: en
+status: true
+dependencies: {  }
+id: csk_feature
+label: 'CSK Feature'
+revision: 0
+description: 'A body block with a full-sized image with text overlay on the right.'

@@ -1,0 +1,23 @@
+uuid: 744e2dc9-eebf-4b09-b80c-1f4667737cef
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_two_column_container
+    - field.storage.block_content.field_csk_inner_padding_top
+  module:
+    - options
+id: block_content.csk_two_column_container.field_csk_inner_padding_top
+field_name: field_csk_inner_padding_top
+entity_type: block_content
+bundle: csk_two_column_container
+label: 'Inner Padding Top'
+description: 'Only has effect for Individual Box Layout and Single Box Layout.'
+required: false
+translatable: true
+default_value:
+  -
+    value: padding-top-20
+default_value_callback: ''
+settings: {  }
+field_type: list_string

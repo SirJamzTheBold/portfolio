@@ -1,0 +1,31 @@
+uuid: 231a8d5e-bd0a-464f-915d-bda385cceb70
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_homepage_header
+    - field.storage.block_content.field_csk_image
+    - media.type.image
+_core:
+  default_config_hash: OOQlv41USExTlcIapjMB82VOHy0A4oP2c7CCFu6aQwg
+id: block_content.csk_homepage_header.field_csk_image
+field_name: field_csk_image
+entity_type: block_content
+bundle: csk_homepage_header
+label: Image
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

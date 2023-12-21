@@ -1,0 +1,10 @@
+uuid: 9ee27f24-99f0-4d13-9a68-4efc5abe0258
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: iRh47cyAjk8rAe_k9g2yAP0OstbXYpn64B9vxGaM8Ww
+id: csk_two_column_container
+label: 'CSK Two Column Container'
+revision: 0
+description: 'Content arranged in a two columns column. Side by side at desktop and one after another on mobile. Each column contain an arbitrary amount of images/text/videos.'

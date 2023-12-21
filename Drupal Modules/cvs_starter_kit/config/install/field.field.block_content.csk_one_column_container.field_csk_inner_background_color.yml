@@ -1,0 +1,29 @@
+uuid: 02c196de-61ca-4638-aa6a-c8a423c782a1
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_one_column_container
+    - field.storage.block_content.field_csk_inner_background_color
+    - taxonomy.vocabulary.csk_background_colors
+id: block_content.csk_one_column_container.field_csk_inner_background_color
+field_name: field_csk_inner_background_color
+entity_type: block_content
+bundle: csk_one_column_container
+label: 'Inner Background Color'
+description: 'Only has effect for Individual Box Layout and Single Box Layout.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      csk_background_colors: csk_background_colors
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

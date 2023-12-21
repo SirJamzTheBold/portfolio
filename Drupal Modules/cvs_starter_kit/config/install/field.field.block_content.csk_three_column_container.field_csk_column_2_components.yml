@@ -1,0 +1,62 @@
+uuid: 28b7d3e8-9910-42d1-bb32-e5c8fad7278b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_three_column_container
+    - field.storage.block_content.field_csk_column_2_components
+    - paragraphs.paragraphs_type.csk_cta_component
+    - paragraphs.paragraphs_type.csk_image_component
+    - paragraphs.paragraphs_type.csk_raw_html_component
+    - paragraphs.paragraphs_type.csk_text_component
+    - paragraphs.paragraphs_type.csk_vimeo_video
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: ytGGqIa1LvO3aOUI9plcc5lhXetFhKCzXLSeRRtrjYU
+id: block_content.csk_three_column_container.field_csk_column_2_components
+field_name: field_csk_column_2_components
+entity_type: block_content
+bundle: csk_three_column_container
+label: 'Column 2 Components'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      csk_cta_component: csk_cta_component
+      csk_image_component: csk_image_component
+      csk_raw_html_component: csk_raw_html_component
+      csk_vimeo_video: csk_vimeo_video
+      csk_text_component: csk_text_component
+    negate: 0
+    target_bundles_drag_drop:
+      csk_cta_component:
+        weight: 14
+        enabled: true
+      csk_image_component:
+        weight: 14
+        enabled: true
+      csk_raw_html_component:
+        weight: 15
+        enabled: true
+      csk_statistic_component:
+        weight: 17
+        enabled: false
+      csk_statistics_component:
+        weight: 16
+        enabled: false
+      csk_text_component:
+        weight: 18
+        enabled: true
+      csk_view_component:
+        weight: 15
+        enabled: false
+      csk_vimeo_video:
+        weight: 16
+        enabled: true
+field_type: entity_reference_revisions

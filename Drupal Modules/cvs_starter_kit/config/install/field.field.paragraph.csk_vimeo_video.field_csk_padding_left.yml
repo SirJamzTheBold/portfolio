@@ -1,0 +1,23 @@
+uuid: c5cd7a86-08a2-401b-9b98-6b91e39d6b22
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_padding_left
+    - paragraphs.paragraphs_type.csk_vimeo_video
+  module:
+    - options
+id: paragraph.csk_vimeo_video.field_csk_padding_left
+field_name: field_csk_padding_left
+entity_type: paragraph
+bundle: csk_vimeo_video
+label: 'Padding Left'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: padding-left-0
+default_value_callback: ''
+settings: {  }
+field_type: list_string

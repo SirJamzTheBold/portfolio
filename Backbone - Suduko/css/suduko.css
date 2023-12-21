@@ -1,0 +1,11 @@
+.square {
+	border: 2px solid black;
+}
+
+.square td {
+	border: 1px solid black;
+}
+
+.square td input {
+	width: 20px;
+}

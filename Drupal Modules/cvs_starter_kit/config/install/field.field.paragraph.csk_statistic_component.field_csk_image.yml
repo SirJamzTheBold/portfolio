@@ -1,0 +1,31 @@
+uuid: 19f7494d-e1f7-4641-ad80-78085434d251
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_image
+    - media.type.image
+    - paragraphs.paragraphs_type.csk_statistic_component
+_core:
+  default_config_hash: 0sctm1KfD7aELVcy-vNrA25pChgXo0l6stuNc_ZgCx4
+id: paragraph.csk_statistic_component.field_csk_image
+field_name: field_csk_image
+entity_type: paragraph
+bundle: csk_statistic_component
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

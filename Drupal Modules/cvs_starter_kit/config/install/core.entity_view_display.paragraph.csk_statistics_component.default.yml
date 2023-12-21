@@ -1,0 +1,67 @@
+uuid: 33c28d91-e8c9-4714-850e-0d7c0eda692b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csk_statistics_component.field_csk_number_of_columns
+    - field.field.paragraph.csk_statistics_component.field_csk_padding_bottom
+    - field.field.paragraph.csk_statistics_component.field_csk_padding_left
+    - field.field.paragraph.csk_statistics_component.field_csk_padding_right
+    - field.field.paragraph.csk_statistics_component.field_csk_padding_top
+    - field.field.paragraph.csk_statistics_component.field_csk_statistics
+    - paragraphs.paragraphs_type.csk_statistics_component
+  module:
+    - entity_reference_revisions
+    - options
+_core:
+  default_config_hash: 0FXkgohwxvxo23ZibvmieYWrsnZ_x5AbF36bvd3ybxI
+id: paragraph.csk_statistics_component.default
+targetEntityType: paragraph
+bundle: csk_statistics_component
+mode: default
+content:
+  field_csk_number_of_columns:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_csk_padding_bottom:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_csk_padding_left:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_csk_padding_right:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_csk_padding_top:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_csk_statistics:
+    type: entity_reference_revisions_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+hidden: {  }

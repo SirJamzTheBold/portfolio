@@ -1,0 +1,58 @@
+.block-feature {
+    position: relative;
+    margin-bottom: -7px;
+  
+    .field--name-field-csk-image {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+  
+    .feature-text-block {
+      z-index: 0;
+      padding-top: 60px;
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-bottom: 80px;
+      position: absolute;
+      bottom: 80px;
+      right: 60px;
+      display: flex;
+      max-width: 800px;
+      width: 100%;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      margin-left: 60px;
+      margin-top: 72px;
+  
+      h1 {
+        margin: 0px;
+      }
+  
+      .field--name-field-description {
+        margin-top: 30px;
+  
+        p {
+          margin: 0px;
+        }
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    .block-feature {
+      .feature-text-block {
+        position: relative;
+        max-width: 100%;
+        margin-left: 0px;
+        margin-top: -10px;
+        bottom: 0;
+        right: 0;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+    }
+  }

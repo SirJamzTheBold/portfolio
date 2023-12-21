@@ -1,0 +1,71 @@
+uuid: 488cbc73-36f2-465e-862b-02fd3f4aedc5
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_one_column_container
+    - field.storage.block_content.field_csk_column_1_components
+    - paragraphs.paragraphs_type.csk_cta_component
+    - paragraphs.paragraphs_type.csk_form_component
+    - paragraphs.paragraphs_type.csk_image_component
+    - paragraphs.paragraphs_type.csk_raw_html_component
+    - paragraphs.paragraphs_type.csk_statistics_component
+    - paragraphs.paragraphs_type.csk_text_component
+    - paragraphs.paragraphs_type.csk_view_component
+    - paragraphs.paragraphs_type.csk_vimeo_video
+  module:
+    - entity_reference_revisions
+_core:
+  default_config_hash: Muztojz8qkjINU-uSu4KkxTFachjo5Ti815_Z4k4nZ0
+id: block_content.csk_one_column_container.field_csk_column_1_components
+field_name: field_csk_column_1_components
+entity_type: block_content
+bundle: csk_one_column_container
+label: 'Column 1 Components'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      csk_cta_component: csk_cta_component
+      csk_image_component: csk_image_component
+      csk_raw_html_component: csk_raw_html_component
+      csk_statistics_component: csk_statistics_component
+      csk_text_component: csk_text_component
+      csk_view_component: csk_view_component
+      csk_form_component: csk_form_component
+      csk_vimeo_video: csk_vimeo_video
+    negate: 0
+    target_bundles_drag_drop:
+      csk_cta_component:
+        weight: -28
+        enabled: true
+      csk_form_component:
+        weight: 11
+        enabled: true
+      csk_image_component:
+        weight: -27
+        enabled: true
+      csk_raw_html_component:
+        weight: -26
+        enabled: true
+      csk_statistic_component:
+        weight: -24
+        enabled: false
+      csk_statistics_component:
+        weight: -25
+        enabled: true
+      csk_text_component:
+        weight: -23
+        enabled: true
+      csk_view_component:
+        weight: -22
+        enabled: true
+      csk_vimeo_video:
+        weight: 16
+        enabled: true
+field_type: entity_reference_revisions

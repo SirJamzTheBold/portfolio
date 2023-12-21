@@ -1,0 +1,23 @@
+uuid: 8881d3ad-bce3-4c0d-a96c-5c1c01d0b5e0
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+_core:
+  default_config_hash: XAZ1lew4xmn5WY7coF62b5qBIo4Q5Gr6vPKPn7AoCUg
+id: paragraph.field_csk_screen_reader_override
+field_name: field_csk_screen_reader_override
+entity_type: paragraph
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

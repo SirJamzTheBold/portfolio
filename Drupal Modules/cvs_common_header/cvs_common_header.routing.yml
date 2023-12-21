@@ -1,0 +1,7 @@
+cvs_common_header.admin_settings:
+  path: '/admin/config/cvs_common_header'
+  defaults:
+    _form: '\Drupal\cvs_common_header\Form\CommonHeaderConfigurationForm'
+    _title: 'CVS Common Header configuration screen'
+  requirements:
+    _permission: 'administer site configuration'

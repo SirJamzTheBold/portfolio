@@ -1,0 +1,32 @@
+.block-one-column-container,
+.block-two-column-container,
+.block-three-column-container,
+.block-four-column-container,
+.block-five-column-container {
+  &.individual-box-layout {
+    .single-column-inner {
+      box-shadow: 0 4px 22px rgba(0,0,0,0.15);
+    }
+  }
+
+  &.single-box-layout {
+    .all-column-container {
+      box-shadow: 0 4px 22px rgba(0,0,0,0.15);
+    }
+  }
+}
+
+.block-one-column-container {
+  &.individual-box-layout {
+    .all-column-container {
+      box-shadow: 0 4px 22px rgba(0,0,0,0.15);
+    }
+  }
+}
+
+.padding-bottom-0.single-box-layout,
+.padding-bottom-0.individual-box-layout,
+.padding-bottom-20.single-box-layout,
+.padding-bottom-20.individual-box-layout {
+  padding-bottom: 25px;
+}

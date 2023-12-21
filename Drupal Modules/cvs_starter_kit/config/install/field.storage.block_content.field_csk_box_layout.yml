@@ -1,0 +1,30 @@
+uuid: fad5551d-2c21-41d9-94fd-989216b0cf8c
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_csk_box_layout
+field_name: field_csk_box_layout
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: no-box-layout
+      label: 'No Box Layout'
+    -
+      value: single-box-layout
+      label: 'Single Box Layout'
+    -
+      value: individual-box-layout
+      label: 'Individual Box Layout'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

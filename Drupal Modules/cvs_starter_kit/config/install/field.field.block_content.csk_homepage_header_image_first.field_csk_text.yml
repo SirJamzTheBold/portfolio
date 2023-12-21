@@ -1,0 +1,23 @@
+uuid: f39b6046-34c9-4760-aeb3-1bb7173ee47f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_homepage_header_image_first
+    - field.storage.block_content.field_csk_text
+  module:
+    - text
+_core:
+  default_config_hash: KiFRxhgFAOudigcTA5bM1pvut_OTHXHh6vexsp3UVn0
+id: block_content.csk_homepage_header_image_first.field_csk_text
+field_name: field_csk_text
+entity_type: block_content
+bundle: csk_homepage_header_image_first
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

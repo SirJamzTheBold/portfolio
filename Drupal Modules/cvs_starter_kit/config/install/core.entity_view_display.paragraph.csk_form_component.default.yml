@@ -1,0 +1,25 @@
+uuid: 461b0e4f-bbe4-458a-b5e9-e2f6abd1e9a6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csk_form_component.field_csk_webform
+    - paragraphs.paragraphs_type.csk_form_component
+  module:
+    - webform
+_core:
+  default_config_hash: SF-ndDnbWtiLuJ2t8_z4p_j9_e4fOgkCZ6ApbKp62K0
+id: paragraph.csk_form_component.default
+targetEntityType: paragraph
+bundle: csk_form_component
+mode: default
+content:
+  field_csk_webform:
+    type: webform_entity_reference_entity_view
+    label: hidden
+    settings:
+      source_entity: true
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

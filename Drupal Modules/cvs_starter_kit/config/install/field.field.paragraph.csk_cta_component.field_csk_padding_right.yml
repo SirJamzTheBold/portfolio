@@ -1,0 +1,23 @@
+uuid: 4439b795-eeb6-45a0-b782-c394de5cb7bd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_padding_right
+    - paragraphs.paragraphs_type.csk_cta_component
+  module:
+    - options
+id: paragraph.csk_cta_component.field_csk_padding_right
+field_name: field_csk_padding_right
+entity_type: paragraph
+bundle: csk_cta_component
+label: 'Padding Right'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: padding-right-0
+default_value_callback: ''
+settings: {  }
+field_type: list_string

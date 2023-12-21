@@ -1,0 +1,23 @@
+uuid: 33185b4d-73a0-42fa-aa51-e2ded4f3e0a3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_five_column_container
+    - field.storage.block_content.field_csk_column_4_vertical_alig
+  module:
+    - options
+id: block_content.csk_five_column_container.field_csk_column_4_vertical_alig
+field_name: field_csk_column_4_vertical_alig
+entity_type: block_content
+bundle: csk_five_column_container
+label: 'Column 4 Vertical Alignment'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: align-middle
+default_value_callback: ''
+settings: {  }
+field_type: list_string

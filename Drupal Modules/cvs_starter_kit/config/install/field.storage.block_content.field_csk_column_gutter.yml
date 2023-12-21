@@ -1,0 +1,53 @@
+uuid: 1b778aad-3e0a-42e6-8819-3c76a3bb7d0a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: fUH3Jqqdrs4RjtsMrl3YBm_gAjifdedwiP7CkX-9d6Q
+id: block_content.field_csk_column_gutter
+field_name: field_csk_column_gutter
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: column-gutter-20
+      label: 20px
+    -
+      value: column-gutter-40
+      label: 40px
+    -
+      value: column-gutter-60
+      label: 60px
+    -
+      value: column-gutter-80
+      label: 80px
+    -
+      value: column-gutter-100
+      label: 100px
+    -
+      value: column-gutter-120
+      label: 120px
+    -
+      value: column-gutter-140
+      label: 140px
+    -
+      value: column-gutter-160
+      label: 160px
+    -
+      value: column-gutter-180
+      label: 180px
+    -
+      value: column-gutter-200
+      label: 200px
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

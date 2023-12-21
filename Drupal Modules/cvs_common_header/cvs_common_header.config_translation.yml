@@ -1,0 +1,5 @@
+cvs_common_header.admin.config:
+  title: 'CVS Common Header'
+  base_route_name: cvs_common_header.admin.config
+  names:
+    - cvs_common_header.settings

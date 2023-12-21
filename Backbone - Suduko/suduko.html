@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+
+		<title>Suduko Solver</title>
+
+		<link rel="stylesheet" type="text/css" media="screen" href="css/suduko.css">
+		<script src="js/underscore.min.js"></script>
+		<script src="js/jquery-3.0.0.min.js"></script>
+		<script src="js/backbone.min.js"></script>
+		<script src="js/suduko.js"></script>
+	</head>
+	<body>
+<div id="suduko-container">
+	<table>
+		<tr>
+			<td>
+				<table class="square">
+					<tr>
+						<td><input id="square0space0" type="text" /></td>
+						<td><input id="square0space1" type="text" /></td>
+						<td><input id="square0space2" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square0space3" type="text" /></td>
+						<td><input id="square0space4" type="text" /></td>
+						<td><input id="square0space5" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square0space6" type="text" /></td>
+						<td><input id="square0space7" type="text" /></td>
+						<td><input id="square0space8" type="text" /></td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table class="square">
+					<tr>
+						<td><input id="square1space0" type="text" /></td>
+						<td><input id="square1space1" type="text" /></td>
+						<td><input id="square1space2" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square1space3" type="text" /></td>
+						<td><input id="square1space4" type="text" /></td>
+						<td><input id="square1space5" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square1space6" type="text" /></td>
+						<td><input id="square1space7" type="text" /></td>
+						<td><input id="square1space8" type="text" /></td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table class="square">
+					<tr>
+						<td><input id="square2space0" type="text" /></td>
+						<td><input id="square2space1" type="text" /></td>
+						<td><input id="square2space2" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square2space3" type="text" /></td>
+						<td><input id="square2space4" type="text" /></td>
+						<td><input id="square2space5" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square2space6" type="text" /></td>
+						<td><input id="square2space7" type="text" /></td>
+						<td><input id="square2space8" type="text" /></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="square">
+					<tr>
+						<td><input id="square3space0" type="text" /></td>
+						<td><input id="square3space1" type="text" /></td>
+						<td><input id="square3space2" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square3space3" type="text" /></td>
+						<td><input id="square3space4" type="text" /></td>
+						<td><input id="square3space5" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square3space6" type="text" /></td>
+						<td><input id="square3space7" type="text" /></td>
+						<td><input id="square3space8" type="text" /></td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table class="square">
+					<tr>
+						<td><input id="square4space0" type="text" /></td>
+						<td><input id="square4space1" type="text" /></td>
+						<td><input id="square4space2" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square4space3" type="text" /></td>
+						<td><input id="square4space4" type="text" /></td>
+						<td><input id="square4space5" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square4space6" type="text" /></td>
+						<td><input id="square4space7" type="text" /></td>
+						<td><input id="square4space8" type="text" /></td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table class="square">
+					<tr>
+						<td><input id="square5space0" type="text" /></td>
+						<td><input id="square5space1" type="text" /></td>
+						<td><input id="square5space2" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square5space3" type="text" /></td>
+						<td><input id="square5space4" type="text"/></td>
+						<td><input id="square5space5" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square5space6" type="text" /></td>
+						<td><input id="square5space7" type="text" /></td>
+						<td><input id="square5space8" type="text" /></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="square">
+					<tr>
+						<td><input id="square6space0" type="text" /></td>
+						<td><input id="square6space1" type="text" /></td>
+						<td><input id="square6space2" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square6space3" type="text" /></td>
+						<td><input id="square6space4" type="text" /></td>
+						<td><input id="square6space5" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square6space6" type="text" /></td>
+						<td><input id="square6space7" type="text" /></td>
+						<td><input id="square6space8" type="text" /></td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table class="square">
+					<tr>
+						<td><input id="square7space0" type="text" /></td>
+						<td><input id="square7space1" type="text" /></td>
+						<td><input id="square7space2" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square7space3" type="text" /></td>
+						<td><input id="square7space4" type="text" /></td>
+						<td><input id="square7space5" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square7space6" type="text" /></td>
+						<td><input id="square7space7" type="text" /></td>
+						<td><input id="square7space8" type="text" /></td>
+					</tr>
+				</table>
+			</td>
+			<td>
+				<table class="square">
+					<tr>
+						<td><input id="square8space0" type="text" /></td>
+						<td><input id="square8space1" type="text" /></td>
+						<td><input id="square8space2" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square8space3" type="text" /></td>
+						<td><input id="square8space4" type="text" /></td>
+						<td><input id="square8space5" type="text" /></td>
+					</tr>
+					<tr>
+						<td><input id="square8space6" type="text" /></td>
+						<td><input id="square8space7" type="text" /></td>
+						<td><input id="square8space8" type="text" /></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+
+	<input id="solve-puzzle" type="button" value="Solve Puzzle" />
+	<input id="clear-puzzle" type="button" value="Clear Puzzle" />
+</div>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+@import 'verne-fluid-type';
+
+// Text links - Call To Action
+a {
+  &.cta-large {
+    // (16px+ font-size)
+    @include verne-fluid-type-scale(
+      $verne-font-size-root-min,
+      $verne-font-size-root-max,
+      $verne-line-height-root-min,
+      $verne-line-height-root-max,
+      'scale-up',
+      1
+    );
+    font-weight: bold;
+    text-decoration: none;
+    color: $cvs-red;
+  
+    &:hover,
+    &:focus {
+      color: $cvs-red-light;
+    }
+    
+    &:active {
+      color: $cvs-red-dark;
+    }
+  
+    // (sub-16px font-size)
+  
+  }
+
+  &.cta-small {
+    text-decoration: underline;
+    font-weight: normal;
+    color: $black;
+
+    &:hover,
+    &:focus {
+      color: $cvs-red-light;
+    }
+  }
+  
+  // Text links on colored background
+  &.cta-small-white {
+    color: $white;
+    text-decoration: underline;
+
+  }
+}
+
+// Text links within paragraph text
+p {
+  a {
+    color: $cvs-red;
+    text-decoration: none;
+    
+    &.hover,
+    &.focus {
+      color: $cvs-red-light;
+      text-decoration: underline;
+    }
+  }
+}

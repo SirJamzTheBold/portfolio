@@ -1,0 +1,217 @@
+<?php
+
+/**
+ * Implements hook_theme().
+ */
+function cvs_starter_kit_theme($existing, $type, $theme, $path) {
+  return [
+    'html__node' => [
+      'variables' => [],
+      'template' => 'html--node',
+      'path' => $path . '/templates/layout',
+      'base hook' => 'html'
+    ],
+    'page__node' => [
+      'variables' => [],
+      'template' => 'page--node',
+      'path' => $path . '/templates/layout',
+      'base hook' => 'page'
+    ],
+
+    'block__footer_block' => [
+      'variables' => [],
+      'template' => 'block--footer-block',
+      'path' => $path . '/templates/block',
+      'base hook' => 'block'
+    ],
+    
+    'block__inline_block__csk_one_column_container' => [
+      'variables' => [],
+      'template' => 'block--inline-block--csk-one-column-container',
+      'path' => $path . '/templates/block',
+      'base hook' => 'block'
+    ],
+    'block__inline_block__csk_two_column_container' => [
+      'variables' => [],
+      'template' => 'block--inline-block--csk-two-column-container',
+      'path' => $path . '/templates/block',
+      'base hook' => 'block'
+    ],
+    'block__inline_block__csk_three_column_container' => [
+      'variables' => [],
+      'template' => 'block--inline-block--csk-three-column-container',
+      'path' => $path . '/templates/block',
+      'base hook' => 'block'
+    ],
+    'block__inline_block__csk_four_column_container' => [
+      'variables' => [],
+      'template' => 'block--inline-block--csk-four-column-container',
+      'path' => $path . '/templates/block',
+      'base hook' => 'block'
+    ],
+    'block__inline_block__csk_five_column_container' => [
+      'variables' => [],
+      'template' => 'block--inline-block--csk-five-column-container',
+      'path' => $path . '/templates/block',
+      'base hook' => 'block'
+    ],
+    'block__inline_block__csk_list' => [
+      'variables' => [],
+      'template' => 'block--inline-block--csk-list',
+      'path' => $path . '/templates/block',
+      'base hook' => 'block'
+    ],
+    'block__inline_block__csk_homepage_header' => [
+      'variables' => [],
+      'template' => 'block--inline-block--csk-homepage-header',
+      'path' => $path . '/templates/block',
+      'base hook' => 'block'
+    ],
+    'block__inline_block__csk_homepage_header_image_first' => [
+      'variables' => [],
+      'template' => 'block--inline-block--csk-homepage-header-image-first',
+      'path' => $path . '/templates/block',
+      'base hook' => 'block'
+    ],
+    'block__inline_block__csk_interior_header' => [
+      'variables' => [],
+      'template' => 'block--inline-block--csk-interior-header',
+      'path' => $path . '/templates/block',
+      'base hook' => 'block'
+    ],
+    
+    'field__block_content__field_csk_list_content' => [
+      'variables' => [],
+      'template' => 'field--block-content--field-csk-list-content',
+      'path' => $path . '/templates/field',
+      'base hook' => 'field'
+    ],
+    'block__inline_block__csk_feature' => [
+      'variables' => [],
+      'template' => 'block--inline-block--csk-feature',
+      'path' => $path . '/templates/block',
+      'base hook' => 'block'
+    ],
+    'field__block_content__field_csk_primary_links' => [
+      'variables' => [],
+      'template' => 'field--block-content--field-csk-primary-links',
+      'path' => $path . '/templates/field',
+      'base hook' => 'field'
+    ],
+    'field__block_content__field_csk_secondary_links' => [
+      'variables' => [],
+      'template' => 'field--block-content--field-csk-secondary-links',
+      'path' => $path . '/templates/field',
+      'base hook' => 'field'
+    ],
+    'field__paragraph__field_csk_statistics' => [
+      'variables' => [],
+      'template' => 'field--paragraph--field-csk-statistics',
+      'path' => $path . '/templates/field',
+      'base hook' => 'field'
+    ],
+
+    'paragraph__csk_cta_component' => [
+      'variables' => [],
+      'template' => 'paragraph--csk-cta-component',
+      'path' => $path . '/templates/paragraph',
+      'base hook' => 'paragraph'
+    ],
+    'paragraph__csk_image_component' => [
+      'variables' => [],
+      'template' => 'paragraph--csk-image-component',
+      'path' => $path . '/templates/paragraph',
+      'base hook' => 'paragraph'
+    ],
+    'paragraph__csk_raw_html_component' => [
+      'variables' => [],
+      'template' => 'paragraph--csk-raw-html-component',
+      'path' => $path . '/templates/paragraph',
+      'base hook' => 'paragraph'
+    ],
+    'paragraph__csk_statistic_component' => [
+      'variables' => [],
+      'template' => 'paragraph--csk-statistic-component',
+      'path' => $path . '/templates/paragraph',
+      'base hook' => 'paragraph'
+    ],
+    'paragraph__csk_statistics_component' => [
+      'variables' => [],
+      'template' => 'paragraph--csk-statistics-component',
+      'path' => $path . '/templates/paragraph',
+      'base hook' => 'paragraph'
+    ],
+    'paragraph__csk_text_component' => [
+      'variables' => [],
+      'template' => 'paragraph--csk-text-component',
+      'path' => $path . '/templates/paragraph',
+      'base hook' => 'paragraph'
+    ],
+    'paragraph__csk_view_component' => [
+      'variables' => [],
+      'template' => 'paragraph--csk-view-component',
+      'path' => $path . '/templates/paragraph',
+      'base hook' => 'paragraph'
+    ],
+    'paragraph__csk_vimeo_video' => [
+      'variables' => [],
+      'template' => 'paragraph--csk-vimeo-video',
+      'path' => $path . '/templates/paragraph',
+      'base hook' => 'paragraph'
+    ],
+  ];
+}
+
+/**
+ * Implaments hook_preprocess_html()
+ */
+function cvs_starter_kit_preprocess_html(&$variables) {
+  $csk_full_width_size  = \Drupal::config('cvs_starter_kit.settings')->get('full_width_size');
+  if (empty($csk_full_width_size)) {
+    $csk_full_width_size = '1280px';
+  }
+  $variables['csk_full_width_size'] = $csk_full_width_size;
+
+  $csk_medium_width_size = \Drupal::config('cvs_starter_kit.settings')->get('medium_width_size');
+  if (empty($csk_medium_width_size)) {
+    $csk_medium_width_size = '1060px';
+  }
+  $variables['csk_medium_width_size'] = $csk_medium_width_size;
+
+  $csk_narrow_width_size = \Drupal::config('cvs_starter_kit.settings')->get('narrow_width_size');
+  if (empty($csk_narrow_width_size)) {
+    $csk_narrow_width_size = '840px';
+  }
+  $variables['csk_narrow_width_size'] = $csk_narrow_width_size;
+
+  $csk_box_border_radius = \Drupal::config('cvs_starter_kit.settings')->get('box_border_radius');
+  if (empty($csk_box_border_radius)) {
+    $csk_box_border_radius = '20px';
+  }
+  $variables['csk_box_border_radius'] = $csk_box_border_radius;
+
+  $csk_image_border_radius = \Drupal::config('cvs_starter_kit.settings')->get('image_border_radius');
+  if (empty($csk_image_border_radius)) {
+    $csk_image_border_radius = '20px';
+  }
+  $variables['csk_image_border_radius'] = $csk_image_border_radius;
+
+  $csk_button_border_radius = \Drupal::config('cvs_starter_kit.settings')->get('button_border_radius');
+  if (empty($csk_button_border_radius)) {
+    $csk_button_border_radius = '15px';
+  }
+  $variables['csk_button_border_radius'] = $csk_button_border_radius;
+}
+
+/**
+* Implements hook_preprocess_page().
+*/
+function cvs_starter_kit_preprocess_page(&$variables) {
+  /*
+   * Ignore if admin
+   */
+  if ($variables['directory'] != 'core/themes/seven') {
+    $variables['#attached']['library'][] =  'cvs_starter_kit/csk-css';
+    $variables['#attached']['library'][] =  'cvs_starter_kit/csk-js';
+  }
+}

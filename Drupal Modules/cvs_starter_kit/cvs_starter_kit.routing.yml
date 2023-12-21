@@ -1,0 +1,7 @@
+cvs_starter_kit.admin_settings:
+  path: '/admin/config/cvs_starter_kit'
+  defaults:
+    _form: '\Drupal\cvs_starter_kit\Form\StarterKitConfigurationForm'
+    _title: 'CVS Starter Kit configuration screen'
+  requirements:
+    _permission: 'administer site configuration'

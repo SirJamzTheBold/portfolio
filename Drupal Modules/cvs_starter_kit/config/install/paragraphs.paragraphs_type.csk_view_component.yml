@@ -1,0 +1,12 @@
+uuid: 984638d0-d7b4-4440-9025-483c9c38fce1
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: mLiNeHnv8PnwOGjSaYnW2bL2wACNAqThgsPNhYVmZU0
+id: csk_view_component
+label: 'CSK View Component'
+icon_uuid: null
+icon_default: null
+description: 'A component that allows you to embed a view on a page.'
+behavior_plugins: {  }

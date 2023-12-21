@@ -1,0 +1,51 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the hurricane_store_search
+ *   module.
+ */
+
+use Drupal\Core\Config\FileStorage;
+use Drupal\Core\Field\BaseFieldDefinition;
+
+/**
+ * Implements hook_install().
+ *
+ * @see hook_install()
+ *
+ */
+function cvs_common_header_install() {
+
+}
+
+
+/**
+ * Create new form element for menus link content.
+ *
+ * @param $sandbox
+ *
+ * @see hook_update_N()
+ *
+ */
+function cvs_common_header_update_8001(&$sandbox) {
+  // Install the configuration updates.
+  $config_path = drupal_get_path('module', 'cvs_common_header') . '/config/install';
+  $source = new FileStorage($config_path);
+  $config_storage = \Drupal::service('config.storage');
+  $config_storage->write('field.storage.menu_link_content.field_ch_featured_link', $source->read('field.storage.menu_link_content.field_ch_featured_link'));
+}
+
+/**
+ * Set show_logo_h1 to true by default for existing builds.
+ *
+ * @param $sandbox
+ *
+ * @see hook_update_N()
+ *
+ */
+function cvs_common_header_update_8002(&$sandbox) {
+  $config = \Drupal::configFactory()->getEditable('cvs_common_header.settings');
+  $config->set('show_logo_h1', TRUE);
+  $config->save();
+}

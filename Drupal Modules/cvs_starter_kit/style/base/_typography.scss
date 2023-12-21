@@ -1,0 +1,594 @@
+// 
+// Import Verne Fluid Typography
+// 
+@import 'verne-fluid-type';
+
+// Variables
+$verne-font-size-root-min: 16px;
+$verne-font-size-root-max: 21px;
+$verne-line-height-p2-min: 1.5; // 24px
+$verne-line-height-p2-max: 1.5238; // 32px
+$verne-vw-max: 1280px;
+$verne-vw-min: 600px;
+
+// Verne fluid typography overrides can go here
+// Root
+:root {
+  @include verne-fluid-type(
+    $verne-font-size-root-min,
+    $verne-font-size-root-max,
+    $verne-line-height-root-min,
+    $verne-line-height-root-max
+  )
+}
+
+// Title text 
+$verne-font-size-title-min: 48px;
+$verne-font-size-title-max: 90px;
+$verne-line-height-title-min: 1.2083; // 58px
+$verne-line-height-title-max: 1.2; // 108px
+
+body .title {
+  @include verne-fluid-type(
+    $verne-font-size-title-min,
+    $verne-font-size-title-max,
+    $verne-line-height-title-min,
+    $verne-line-height-title-max
+  );
+  font-weight: 500; // Medium
+  margin-bottom: 20px;
+}
+
+// Title text - smaller mobile
+$verne-font-size-title-smaller-mobile-min: 42px;
+$verne-font-size-title-smaller-mobile-max: 90px;
+$verne-line-height-title-smaller-mobile-min: 1.2381; // 52px
+$verne-line-height-title-smaller-mobile-max: 1.2; // 108px
+
+body .title-smaller-mobile {
+  @include verne-fluid-type(
+    $verne-font-size-title-smaller-mobile-min,
+    $verne-font-size-title-smaller-mobile-max,
+    $verne-line-height-title-smaller-mobile-min,
+    $verne-line-height-title-smaller-mobile-max
+  );
+  font-weight: 500; // Medium
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+// H1 (Header 1)
+$verne-font-size-h1-min: 36px;
+$verne-font-size-h1-max: 60px;
+$verne-line-height-h1-min: 1.2778; // 46px
+$verne-line-height-h1-max: 1.1613; // 72px
+
+body {
+    h1, .h1 {
+    @include verne-fluid-type(
+      $verne-font-size-h1-min,
+      $verne-font-size-h1-max,
+      $verne-line-height-h1-min,
+      $verne-line-height-h1-max
+    );
+    font-weight: 500; // Medium
+  }
+}
+
+// H2 (Header 2)
+$verne-font-size-h2-min: 28px;
+$verne-font-size-h2-max: 48px;
+$verne-line-height-h2-min: 1.2857; // 36px
+$verne-line-height-h2-max: 1.2083; // 58px
+
+body {
+  h2, .h2, p.h2 {
+    @include verne-fluid-type(
+      $verne-font-size-h2-min,
+      $verne-font-size-h2-max,
+      $verne-line-height-h2-min,
+      $verne-line-height-h2-max
+    );
+    font-weight: 500; // Medium
+    margin-top: 0;
+  }
+}
+
+// H3 (Header 3)
+$verne-font-size-h3-min: 24px;
+$verne-font-size-h3-max: 36px;
+$verne-line-height-h3-min: 1.3333; // 32px
+$verne-line-height-h3-max: 1.2778; // 46px
+
+body {
+  h3, .h3, .h3 > p, p.h3 {
+    @include verne-fluid-type(
+      $verne-font-size-h3-min,
+      $verne-font-size-h3-max,
+      $verne-line-height-h3-min,
+      $verne-line-height-h3-max
+    );
+    font-weight: 500; // Medium
+    margin-top: 0;
+  }
+}
+
+// H4 (Header 4)
+$verne-font-size-h4-min: 21px;
+$verne-font-size-h4-max: 28px;
+$verne-line-height-h4-min: 1.3333; // 28px
+$verne-line-height-h4-max: 1.2857; // 36px
+
+body {
+  h4, .h4, .h4 > p, p.h4, h3.h4 {
+    @include verne-fluid-type(
+      $verne-font-size-h4-min,
+      $verne-font-size-h4-max,
+      $verne-line-height-h4-min,
+      $verne-line-height-h4-max
+    );
+    font-weight: 500; // Medium
+  }
+}
+
+// Paragraph [1] text - page intro copy
+$verne-font-size-p1-min: 18px;
+$verne-font-size-p1-max: 24px;
+$verne-line-height-p1-min: 1.4444; // 26px
+$verne-line-height-p1-max: 1.3333; // 32px
+
+.p1,
+.p1 > p,
+p.p1 {
+  @include verne-fluid-type(
+    $verne-font-size-p1-min,
+    $verne-font-size-p1-max,
+    $verne-line-height-p1-min,
+    $verne-line-height-p1-max
+  );
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+// Paragraph 2 text
+$verne-font-size-p2-min: 16px;
+$verne-font-size-p2-max: 21px;
+$verne-line-height-p2-min: 1.5; // 24px
+$verne-line-height-p2-max: 1.5238; // 32px
+
+p,
+.p2,
+.p2 > p,
+p.p2,
+h3.p2 {
+  @include verne-fluid-type(
+    $verne-font-size-p2-min,
+    $verne-font-size-p2-max,
+    $verne-line-height-p2-min,
+    $verne-line-height-p2-max
+  );
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+// Paragraph 3 text
+$verne-font-size-p3-min: 14px;
+$verne-font-size-p3-max: 18px;
+$verne-line-height-p3-min: 1.4285; // 20px
+$verne-line-height-p3-max: 1.4444; // 26px
+
+.p3,
+.p3 > p,
+p.p3 {
+  @include verne-fluid-type(
+    $verne-font-size-p3-min,
+    $verne-font-size-p3-max,
+    $verne-line-height-p3-min,
+    $verne-line-height-p3-max
+  );
+  font-weight: 400;
+}
+
+// Paragraph 4 text
+$verne-font-size-p4-min: 14px;
+$verne-font-size-p4-max: 16px;
+$verne-line-height-p4-min: 1.4285; // 20px
+$verne-line-height-p4-max: 1.375; // 22px
+
+.p4,
+.p4 > p,
+p.p4,
+input.webform-button--submit {
+  @include verne-fluid-type(
+    $verne-font-size-p4-min,
+    $verne-font-size-p4-max,
+    $verne-line-height-p4-min,
+    $verne-line-height-p4-max
+  );
+  font-weight: 400;
+}
+
+// Paragraph 5 text
+$verne-font-size-p5-min: 16px;
+$verne-font-size-p5-max: 18px;
+$verne-line-height-p5-min: 1.5; // 24px
+$verne-line-height-p5-max: 1.5555; // 28px
+
+.p5,
+.p5 > p,
+p.p5 {
+  @include verne-fluid-type(
+    $verne-font-size-p5-min,
+    $verne-font-size-p5-max,
+    $verne-line-height-p5-min,
+    $verne-line-height-p5-max
+  );
+}
+
+// Paragraph 5 text
+$verne-font-size-p5-min: 16px;
+$verne-font-size-p5-max: 18px;
+$verne-line-height-p5-min: 1.5; // 24px
+$verne-line-height-p5-max: 1.5555; // 28px
+
+.p5,
+.p5 > p,
+p.p5 {
+  @include verne-fluid-type(
+    $verne-font-size-p5-min,
+    $verne-font-size-p5-max,
+    $verne-line-height-p5-min,
+    $verne-line-height-p5-max
+  );
+}
+// Case studies text
+.view-case-studies {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+// Statistics text
+$verne-font-size-stats-min: 48px;
+$verne-font-size-stats-max: 60px;
+$verne-line-height-stats-min: 1.2083; // 58px
+$verne-line-height-stats-max: 1.2; // 72px
+
+.stats,
+p.stats,
+h2.stats,
+h3.stats {
+  @include verne-fluid-type(
+    $verne-font-size-stats-min,
+    $verne-font-size-stats-max,
+    $verne-line-height-stats-min,
+    $verne-line-height-stats-max
+  );
+  font-weight: 500;
+}
+
+// Blockquote
+$verne-font-size-blockquote-min: 28px;
+$verne-font-size-blockquote-max: 60px;
+$verne-line-height-blockquote-min: 1.2857; // 36px
+$verne-line-height-blockquote-max: 1.2; // 72px
+
+blockquote {
+  @include verne-fluid-type(
+    $verne-font-size-blockquote-min,
+    $verne-font-size-blockquote-max,
+    $verne-line-height-blockquote-min,
+    $verne-line-height-blockquote-max
+  );
+  font-weight: 300; // Light
+  margin: 0;
+}
+
+// Blockquote figcaption cite
+$verne-font-size-cite-min: 18px;
+$verne-font-size-cite-max: 24px;
+$verne-line-height-cite-min: 1.4444; // 26px
+$verne-line-height-cite-max: 1.25; // 30px
+
+figcaption cite {
+  @include verne-fluid-type(
+    $verne-font-size-cite-min,
+    $verne-font-size-cite-max,
+    $verne-line-height-cite-min,
+    $verne-line-height-cite-max
+  );
+  font-weight: 400; // Regular
+  font-style: normal;
+}
+
+.cta-link-container button,
+.cta-link-container a {
+  padding-right: 24px;
+  padding-left: 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-decoration: none;
+}
+
+/* Styling for background-colors */
+.bg-color-red {
+  background-color: $cvs-red;
+}
+
+.bg-color-red-light {
+  background-color: $cvs-red-light;
+}
+
+.bg-color-red-dark {
+  background-color: $cvs-red-dark;
+}
+
+.bg-color-aco-blue {
+  background-color: $aco-blue;
+}
+
+.bg-color-blue {
+  background-color: $cvs-blue;
+}
+
+.bg-color-blue-light {
+  background-color: $cvs-light-blue
+}
+
+.bg-color-blue-dark {
+  background-color: $cvs-dark-blue;
+}
+
+.bg-color-navy {
+  background-color: $cvs-navy;
+}
+
+.bg-color-navy-light {
+  background-color: $cvs-navy-light;
+}
+
+.bg-color-navy-dark {
+  background-color: $cvs-navy-dark;
+}
+
+.bg-color-black {
+  background-color: $black;
+}
+
+.bg-color-dark-gray {
+  background-color: $cvs-gray-dark;
+}
+
+.bg-color-gray {
+  background-color: $cvs-grey-medium;
+}
+
+.bg-color-gray-alternative {
+  background-color: $cvs-grey-alternative;
+}
+
+.bg-color-gray-light {
+  background-color: $cvs-gray-light;
+}
+
+.bg-color-lightest-gray {
+  background-color: $cvs-gray-lightest;
+}
+
+.bg-color-white {
+  background-color: $white;
+}
+
+/* Special override class for when you want white bg with black links and text */
+.bg-color-white-text-color-black {
+  background-color: $white;
+  color: $black;
+
+  a {
+    color: $black !important;
+  }
+}
+
+.bg-color-blue,
+.bg-color-blue-light,
+.bg-color-blue-dark,
+.bg-color-aco-blue,
+.bg-color-red,
+.bg-color-red-light,
+.bg-color-red-dark,
+.bg-color-navy-light,
+.bg-color-navy,
+.bg-color-navy-dark,
+.bg-color-black,
+.bg-color-dark-gray,
+.bg-color-gray,
+.bg-color-gray-alternative,
+.bg-color-gray-light,
+.bg-color-lightest-gray,
+.bg-color-white {
+  .cta-link-container button,
+  .cta-link-container a {
+    padding-right: 24px;
+    padding-left: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-decoration: none;
+    background-color: $cvs-red;
+    color: $white;
+    border: $cvs-red 1px solid;
+
+    @include verne-fluid-type(
+      $verne-font-size-p2-min,
+      $verne-font-size-p2-max,
+      $verne-line-height-p2-min,
+      $verne-line-height-p2-max
+    );
+  }
+
+  .cta-link-container button:focus,
+  .cta-link-container button:hover,
+  .cta-link-container a:focus,
+  .cta-link-container a:hover {
+    color: $cvs-red;
+    background-color: $white;
+    text-decoration: underline;
+    border-color: $cvs-red 1px solid;
+  }
+}
+
+// External links
+a.ext svg.ext,
+a.ext svg.mailto {
+  width: 17px;
+  height: 18px;
+  padding-top: 3px;
+  padding-right: 0;
+  margin-left: 0.45em;
+  fill: currentColor;
+  font-weight: 500; 
+}
+a.ext svg.ext path,
+a.ext svg.mailto path {
+  stroke-width: 1;
+  stroke: currentColor; 
+}
+
+// External links and their SVGs
+a.ext {
+  svg.ext,
+  svg.mailto {
+    width: 17px;
+    height: 18px;
+    padding-top: 3px;
+    padding-right: 0;
+    // em scales best w/ font size
+    margin-left: 0.45em;
+    fill: currentColor;
+    font-weight: 500;
+
+    path {
+      stroke-width: 1;
+      stroke: currentColor;
+    }
+  } // svg.{ext|mailto}
+} // a.ext
+
+/* Styling for font colors when appearing over certain background-colors */
+.bg-color-red,
+.bg-color-red-light,
+.bg-color-red-dark,
+.bg-color-navy-light,
+.bg-color-navy,
+.bg-color-navy-dark,
+.bg-color-black,
+.bg-color-dark-gray,
+.bg-color-gray,
+.bg-color-gray-alternative {
+  color: $white;
+
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6,
+  .p1,
+  .p2,
+  .p3,
+  .p4 {
+    color: $white;
+  }
+
+  a,
+  nav.breadcrumb a {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+  
+  .button.outline {
+    background-color: $white;
+    text-decoration: none;
+  }
+
+  .stats, p.stats, h2.stats, h3.stats {
+    color: $white;
+  }
+}
+
+.bg-color-blue,
+.bg-color-blue-light,
+.bg-color-blue-dark,
+.bg-color-gray-light,
+.bg-color-lightest-gray,
+.bg-color-gray-alternative,
+.bg-color-white {
+  color: $black;
+
+  h1, .h1,
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6,
+  .p1,
+  .p2,
+  .p3,
+  .p4 {
+    color: $black;
+  }
+
+  a {
+    color: $cvs-red;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus {
+      color: $cvs-red-light;
+      text-decoration: none;
+    }
+    &:active {
+      color: $cvs-red-dark;
+      text-decoration: none;
+    }
+  }
+
+  nav.breadcrumb a {
+    color: $black;
+    text-decoration: underline;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $black;
+      text-decoration: none;
+    }
+  }
+
+  .stats, p.stats, h2.stats, h3.stats {
+    color: $cvs-red;
+  }
+}
+
+/*
+* Lobotomized owl for spacing control
+*/
+.title-smaller-mobile {
+  + p,
+  + h1,
+  + h2,
+  + h3,
+  + h4,
+  + h5 {
+    margin-top: 20px;
+  }
+}
+
+p:last-child {
+  margin-bottom: 0;
+}

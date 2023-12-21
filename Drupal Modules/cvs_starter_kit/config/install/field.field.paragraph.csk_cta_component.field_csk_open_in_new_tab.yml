@@ -1,0 +1,25 @@
+uuid: bf0d98ec-5f59-4681-a425-a908975a9614
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_open_in_new_tab
+    - paragraphs.paragraphs_type.csk_cta_component
+_core:
+  default_config_hash: S8kMwbhhuhYBmEA9HhRal-hBBWxTe33_0wJp8mn7pCM
+id: paragraph.csk_cta_component.field_csk_open_in_new_tab
+field_name: field_csk_open_in_new_tab
+entity_type: paragraph
+bundle: csk_cta_component
+label: 'Open in New Tab'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

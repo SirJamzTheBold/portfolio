@@ -1,0 +1,23 @@
+uuid: d35046a3-9427-4824-bc79-a386b987808b
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - entity_reference_revisions
+    - paragraphs
+_core:
+  default_config_hash: r2AKgvfGE3HY1TRR-sbETNAGm0YqgSbeX_Vb7nlOeDY
+id: block_content.field_csk_column_3_components
+field_name: field_csk_column_3_components
+entity_type: block_content
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

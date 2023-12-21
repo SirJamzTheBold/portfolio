@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html ng-app="app" lang="en" ng-strict-di>
+
+  <head profile="http://www.w3.org/1999/xhtml/vocab">
+    <title>Dive Deep</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta property="og:url" content="dive-deep" />
+    <meta property="og:title" content="Dive Deep: 360 Experience" />
+    <meta property="og:description" content="Dive deep into the waters off the coast of Belize to experience the true beauty of our Coral Reef." />
+
+    <style>
+      .modal-backdrop {
+        background-color: rgba(0, 0, 0, .75) !important;
+      }
+    </style>
+
+    <script src='./js/vendor/jquery-3.7.1.min.js'></script>
+    <script src='./js/vendor/smoothscroll.js'></script>
+    <script src='./js/vendor/rainbow.min.js'></script>
+    <script src='./js/vendor/scrollax.min.js'></script>
+    <script src='./js/vendor/basicScroll.min.js'></script>
+    <script src='./js/dive-deep.js'></script>
+    <link rel='stylesheet' href='./dive-deep.css'></script>
+
+  </head>
+  <body class="html not-front not-logged-in no-sidebars page-node page-node- page-node-44073926 node-type-stand-alone-page i18n-en" >
+    <script>$('html').addClass('noMax');</script>
+    <section id="page-content">
+      <!-- dive deep landing page content -->
+      <div id="wrapper">
+        <header>
+          <a id="mbl-about" class="fixed" href="/dive-deep/about" title="About the Dive"><i class="fa fa-info-circle" aria-hidden="true"></i></a>
+          <a id="mbl-share" href="javascript:void(0);" title="Share This"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></a>
+          <h1 id="mbl-header">Dive Deep</h1>
+          <h1 id="header" class="header">Dive Deep</h1>
+          <div class="header-container">
+            <p>
+              Dive deep into the waters off the coast of Belize to experience the true beauty of our Coral Reef.
+              <br /><br />
+              <a id="scroll-down" href="#experience">Scroll Down</a>
+            </p>
+            
+          </div>
+        </header>
+
+        <!-- parallax -->
+        <div id="scroll-container">
+          <div class="parent">
+            <div id="sea-mask"></div>
+
+            <div id="turtle">
+              <img src="./images/sea-turtle.png">
+            </div>
+
+            <div id="shark">
+              <img src="./images/nurse-shark.png">
+            </div>
+
+            <div id="diver">
+              <img src="./images/scuba.png">
+            </div>
+
+            <div id="diver_sm">
+              <img src="./images/scuba-small.png">
+            </div>
+
+            <div id="lg_butterfly"">
+              <img src="./images/chevroned-butterflyfish.png">
+            </div>
+
+            <div id="med_butterfly_bottom"">
+              <img src="./images/chevroned-butterflyfish.png">
+            </div>
+
+            <div id="med_butterfly">
+              <img src="./images/chevroned-butterflyfish.png">
+            </div>
+
+            <div id="sm_butterfly">
+              <img src="./images/chevroned-butterflyfish.png">
+            </div>
+
+            <div id="xs_butterfly">
+              <img src="./images/chevroned-butterflyfish.png">
+            </div>
+
+            <div id="parrotfish">
+              <img src="./images/parrotfish.png">
+            </div>
+
+            <div id="lg_angelfish">
+              <img src="./images/french-angelfish.png">
+            </div>
+
+            <div id="sm_angelfish">
+              <img src="./images/french-angelfish.png">
+            </div>
+
+            <div id="xs_angelfish">
+              <img src="./images/french-angelfish.png">
+            </div>
+
+            <div id="xxs_angelfish">
+              <img src="./images/french-angelfish.png">
+            </div>
+
+            <ul id="particles" class="particles"></ul>
+          </div>
+        </div>
+
+        <div class="light-mask" id="light-mask1">
+          <img src="./images/light-beam.png" alt="Light Beam">
+        </div>
+
+        <div class="light-mask" id="light-mask2">
+          <img src="./images/light-beam.png" alt="Light Beam">
+        </div>
+
+        <div class="light-mask" id="light-mask3">
+          <img src="./images/light-beam.png" alt="Light Beam">
+        </div>
+
+        <div id="experience">
+          <div id="cta">
+            <a href="https://www.youtube.com/embed/If3LUJ-KiQA?wmode=transparent&amp;rel=0&amp;showinfo=0" target="_blank">
+              Begin your 360&deg;<br /> experience
+            </a>
+          </div>
+        </div>
+
+        <div id="coral">
+          <h3>A co-production by MIT and the Museum of Science, Boston</h3>
+          <img src="./images/coral-reef.png" alt="Coral Reef"/>
+        </div>
+
+        <div id="loading-message">
+          <div id="loading-message-text">
+            <span class="fa fa-spin"><img src="./images/loader.png" alt="Loading"></span>
+            <span id="loading">Loading</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- modal backdrop -->
+    <div id="modal-backdrop"></div>
+	</body>
+</html>

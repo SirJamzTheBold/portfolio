@@ -1,0 +1,25 @@
+uuid: 66bafd53-9d1e-431f-89dc-c80e48231903
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_number_of_columns
+    - paragraphs.paragraphs_type.csk_statistics_component
+  module:
+    - options
+_core:
+  default_config_hash: dv9Xe-b7SWl6J9_0FQ7e-NsWJn6BC4GFXjes7RlQvKY
+id: paragraph.csk_statistics_component.field_csk_number_of_columns
+field_name: field_csk_number_of_columns
+entity_type: paragraph
+bundle: csk_statistics_component
+label: 'Number of Columns'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: two-column
+default_value_callback: ''
+settings: {  }
+field_type: list_string

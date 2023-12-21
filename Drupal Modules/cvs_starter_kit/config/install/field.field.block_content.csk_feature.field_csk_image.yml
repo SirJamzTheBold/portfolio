@@ -1,0 +1,29 @@
+uuid: 371361b1-66de-48c6-926e-b9c5668e7bb3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_feature
+    - field.storage.block_content.field_csk_image
+    - media.type.image
+id: block_content.csk_feature.field_csk_image
+field_name: field_csk_image
+entity_type: block_content
+bundle: csk_feature
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

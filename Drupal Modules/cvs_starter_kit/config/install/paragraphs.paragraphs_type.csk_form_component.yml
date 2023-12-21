@@ -1,0 +1,12 @@
+uuid: b340b298-ac6a-468d-82fa-9d87a39a697f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: CT8XJm-I_YL3D3cih3Lcnkq4MgNsjm5FxB2yEHZHT-8
+id: csk_form_component
+label: 'CSK Form Component'
+icon_uuid: null
+icon_default: null
+description: 'A component that allows you to embed the webform on a page.'
+behavior_plugins: {  }

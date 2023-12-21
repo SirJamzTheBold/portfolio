@@ -1,0 +1,29 @@
+uuid: 908ac8bd-1a7b-4876-aeff-056e214b34c7
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: d_Dh4IY2aa7ICF-PIdNrs4JYPV9F81zxsTS8tHMCAdg
+id: paragraph.field_csk_link_role
+field_name: field_csk_link_role
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: link
+      label: Link
+    -
+      value: button
+      label: Button
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

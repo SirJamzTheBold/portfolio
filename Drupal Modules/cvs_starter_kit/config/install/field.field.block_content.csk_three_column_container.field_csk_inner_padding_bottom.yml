@@ -1,0 +1,23 @@
+uuid: db8af161-4600-4948-a4c1-a3740c22207e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_three_column_container
+    - field.storage.block_content.field_csk_inner_padding_bottom
+  module:
+    - options
+id: block_content.csk_three_column_container.field_csk_inner_padding_bottom
+field_name: field_csk_inner_padding_bottom
+entity_type: block_content
+bundle: csk_three_column_container
+label: 'Inner Padding Bottom'
+description: 'Only has effect for Individual Box Layout and Single Box Layout.'
+required: false
+translatable: true
+default_value:
+  -
+    value: padding-bottom-20
+default_value_callback: ''
+settings: {  }
+field_type: list_string

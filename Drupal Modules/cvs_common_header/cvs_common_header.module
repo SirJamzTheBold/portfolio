@@ -1,0 +1,164 @@
+<?php
+
+/**
+ * @file
+ * Contains cvs_common_header.module.
+ */
+
+use Drupal\Core\Entity\EntityTypeInterface;
+use Drupal\Core\Field\BaseFieldDefinition;
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function cvs_common_header_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the cvs_common_header module.
+    case 'help.page.cvs_common_header':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Common Header for CVS sites') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function cvs_common_header_theme_suggestions_menu_alter(array &$suggestions, array $variables) {
+  $primary = \Drupal::config('cvs_common_header.settings')->get('primary_menu');
+  $secondary = \Drupal::config('cvs_common_header.settings')->get('secondary_menu');
+
+  if (!empty($variables['menu_name']) && ($variables['menu_name'] == $primary || $variables['menu_name'] == $secondary)) {
+    $suggestions[] = 'menu--cvs-common-header';
+  }
+}
+
+function cvs_common_header_preprocess_menu(&$variables) {
+  $url_fragments = explode('/', $_SERVER['REQUEST_URI']);
+  if (!empty($url_fragments[1])) {
+    $variables['current_url'] = '/' . $url_fragments[1];
+  }
+   if (!empty($url_fragments[2])) {
+    $variables['current_url'] = '/' . $url_fragments[1] . '/' . $url_fragments[2];
+  }
+  if (!empty($url_fragments[3])) {
+    $variables['current_url'] = '/' . $url_fragments[1] . '/' . $url_fragments[2] . '/' . $url_fragments[3];
+  }
+
+  // Build active trail options.
+  $active_trail_urls = [];
+  if (!empty($url_fragments)) {
+    $active_trail_url = "";
+    foreach ($url_fragments as $url_fragment) {
+      if (empty($url_fragment) && !(\Drupal::service('path.matcher')->isFrontPage() && ($_SERVER['REQUEST_URI'] == '/'))) {
+        continue;
+      }
+      $active_trail_url .= "/{$url_fragment}";
+      $active_trail_urls[] = $active_trail_url;
+    }
+
+    // Recursively get all menu link IDs in active trail and their parents.
+    $active_trail_link_ids = _cvs_common_header_recurse_get_active_menu_link_id($variables['items'], $active_trail_urls);
+    if (!empty($active_trail_link_ids)) {
+      _cvs_common_header_recurse_attach_active_menu_link_class($variables['items'], $active_trail_link_ids);
+    }
+  }
+
+}
+
+/**
+ * Recursively determine menu link IDs in active trail.
+ *
+ * @param array $items
+ *   The menu links.
+ * @param array $active_trail_urls
+ *   The active trail ID options.
+ * @param array $parents
+ *   The parents of current menu.
+ *
+ * @return array
+ *   The menu link IDs in active trail.
+ */
+function _cvs_common_header_recurse_get_active_menu_link_id(array &$items, array $active_trail_urls, array &$parents = []) {
+
+  $return = [];
+
+  foreach ($items as $menu_link_id => $child) {
+
+    /** @var \Drupal\Core\Url $child_url */
+    $child_url = $child['url'];
+    if (in_array($child_url->toString(), $active_trail_urls)) {
+      $return[$menu_link_id] = $menu_link_id;
+
+      // Also add parents.
+      foreach ($parents as $parent) {
+        $return[$parent] = $parent;
+      }
+    }
+
+    if (!empty($child['below'])) {
+      $parents[] = $menu_link_id;
+      $return = array_merge($return, _cvs_common_header_recurse_get_active_menu_link_id($child['below'], $active_trail_urls, $parents));
+      $parents = [];
+    }
+
+  }
+
+  return $return;
+}
+
+/**
+ * Recursively add active trail class to matching links and their parents.
+ *
+ * @param array $items
+ *   The menu links.
+ * @param array $active_trail_link_ids
+ *   The active trail ID options.
+ */
+function _cvs_common_header_recurse_attach_active_menu_link_class(array &$items, array $active_trail_link_ids) {
+  foreach ($items as $menu_link_id => &$child) {
+
+    if (in_array($menu_link_id, $active_trail_link_ids) || array_intersect(array_keys($child['below']), $active_trail_link_ids)) {
+      $child['in_active_trail'] = TRUE;
+    }
+
+    if (!empty($child['below'])) {
+      _cvs_common_header_recurse_attach_active_menu_link_class($child['below'], $active_trail_link_ids);
+    }
+  }
+
+}
+
+/**
+ * Implements hook_theme().
+ */
+function cvs_common_header_theme() {
+  return [
+    'cvs_common_header' => [
+      'render element' => 'children',
+      'variables'      => ['data' => NULL],
+    ],
+
+    'menu--cvs-common-header' => [
+      'base hook' => 'menu',
+      'render element' => 'menu',
+    ]
+  ];
+}
+
+
+/**
+ * Uses hook_entity_base_field_info_alter.
+ * @param                     $fields
+ * @param EntityTypeInterface $entity_type
+ */
+function cvs_common_header_entity_base_field_info_alter(&$fields, EntityTypeInterface $entity_type)
+{
+  // Set the field to false if it exists.
+  if (!empty($fields['machine_name'])) {
+    $fields['machine_name']->setRequired(FALSE);
+    $fields['machine_name']->setDisplayOptions('form', []);
+    $fields['template_suggestion']->setDisplayOptions('form', []);
+  }
+}

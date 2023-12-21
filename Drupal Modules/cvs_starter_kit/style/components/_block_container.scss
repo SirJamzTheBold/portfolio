@@ -1,0 +1,24 @@
+.block-one-column-container {
+  .block-one-column-container-inner {
+    width: calc(100% - 40px);
+    margin: auto;
+  }
+
+  &.width-800 {
+    .block-one-column-container-inner {
+      max-width: 800px;
+    }
+  }
+
+  &.width-1220 {
+    .block-one-column-container-inner {
+      max-width: 1220px;
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .block-one-column-container {
+    max-width: 100%;
+  }
+}

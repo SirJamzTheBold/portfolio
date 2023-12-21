@@ -1,0 +1,23 @@
+uuid: f1e8efc7-1a12-4d53-8b17-6015ff895ad5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_video_type
+    - paragraphs.paragraphs_type.csk_vimeo_video
+  module:
+    - options
+id: paragraph.csk_vimeo_video.field_csk_video_type
+field_name: field_csk_video_type
+entity_type: paragraph
+bundle: csk_vimeo_video
+label: 'Video Type'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: video-gif
+default_value_callback: ''
+settings: {  }
+field_type: list_string

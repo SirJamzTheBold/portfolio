@@ -1,0 +1,10 @@
+uuid: 3bb3202b-436b-4da2-93ea-22d139e1c4e5
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Db6rBaDS2AhgunhgYkcso0Xse2-nBG2A5wxN3K8G7oQ
+id: csk_footer
+label: 'CSK Footer'
+revision: 0
+description: 'Common CVS Footer.'

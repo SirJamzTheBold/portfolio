@@ -1,0 +1,9 @@
+//
+// Import Verne Fluid Typography
+//
+// override any verne variable defaults here
+$verne-vw-max: 1600px;
+$verne-vw-min: 1024px;
+// then import verne-fluid-type so default
+// overrides are utilized in calculations
+@import 'verne-fluid-type';

@@ -1,0 +1,17 @@
+{
+    "name": "add-cvs/cvs_starter_kit",
+    "type": "drupal-addventures-module",
+    "description": "Adds a set of starter components with standard styles.",
+    "keywords": [
+    ],
+    "homepage": "https://www.github.com/add-cvs/cvs_starter_kit",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.github.com/add-cvs/cvs_starter_kit",
+        "source": "https://www.github.com/add-cvs/cvs_starter_kit"
+    },
+    "require": {
+        "drupal/paragraphs": "^1.15",
+        "drupal/twig_tweak": "^3.2"
+    }
+}

@@ -1,0 +1,31 @@
+uuid: 1bad9dcd-c272-45f1-8ef9-d0a3f50958bb
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_interior_header
+    - field.storage.block_content.field_csk_image
+    - media.type.image
+_core:
+  default_config_hash: NREx1azxOSgS1jyQ0vQ6INd5YqVl7iBiCA2R-breQQc
+id: block_content.csk_interior_header.field_csk_image
+field_name: field_csk_image
+entity_type: block_content
+bundle: csk_interior_header
+label: Image
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

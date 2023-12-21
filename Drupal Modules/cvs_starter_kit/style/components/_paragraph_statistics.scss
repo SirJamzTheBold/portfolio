@@ -1,0 +1,111 @@
+/*
+* Statistics container block
+*/
+.paragraph--type--csk-statistics-component {
+  .field--name-field-csk-statistics {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding-left: 0;
+
+    @include for-phone-only {
+      width: 100%;
+      display: block;
+    }
+
+    .single-statistic {
+      list-style: none;
+
+      @include for-phone-only {
+        margin-bottom: 30px;
+      }
+
+      &:last-child {
+        @include for-phone-only {
+          margin-bottom: 0;
+        }
+      }
+
+      .stats {
+        margin-top: 0px;
+      }
+
+      .field--name-field-image {
+        width: 50%;
+        height: auto;
+      }
+    }
+  }
+
+  // Two column layout
+  &.one-column {
+    .field--name-field-csk-statistics {
+      @include verne-fluid-margin-bottom(-30px, -60px); // Bottom spacing after list to make up for list item padding
+
+      .single-statistic {
+        width: 100%;
+        @include verne-fluid-margin-bottom(30px, 60px); // Space between each list item
+      }
+    }
+  }
+
+  // Two column layout
+  &.two-column {
+    .field--name-field-csk-statistics {
+      @include verne-fluid-margin-bottom(-30px, -60px); // Bottom spacing after list to make up for list item padding
+
+      .single-statistic {
+        width: calc(50% - 20px);
+        @include verne-fluid-margin-bottom(30px, 60px); // Space between each list item
+
+        // At mobile span full width
+        @include for-phone-only {
+          width: 100%;
+        }
+      }
+
+      .single-statistic:nth-child(odd) {
+        margin-right: 20px;
+
+        @include for-phone-only {
+          margin-right: 20px;
+        }
+      }
+
+      .single-statistic:nth-child(even) {
+        margin-left: 20px;
+
+        @include for-phone-only {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+
+  // Three column layout
+  &.three-column {
+    .field--name-field-csk-statistics {
+      @include verne-fluid-margin-bottom(-30px, -60px); // Bottom spacing after list to make up for list item padding
+
+      .single-statistic {
+        width: calc(33.33% - 27px);
+        @include verne-fluid-margin-bottom(30px, 60px); // Space between each list item
+
+        // At mobile span full width
+        @include for-phone-only {
+          width: 100%;
+        }
+      }
+
+      .single-statistic:nth-child(3n + 2) {
+        margin-left: 40px;
+        margin-right: 40px;
+
+        @include for-phone-only {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

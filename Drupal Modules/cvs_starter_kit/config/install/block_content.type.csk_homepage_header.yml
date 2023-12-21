@@ -1,0 +1,10 @@
+uuid: 1f43514a-f8b6-4c02-a567-46325c5eb50a
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: pmlV4o7-7JK2yly2eZJilK4Rxj_Yk-zVefaHCDVejyk
+id: csk_homepage_header
+label: 'CSK Homepage Header'
+revision: 0
+description: 'Header commonly used on the homepage. Has a large hero image with a floating block for text.'

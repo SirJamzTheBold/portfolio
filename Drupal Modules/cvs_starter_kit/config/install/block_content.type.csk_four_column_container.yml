@@ -1,0 +1,10 @@
+uuid: 4ef17d6f-e240-4c92-b65d-29dc46f48a88
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: F4OxHsUbRFVTf-FqEve1eO7bQBnOgw287PRhyXprJLw
+id: csk_four_column_container
+label: 'CSK Four Column Container'
+revision: 0
+description: "Content arranged in a four columns column. Side by side at desktop and one after another on mobile. Each column contain an arbitrary amount of images/text/videos.\t"

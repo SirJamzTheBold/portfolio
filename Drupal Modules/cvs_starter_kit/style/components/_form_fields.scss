@@ -1,0 +1,97 @@
+@import 'verne-fluid-type';
+
+// Styling for webform body layout
+.page-node-type-webform {
+
+  .node--type-webform {
+    max-width: 1200px;
+    width: calc(100% - 80px);
+    margin: 0 auto;
+    @include verne-fluid-padding-top(40px, 80px);
+
+    @include for-phone-only {
+      width: 100%;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
+
+  article > .node__content {
+    max-width: 800px;
+    width: 100%;
+    margin: 0;
+  }
+
+  // Default styling for form fields
+  .form-item {
+
+    label {
+      font-weight: bold;
+      @include verne-fluid-type-scale(
+        $verne-font-size-root-min,
+        $verne-font-size-root-max,
+        $verne-line-height-root-min,
+        $verne-line-height-root-max,
+        'scale-down',
+        1
+      );
+
+      &.form-required {
+        &:after {
+          color: $cvs-red;
+          margin-left: 5px;
+        }
+      }
+    }
+
+    input,
+    textarea,
+    select {
+      background-color: $white;
+      color: $black;
+      border: 1px solid $black;
+      padding: 14px;
+      
+      &.error {
+        background-color: $cvs-gray-light;
+        border-color: $cvs-red;
+      }
+
+      .error-message {
+        color: $cvs-red;
+        font-weight: normal;
+        @include verne-fluid-type-scale(
+          $verne-font-size-root-min,
+          $verne-font-size-root-max,
+          $verne-line-height-root-min,
+          $verne-line-height-root-max,
+          'scale-down',
+          1
+        );
+      }
+    }
+
+    select {
+      background-image: url('/modules/add/cvs_starter_kit/src/images/downarrow-black.svg');
+      background-position: right;
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+    }
+
+    // For phone number and description
+    .label-and-desc {
+      display: flex;
+      align-items: center;
+
+      // Phone number title
+      label {
+        width: auto !important;
+        margin-right: 10px;
+      }
+
+      .description {
+        margin-top: -15px;
+      }
+    }
+  }
+}

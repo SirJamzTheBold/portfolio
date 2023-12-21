@@ -1,0 +1,21 @@
+uuid: 9ae06fd8-e3fe-420a-b259-53ea0dc103fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_two_column_container
+    - field.storage.block_content.field_csk_anchor_link
+_core:
+  default_config_hash: 7z_PCeyvlw5ETO3hif6PdV-7QOgph7KrWNOsSaTaioA
+id: block_content.csk_two_column_container.field_csk_anchor_link
+field_name: field_csk_anchor_link
+entity_type: block_content
+bundle: csk_two_column_container
+label: 'Anchor Link'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

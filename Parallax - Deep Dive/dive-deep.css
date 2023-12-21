@@ -1,0 +1,910 @@
+@import "https://fonts.googleapis.com/css?family=Spinnaker";
+html {
+  margin: 0;
+  padding: 0;
+}
+html body {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+  font-size: 12px;
+  background: #000e2a;
+  background: -moz-linear-gradient(
+    left,
+    #000e2a 0%,
+    #002357 23%,
+    #00497a 51%,
+    #002357 78%,
+    #000e2a 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, #000e2a),
+    color-stop(23%, #002357),
+    color-stop(51%, #00497a),
+    color-stop(78%, #002357),
+    color-stop(100%, #000e2a)
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #000e2a 0%,
+    #002357 23%,
+    #00497a 51%,
+    #002357 78%,
+    #000e2a 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    #000e2a 0%,
+    #002357 23%,
+    #00497a 51%,
+    #002357 78%,
+    #000e2a 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    #000e2a 0%,
+    #002357 23%,
+    #00497a 51%,
+    #002357 78%,
+    #000e2a 100%
+  );
+  background: linear-gradient(
+    to right,
+    #000e2a 0%,
+    #002357 23%,
+    #00497a 51%,
+    #002357 78%,
+    #000e2a 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#000e2a", endColorstr="#000e2a", GradientType=1 );
+  color: #fff;
+}
+#wrapper {
+  overflow: hidden;
+  position: relative;
+}
+#ocean-top {
+  width: 100%;
+  position: absolute;
+  top: -150px;
+  left: 0;
+  z-index: -1;
+}
+header {
+  z-index: 1000;
+  position: absolute;
+  width: 96%;
+  top: 0;
+  padding: 10px 2%;
+}
+header h1 {
+  clear: both;
+  overflow: hidden;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border: 2px solid #fff;
+  font-family: "Spinnaker", sans-serif;
+}
+header h1#header {
+  display: block;
+  margin: 0 auto;
+  padding: 20px 0px;
+  font-size: 46px;
+  line-height: 0.9em !important;
+  left: -50%;
+  position: absolute;
+  top: 320px;
+  width: 25%;
+  left: 37.5%;
+}
+header h1.fixed {
+  display: block;
+  position: absolute;
+  top: 20px;
+  margin: 0;
+  font-size: 23px;
+  padding: 11px 2.5%;
+  width: 15%;
+  left: 40%;
+}
+header h1#mbl-header {
+  display: none;
+}
+header p {
+  text-align: center;
+  max-width: 600px;
+  font-size: 22px;
+  line-height: 1.2em;
+  font-family: "Spinnaker", sans-serif;
+  position: relative;
+  margin: 0px auto;
+  font-weight: normal;
+}
+header .header-container {
+  position: absolute;
+  top: 450px;
+  left: 0;
+  width: 80%;
+  padding: 0 10%;
+}
+header .header-container a {
+  font-family: "Spinnaker", sans-serif;
+  color: #fff;
+}
+header .header-container a:hover {
+  text-decoration: none;
+}
+header #mbl-share {
+  display: none;
+}
+header #about-link {
+  position: fixed;
+  float: left;
+  font-size: 22px;
+  font-family: "Spinnaker", sans-serif;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 25px 0;
+}
+header #mbl-about {
+  display: none;
+}
+#player {
+  display: none;
+  height: 100%;
+  background: rgba(0, 14, 42, 0.8);
+  width: 100%;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+#player #exit {
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  position: absolute;
+  width: 10%;
+  top: 10px;
+  right: 0;
+  z-index: 1000;
+  cursor: pointer;
+}
+#player #video {
+  width: 100%;
+  display: table-cell;
+  vertical-align: middle;
+}
+#player #video iframe {
+  background: transparent;
+}
+#experience {
+  font-family: "Spinnaker", sans-serif;
+  font-size: 46px;
+  line-height: 1em;
+  position: absolute;
+  text-align: center;
+  top: 80%;
+  width: 80%;
+  margin: 0 10%;
+  padding: 200px 0 0 0;
+  z-index: 100;
+}
+#experience #mbl-youtube {
+  display: none;
+  font-size: 16px;
+}
+#experience #cta {
+  display: inline-block;
+  transition: color 0.3s ease;
+}
+#experience #cta a {
+  color: #fff;
+  text-decoration: underline;
+}
+#experience #cta a:hover {
+  text-decoration: none;
+}
+#experience #cta .fa-play-circle {
+  margin: 5px 0;
+  display: block;
+  font-size: 100px;
+}
+#experience #cta:hover {
+  cursor: pointer;
+  color: #00c4e5;
+}
+#coral {
+  margin-bottom: -40px;
+  width: 100%;
+  position: relative;
+  height: 1000px;
+}
+#coral h3 {
+  font-size: 20px;
+  position: absolute;
+  bottom: 80px;
+  width: 100%;
+  text-align: center;
+  z-index: 200;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  text-shadow: 1px 1px 3px #001872;
+}
+#coral img {
+  position: absolute;
+  bottom: 0;
+  z-index: 40;
+  width: 100%;
+  border: 0;
+}
+.light-mask {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  margin: 0 auto;
+  text-align: center;
+  opacity: 0.1;
+  z-index: 30;
+}
+#light-mask1 {
+  left: -25%;
+}
+#light-mask2 {
+  left: 25%;
+}
+#light-mask3 {
+  left: 75%;
+}
+#loading-message {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  z-index: 9999;
+  font-family: arial;
+  font-size: 12px;
+  background: #000e2a;
+  background: -moz-linear-gradient(
+    left,
+    #000e2a 0%,
+    #002357 23%,
+    #00497a 51%,
+    #002357 78%,
+    #000e2a 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    right top,
+    color-stop(0%, #000e2a),
+    color-stop(23%, #002357),
+    color-stop(51%, #00497a),
+    color-stop(78%, #002357),
+    color-stop(100%, #000e2a)
+  );
+  background: -webkit-linear-gradient(
+    left,
+    #000e2a 0%,
+    #002357 23%,
+    #00497a 51%,
+    #002357 78%,
+    #000e2a 100%
+  );
+  background: -o-linear-gradient(
+    left,
+    #000e2a 0%,
+    #002357 23%,
+    #00497a 51%,
+    #002357 78%,
+    #000e2a 100%
+  );
+  background: -ms-linear-gradient(
+    left,
+    #000e2a 0%,
+    #002357 23%,
+    #00497a 51%,
+    #002357 78%,
+    #000e2a 100%
+  );
+  background: linear-gradient(
+    to right,
+    #000e2a 0%,
+    #002357 23%,
+    #00497a 51%,
+    #002357 78%,
+    #000e2a 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#000e2a", endColorstr="#000e2a", GradientType=1 );
+  color: #fff;
+  color: #fff;
+}
+#loading-message #loading-message-text {
+  position: absolute;
+  top: 35%;
+  font-size: 14px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+#loading-message #loading-message-text .fa-spin {
+  display: inline-block;
+}
+#loading-message #loading-message-text #loading {
+  display: inline-block;
+  margin: 20px 0;
+  width: 100%;
+}
+#scroll-container {
+  height: 3000px;
+  background-image: url("././images/water-top.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100%;
+}
+#scroll-container #sea-mask {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background-color: navy;
+  opacity: var(--sea-mask-opacity);
+  z-index: 100;
+}
+#scroll-container pre {
+  text-align: left;
+}
+#scroll-container h1,
+#scroll-container h2 {
+  margin: 0;
+  color: #fff;
+}
+#scroll-container .parent {
+  width: 100%;
+  height: 100%;
+}
+#scroll-container .pos {
+  width: 400px;
+  margin: 50px auto;
+  padding: 15px 25px;
+  font-size: 1em;
+  background: #fff;
+  line-height: 1.6;
+}
+#scroll-container .particles {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  overflow: hidden;
+}
+#scroll-container .particles li {
+  list-style: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  background: rgba(111, 172, 207, 0.4);
+  pointer-events: none;
+}
+#scroll-container #turtle {
+  opacity: 0.5;
+  position: absolute;
+  top: var(--turtle-top);
+  left: var(--turtle-left);
+}
+#scroll-container #turtle img {
+  width: 100%;
+  -ms-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+#scroll-container #lg_eel_flopper {
+  opacity: 0.9;
+  position: absolute;
+  top: 3650px;
+  left: 57%;
+}
+#scroll-container #lg_eel_flopper img {
+  width: 60%;
+}
+#scroll-container #diver {
+  opacity: 1;
+  position: absolute;
+  top: var(--diver-top);
+  left: var(--diver-left);
+  opacity: var(--diver-opacity);
+}
+#scroll-container #diver img {
+  width: var(--diver-width);
+  height: auto;
+  -ms-transform: rotate(15deg);
+  -webkit-transform: rotate(15deg);
+  transform: rotate(15deg);
+}
+#scroll-container #diver_sm {
+  opacity: 1;
+  position: absolute;
+  top: var(--diver-sm-top);
+  right: var(--diver-sm-right);
+}
+#scroll-container #diver_sm img {
+  width: 75%;
+  -ms-transform: rotate(-4deg);
+  -webkit-transform: rotate(-4deg);
+  transform: rotate(-4deg);
+}
+#scroll-container #lg_butterfly {
+  opacity: 0.9;
+  position: absolute;
+  top: 900px;
+  left: var(--lg-butterfly-left);
+  z-index: 30;
+}
+#scroll-container #lg_butterfly img {
+  width: 90%;
+  -ms-transform: rotate(8deg);
+  -webkit-transform: rotate(8deg);
+  transform: rotate(8deg);
+}
+#scroll-container #med_butterfly_bottom {
+  opacity: 0.7;
+  position: absolute;
+  top: 1200px;
+  left: var(--med-butterfly-bottom-left);
+}
+#scroll-container #med_butterfly_bottom img {
+  width: 50%;
+  -ms-transform: rotate(8deg);
+  -webkit-transform: rotate(8deg);
+  transform: rotate(8deg);
+}
+#scroll-container #med_butterfly {
+  opacity: 0.8;
+  position: absolute;
+  top: 750px;
+  left: var(--med-butterfly-left);
+}
+#scroll-container #med_butterfly img {
+  width: 60%;
+}
+#scroll-container #sm_butterfly {
+  opacity: 0.7;
+  position: absolute;
+  top: 700px;
+  left: var(--sm-butterfly-left);
+}
+#scroll-container #sm_butterfly img {
+  width: 30%;
+}
+#scroll-container #xs_butterfly {
+  opacity: 0.6;
+  position: absolute;
+  top: 800px;
+  left: var(--xs-butterfly-left);
+}
+#scroll-container #xs_butterfly img {
+  width: 20%;
+  -ms-transform: rotate(8deg);
+  -webkit-transform: rotate(8deg);
+  transform: rotate(8deg);
+}
+#scroll-container #parrotfish {
+  opacity: 0.9;
+  position: absolute;
+  top: 2600px;
+  left: var(--parrotfish-left);
+  z-index: 30;
+}
+#scroll-container #parrotfish img {
+  width: 30%;
+  -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+#scroll-container #lg_angelfish {
+  opacity: 0.9;
+  position: absolute;
+  top: 800px;
+  right: var(--lg-angelfish-right);
+}
+#scroll-container #lg_angelfish img {
+  width: 32%;
+  -ms-transform: rotate(-10deg);
+  -webkit-transform: rotate(-10deg);
+  transform: rotate(-10deg);
+}
+#scroll-container #sm_angelfish {
+  opacity: 0.6;
+  position: absolute;
+  top: 1120px;
+  right: var(--sm-angelfish-right);
+}
+#scroll-container #sm_angelfish img {
+  width: 20%;
+}
+#scroll-container #xs_angelfish {
+  opacity: 0.5;
+  position: absolute;
+  top: 1250px;
+  right: var(--xs-angelfish-right);
+}
+#scroll-container #xs_angelfish img {
+  width: 10%;
+}
+#scroll-container #xxs_angelfish {
+  opacity: 0.4;
+  position: absolute;
+  top: 1000px;
+  right: var(--xxs-angelfish-right);
+}
+#scroll-container #xxs_angelfish img {
+  width: 8%;
+}
+#scroll-container #shark {
+  opacity: 1;
+  position: absolute;
+  top: 3450px;
+  left: var(--shark-left);
+  z-index: 99;
+}
+#scroll-container #shark img {
+  width: 75%;
+  -ms-transform: rotate(-6deg);
+  -webkit-transform: rotate(-6deg);
+  transform: rotate(-6deg);
+}
+.about {
+  clear: both;
+  overflow: hidden;
+  margin: 100px 0 50px 0;
+  width: 90%;
+  padding: 0 5%;
+}
+.about .flexslider {
+  border: 0;
+  border-radius: 15px;
+  background: transparent;
+}
+.about .slider {
+  width: 90%;
+  margin: 60px 5%;
+  clear: both;
+  overflow: hidden;
+}
+.about .slider ul li {
+  list-style: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.about .slider img {
+  border: 0;
+  border-radius: 15px;
+  width: 100%;
+  max-width: none;
+  float: none;
+}
+.about img {
+  float: right;
+  width: 40%;
+  max-width: 600px;
+}
+.about img#map-diagram {
+  width: 30%;
+  max-width: 400px;
+  margin: 0 0 80px 0;
+  clear: right;
+}
+.about a {
+  color: #00c4e5;
+  font-weight: normal;
+}
+.about a:hover {
+  color: #c1f6ff;
+}
+.about sup,
+.about sub {
+  font-size: 10px;
+  vertical-align: baseline;
+  position: relative;
+  top: -0.7em;
+}
+.about sup a,
+.about sub a {
+  font-weight: normal;
+  text-decoration: none;
+}
+.about sub {
+  top: 0.2em;
+}
+.about h2 {
+  margin: 60px 0 20px 0;
+  font-size: 30px;
+  font-family: "Spinnaker", sans-serif;
+}
+.about #team ul {
+  width: 95%;
+  padding: 0 2.5%;
+  margin: 20px 0;
+}
+.about #team ul li {
+  font-size: 14px;
+  line-height: 24px;
+}
+.about #team ul b {
+  font-family: "Spinnaker", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.about #team ul p {
+  padding: 0;
+  margin: 15px 0 15px -2.5%;
+  font-size: 16px;
+}
+#credits {
+  margin: 40px 7% 0 0;
+  width: 23%;
+  float: right;
+  text-align: center;
+}
+#credits .logo {
+  max-width: 300px;
+  margin: 50px 5%;
+  width: 95%;
+  float: none;
+}
+#credits .logo#mos {
+  width: 75%;
+}
+@media only screen and (max-width: 1100px) {
+  #scroll-container #turtle img {
+    width: 90%;
+  }
+  #scroll-container #diver_sm img {
+    width: 56%;
+  }
+  #scroll-container #lg_butterfly {
+    z-index: 3;
+  }
+  #scroll-container #parrotfish img {
+    width: 30%;
+  }
+  #scroll-container #lg_angelfish {
+    top: 900px;
+    opacity: 1;
+  }
+  #scroll-container #lg_angelfish img {
+    width: 32%;
+  }
+  #scroll-container #sm_angelfish {
+    top: 1120px;
+  }
+  #scroll-container #sm_angelfish img {
+    width: 20%;
+  }
+  #scroll-container #xs_angelfish {
+    opacity: 0.5;
+    position: absolute;
+    top: 1550px;
+  }
+  #scroll-container #xs_angelfish img {
+    width: 10%;
+  }
+  #scroll-container #xxs_angelfish {
+    opacity: 0.4;
+    position: absolute;
+    top: 1000px;
+  }
+  #scroll-container #xxs_angelfish img {
+    width: 8%;
+  }
+  #scroll-container #shark img {
+    width: 60%;
+  }
+  #experience {
+    top: 2900px;
+    padding: 200px 0 0 0;
+  }
+  .about .slider {
+    width: 100%;
+    margin: 60px 0;
+  }
+}
+@media only screen and (max-width: 750px) {
+  #experience {
+    top: 2750px;
+    padding: 200px 0 0 0;
+  }
+  #credits {
+    float: none;
+    clear: both;
+    overflow: hidden;
+    padding: 0;
+    margin: 60px 0 0px 0;
+    width: 100%;
+  }
+  #credits .logo {
+    float: left;
+    width: 45%;
+    margin: 0px 5% 10px 5%;
+  }
+  #credits .logo#mos {
+    width: 35%;
+  }
+  .about img {
+    float: right;
+    width: 55%;
+  }
+  .about img#map-diagram {
+    width: 45%;
+  }
+  header h1#header,
+  header h1.fixed {
+    display: none;
+  }
+  header h1#mbl-header {
+    display: block;
+    position: fixed;
+    margin: 0 30%;
+    width: 35%;
+    border: 2px solid #fff;
+    padding: 20px 0;
+    font-family: "Spinnaker", sans-serif;
+    font-size: 26px;
+    line-height: 0.9em !important;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  header h1#mbl-header.static {
+    position: absolute !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  header .header-container {
+    top: 260px;
+  }
+  header .fa-arrow-circle-down {
+    margin: 40px auto 0 auto;
+  }
+  header #share {
+    display: none;
+    top: 10px;
+    right: 1%;
+    padding: 0 1%;
+  }
+  header #share a {
+    float: none;
+    display: block;
+    margin: 5px 0;
+  }
+  header #mbl-about {
+    opacity: 0.6;
+    display: block;
+    position: fixed;
+    margin: 0;
+    padding: 0;
+    top: 18px;
+    left: 3.5%;
+    color: #fff;
+    line-height: 1em;
+    font-size: 42px;
+  }
+  header #mbl-about:hover {
+    opacity: 1;
+  }
+
+  #experience {
+    top: 2600px;
+    padding: 200px 0 0 0;
+  }
+  #experience #cta {
+    font-size: 30px;
+    line-height: 1.2em;
+  }
+  #coral h3 {
+    width: 80%;
+    margin: 10px 10%;
+    font-size: 16px;
+    line-height: 1em;
+    bottom: 60px;
+  }
+  .about img {
+    float: right;
+    clear: both;
+    overflow: none;
+    width: 100%;
+    margin: 0;
+  }
+  .about img#map-diagram {
+    display: none;
+  }
+  #credits {
+    margin: -20px 10% 20px 10%;
+    width: 80%;
+    float: none;
+    text-align: center;
+  }
+  #credits .logo {
+    margin: 50px 5% 0 5%;
+    width: 95%;
+    float: none;
+  }
+  #credits .logo#mos {
+    width: 78%;
+  }
+
+  #scroll-container #turtle {
+    top: 3500px;
+    left: 50%;
+  }
+  #scroll-container #diver {
+    top: 2200px;
+    left: 30%;
+    opacity: 0.75;
+  }
+  #scroll-container #diver img {
+    width: 75%;
+  }
+  #scroll-container #diver_sm {
+    top: 3000px;
+    right: 15%;
+  }
+  #scroll-container #lg_butterfly {
+    left: 25%;
+  }
+  #scroll-container #med_butterfly_bottom {
+    left: 35%;
+  }
+  #scroll-container #med_butterfly {
+    left: 15%;
+  }
+  #scroll-container #sm_butterfly {
+    left: 75%;
+  }
+  #scroll-container #xs_butterfly {
+    left: 60%;
+  }
+  #scroll-container #parrotfish {
+    left: 50%;
+  }
+  #scroll-container #lg_angelfish {
+    right: 15%;
+  }
+  #scroll-container #sm_angelfish {
+    right: 22%;
+  }
+  #scroll-container #xs_angelfish {
+    right: 35%;
+  }
+  #scroll-container #xxs_angelfish {
+    right: 15%;
+  }
+  #scroll-container #xxs_angelfish img {
+    width: 8%;
+  }
+  #scroll-container #shark {
+    left: 20%;
+  }
+} /*# sourceMappingURL=dive-deep.css.map */

@@ -1,0 +1,38 @@
+uuid: 8d680930-7dec-424a-a2ad-27f02a7d1007
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: 5qc94Sg89jLaPJ6omPMeoqx98ceXCHT4pmxJUFDcR6M
+id: block_content.field_csk_column_widths
+field_name: field_csk_column_widths
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: column-widths-25-75
+      label: 25-75
+    -
+      value: column-widths-33-66
+      label: 33-66
+    -
+      value: column-widths-50-50
+      label: 50-50
+    -
+      value: column-widths-66-33
+      label: 66-33
+    -
+      value: column-widths-75-25
+      label: 75-25
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,27 @@
+uuid: d123d0f3-0a3b-44f0-a8a5-157623b2ef3d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_webform
+    - paragraphs.paragraphs_type.csk_form_component
+  module:
+    - webform
+_core:
+  default_config_hash: Pdxx9FyiE3DhkaS3fq_jVBJ4HI25m1b5xi0aicJD-lI
+id: paragraph.csk_form_component.field_csk_webform
+field_name: field_csk_webform
+entity_type: paragraph
+bundle: csk_form_component
+label: Webform
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:webform'
+  handler_settings:
+    target_bundles: null
+    auto_create: false
+field_type: webform

@@ -1,0 +1,27 @@
+uuid: 699d8ad4-f38c-4d89-a27c-ff560a159136
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csk_form_component.field_csk_webform
+    - paragraphs.paragraphs_type.csk_form_component
+  module:
+    - webform
+_core:
+  default_config_hash: H8RKh7Ur4GZe24_uzBfP9ter1dzm9QtyGqbBuNW9GC8
+id: paragraph.csk_form_component.default
+targetEntityType: paragraph
+bundle: csk_form_component
+mode: default
+content:
+  field_csk_webform:
+    type: webform_entity_reference_select
+    weight: 0
+    region: content
+    settings:
+      default_data: true
+      webforms: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

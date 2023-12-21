@@ -1,0 +1,10 @@
+uuid: 34c3be36-a54f-4921-8c86-f160edbdfc97
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: UrU6nq4mUdVgCoPzUocqJrLThxwOdwI8dW3eif9vpRg
+name: 'CSK Background Colors'
+vid: csk_background_colors
+description: 'All available background colors.'
+weight: 0

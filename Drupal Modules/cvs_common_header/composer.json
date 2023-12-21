@@ -1,0 +1,18 @@
+{
+    "name": "add-cvs/cvs_common_header",
+    "type": "drupal-addventures-module",
+    "description": "Common Header for CVS sites",
+    "keywords": [
+    ],
+    "homepage": "https://www.github.com/addventures/cvs_common_header",
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://www.github.com/addventures/cvs_common_header",
+        "source": "https://www.github.com/addventures/cvs_common_header"
+    },
+    "require": {
+        "drupal/menu_item_extras": "^2.11",
+        "drupal/twig_tweak": "^2.6",
+        "drupal/block_content_machine_name": "^3.0"
+    }
+}

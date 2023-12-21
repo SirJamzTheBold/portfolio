@@ -1,0 +1,21 @@
+uuid: 278464e4-4eb4-4ba8-b72d-1a688777cb91
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+_core:
+  default_config_hash: bfIPyRz_Y1F36TdAjTnw57ClX9r55ky9icvNN4Ljtb8
+id: block_content.field_csk_primary_links
+field_name: field_csk_primary_links
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

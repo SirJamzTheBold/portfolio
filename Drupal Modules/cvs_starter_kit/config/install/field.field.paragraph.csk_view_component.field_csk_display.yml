@@ -1,0 +1,21 @@
+uuid: 97cc11ce-921e-4c6a-8213-6571e7633f8e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_display
+    - paragraphs.paragraphs_type.csk_view_component
+_core:
+  default_config_hash: NjHMrg540tUT3P3Tm4yY2XklcNGCWV_mwpxrh_E3e-8
+id: paragraph.csk_view_component.field_csk_display
+field_name: field_csk_display
+entity_type: paragraph
+bundle: csk_view_component
+label: Display
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

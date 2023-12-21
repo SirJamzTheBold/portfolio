@@ -1,0 +1,73 @@
+/* =======================================================================
+## ++ Media Queries
+========================================================================== */
+
+/*
+    Used for media queries.
+    Add these mixins in your normal scss flow.
+
+    Eg.
+    .container{
+        width:1024px;
+
+        @include tablets{
+            width:90%;
+        }
+    }
+*/
+
+@mixin for-phone-only {
+  @media (max-width: 599px) { @content; }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 600px) { @content; }
+}
+@mixin for-tablet-portrait-only {
+  @media (min-width: 600px) and (max-width: 899px) { @content; }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) { @content; }
+}
+@mixin for-tablet-landscape-only {
+  @media (min-width: 900px) and (max-width: 1199px) { @content; }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) { @content; }
+}
+@mixin for-desktop-only {
+  @media (min-width: 1200px) and (max-width: 1799px) { @content; }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) { @content; }
+}
+
+/**
+ * This mixin, when placed within a selector that has a BG color, will transform
+ * outlined buttons to fill with white on hover. This gets passed the text color
+ * so it matches the background color of the parent, as per spec (e.g. outline
+ * buttons in the main footer will have grey text on hover, since the footer
+ * itself is grey, stuff like that).
+ */
+ @mixin alter-outline-btns($text-color) {
+
+  & button,
+  & a.button {
+
+    &.outline,
+    &.secondary-outline {
+      border-color: $white;
+      color: $white;
+
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $white;
+        border-color: $white;
+        color: $text-color;
+      }
+
+    } // END: &.[secondary-]outline
+
+  } // END: button, a.button
+
+}

@@ -1,0 +1,67 @@
+uuid: 77e39a24-39c7-4def-b3cf-3937aa286c3e
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csk_vimeo_video.field_csk_padding_bottom
+    - field.field.paragraph.csk_vimeo_video.field_csk_padding_left
+    - field.field.paragraph.csk_vimeo_video.field_csk_padding_right
+    - field.field.paragraph.csk_vimeo_video.field_csk_padding_top
+    - field.field.paragraph.csk_vimeo_video.field_csk_video_description
+    - field.field.paragraph.csk_vimeo_video.field_csk_video_type
+    - field.field.paragraph.csk_vimeo_video.field_csk_vimeo_video
+    - paragraphs.paragraphs_type.csk_vimeo_video
+id: paragraph.csk_vimeo_video.default
+targetEntityType: paragraph
+bundle: csk_vimeo_video
+mode: default
+content:
+  field_csk_padding_bottom:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csk_padding_left:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csk_padding_right:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csk_padding_top:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csk_video_description:
+    type: string_textarea
+    weight: 5
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_csk_video_type:
+    type: options_select
+    weight: 4
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csk_vimeo_video:
+    type: string_textfield
+    weight: 6
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

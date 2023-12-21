@@ -1,0 +1,10 @@
+uuid: 03089da4-d7b6-4b06-a238-66e26b54acf4
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cb0ZDc8ioy55pckQCIU4kjc7cfvLzGf-o9gVGQ9yZ_o
+id: csk_one_column_container
+label: 'CSK One Column Container'
+revision: 0
+description: 'Content arranged in a single column. Width can either be narrow (800px) or full (1220px). Can contain an arbitrary amount of images/text/videos.'

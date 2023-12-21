@@ -1,0 +1,118 @@
+{#
+/**
+ * @file
+ * Theme override to display a menu.
+ *
+ * Available variables:
+ * - menu_name: The machine name of the menu.
+ * - items: A nested list of menu items. Each menu item contains:
+ *   - attributes: HTML attributes for the menu item.
+ *   - below: The menu item child items.
+ *   - title: The menu link title.
+ *   - url: The menu link url, instance of \Drupal\Core\Url
+ *   - localized_options: Menu link localized options.
+ *   - is_expanded: TRUE if the link has visible children within the current
+ *     menu tree.
+ *   - is_collapsed: TRUE if the link has children within the current menu tree
+ *     that are not currently visible.
+ *   - in_active_trail: TRUE if the link is in the active trail.
+ */
+#}
+{% import _self as menus %}
+
+{#
+We call a macro which calls itself to render the full tree.
+@see https://twig.symfony.com/doc/1.x/tags/macro.html
+#}
+{{ menus.menu_links(items, attributes, 0, current_url, "", "", "") }}
+
+{% macro menu_links(items, attributes, menu_level, current_url, parent_title="", parent_url="", parent_content="") %}
+  {% import _self as menus %}
+
+  {% if items %}
+    {% set upper_level = menu_level - 1 %}
+    {% set lower_level = menu_level + 1 %}
+    {% set items_length = items|length %}
+    {% set count = 1 %}
+
+    {% if menu_level == 0 %}
+<ul level="{{ menu_level }}" {{ attributes.removeClass('menu menu-level-' ~ upper_level).removeClass('menu menu-level-' ~ lower_level).addClass('menu menu-level-' ~ menu_level) }} >
+  {% else %}
+  <ul level="{{ menu_level }}" {{ attributes.removeClass('menu menu-level-' ~ upper_level).removeClass('menu menu-level-' ~ lower_level).addClass('menu menu-level-' ~ menu_level) }} aria-label="Group. {{parent_title}}">
+    {% endif %}
+    {% if parent_title != "" and parent_url.toString() != "" %}
+      {% set items_length = items_length + 1 %}
+      <li class="menu-item">
+        {% if menu_level != 0 %}
+          {% if current_url != "" and current_url == parent_url.toString() %}
+            <a class="menu-flat-current-url" href="{{ parent_url.toString() }}">{{ parent_title }} overview</a>
+          {% else %}
+            <a href="{{ parent_url.toString() }}">{{ parent_title }} overview</a>
+          {% endif %}
+        {% else %}
+          {% if current_url != "" and current_url == parent_url.toString() %}
+            <a class="menu-flat-current-url" href="{{ parent_url.toString() }}">{{ parent_title }} overview</a>
+          {% else %}
+            <a href="{{ parent_url.toString() }}">{{ parent_title }} overview</a>
+          {% endif %}
+        {% endif %}
+      </li>
+      {% set count = count + 1 %}
+    {% endif %}
+
+    {% for item in items %}
+      {%
+        set classes = [
+        'menu-item',
+        item.below ? 'menu-item--collapsed',
+      ]
+      %}
+
+      <li {{ item.attributes.addClass(classes) }}>
+        {% if item.below %}
+          {% if menu_level == 0 %}
+            {% if item.in_active_trail %}
+              <button class="menu-expand-button menu-expand-button-current-url" aria-label="expand menu {{item.title}}.">{{item.title}}</button>
+            {% else %}
+              <button class="menu-expand-button" aria-label="expand menu {{item.title}}.">{{item.title}}</button>
+            {% endif %}
+          {% else %}
+            {% if item.in_active_trail %}
+              <button class="menu-expand-button menu-expand-button-current-url" aria-label="Button. {{ item.title }}. expand. {{count}} of {{items_length}}">{{item.title}}</button>
+            {% else %}
+              <button class="menu-expand-button" aria-label="Button. {{ item.title }}. expand. {{count}} of {{items_length}}">{{item.title}}</button>
+            {% endif %}
+          {% endif %}
+          {{ menus.menu_links(item.below, attributes, menu_level + 1, current_url, item.title, item.url, item.content) }}
+        {% else %}
+          {% if item.url.toString() != "" %}
+            {% if item.in_active_trail %}
+              {{ link(item.title, item.url, item.attributes.addClass('menu-flat-current-url')) }}
+            {% else %}
+              {{ link(item.title, item.url, item.attributes) }}
+            {% endif %}
+          {% else %}
+            {% if menu_level == 0 %}
+              <span class="no-link-link">{{ item.title }}</span>
+            {% else %}
+              <span class="no-link-link">{{ item.title }}</span>
+            {% endif %}
+          {% endif %}
+        {% endif %}
+      </li>
+      {% set count = count + 1 %}
+    {% endfor %}
+
+    {% if menu_level == 1 %}
+      {% set featured_link_id = parent_content['#menu_link_content'].get('field_featured_link').getValue().0.target_id %}
+      {% set featured_link_view_mode = parent_content['#menu_link_content'].get('view_mode').getValue().0.value %}
+      {% if featured_link_id is not null and featured_link_view_mode is not null %}
+        {# Section ensures screen reader lands on entire featured content block #}
+        <section class="featured-article-container" aria-label="Featured content for {{parent_title}}">
+          {{ drupal_entity('node', featured_link_id, featured_link_view_mode) }}
+        </section>
+      {% endif %}
+    {% endif %}
+  </ul>
+  {% endif %}
+  {% endmacro %}

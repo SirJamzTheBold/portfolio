@@ -1,0 +1,54 @@
+uuid: ed957ec5-7b78-4708-b8f2-57bbf8d8c7c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csk_image_component.field_csk_image
+    - field.field.paragraph.csk_image_component.field_csk_padding_bottom
+    - field.field.paragraph.csk_image_component.field_csk_padding_left
+    - field.field.paragraph.csk_image_component.field_csk_padding_right
+    - field.field.paragraph.csk_image_component.field_csk_padding_top
+    - paragraphs.paragraphs_type.csk_image_component
+  module:
+    - media_library
+_core:
+  default_config_hash: 43QNLcaZYFN61tWC3LD6Qq_wxgy9oxKKyfkYJsrh6B4
+id: paragraph.csk_image_component.default
+targetEntityType: paragraph
+bundle: csk_image_component
+mode: default
+content:
+  field_csk_image:
+    type: media_library_widget
+    weight: 4
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_csk_padding_bottom:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csk_padding_left:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csk_padding_right:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csk_padding_top:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

@@ -1,0 +1,25 @@
+uuid: bfb183c0-2aa6-441f-b2c9-9b7e2487bd9e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_one_column_container
+    - field.storage.block_content.field_csk_padding_top
+  module:
+    - options
+_core:
+  default_config_hash: B9yOqqTQVU8b9JPxPF9tGW_xqjOFFCFapOdDFJgTQMI
+id: block_content.csk_one_column_container.field_csk_padding_top
+field_name: field_csk_padding_top
+entity_type: block_content
+bundle: csk_one_column_container
+label: 'Padding Top'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: padding-top-60
+default_value_callback: ''
+settings: {  }
+field_type: list_string

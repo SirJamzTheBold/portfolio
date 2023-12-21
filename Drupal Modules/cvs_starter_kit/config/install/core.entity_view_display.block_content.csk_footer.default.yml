@@ -1,0 +1,60 @@
+uuid: 42472ed4-30ec-47cf-b764-d18ee7da02c7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_footer
+    - field.field.block_content.csk_footer.field_csk_copyright
+    - field.field.block_content.csk_footer.field_csk_description
+    - field.field.block_content.csk_footer.field_csk_primary_links
+    - field.field.block_content.csk_footer.field_csk_secondary_links
+  module:
+    - link
+    - text
+_core:
+  default_config_hash: jJ8s0ql9YYEh_SO6b28ViwHUo6Rn36Aq0RgGBYFYsLs
+id: block_content.csk_footer.default
+targetEntityType: block_content
+bundle: csk_footer
+mode: default
+content:
+  field_csk_copyright:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_csk_description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_csk_primary_links:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_csk_secondary_links:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 2
+    region: content
+hidden: {  }

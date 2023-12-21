@@ -1,0 +1,32 @@
+uuid: a05d1781-b89c-4a83-a8cc-7237c605f051
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: juF0wVs48HFLXVjDOpa4Y8AF9ij4mniGtXxIBznEgUo
+id: paragraph.field_csk_number_of_columns
+field_name: field_csk_number_of_columns
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: one-column
+      label: '1 Column'
+    -
+      value: two-column
+      label: '2 Columns'
+    -
+      value: three-column
+      label: '3 Columns'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

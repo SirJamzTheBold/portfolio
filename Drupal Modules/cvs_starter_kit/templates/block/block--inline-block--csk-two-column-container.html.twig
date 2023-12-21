@@ -1,0 +1,199 @@
+{#
+/**
+ * @file
+ * Theme override to display a block.
+ *
+ * Available variables:
+ * - plugin_id: The ID of the block implementation.
+ * - label: The configured label of the block if visible.
+ * - configuration: A list of the block's configuration values.
+ *   - label: The configured label for the block.
+ *   - label_display: The display settings for the label.
+ *   - provider: The module or other provider that provided this block plugin.
+ *   - Block plugin specific settings will also be stored here.
+ * - content: The content of this block.
+ * - attributes: array of HTML attributes populated by modules, intended to
+ *   be added to the main container tag of this template.
+ *   - id: A valid HTML ID and guaranteed unique.
+ * - title_attributes: Same as attributes, except applied to the main title
+ *   tag that appears in the template.
+ * - title_prefix: Additional output populated by modules, intended to be
+ *   displayed in front of the main title tag that appears in the template.
+ * - title_suffix: Additional output populated by modules, intended to be
+ *   displayed after the main title tag that appears in the template.
+ *
+ * @see template_preprocess_block()
+ */
+#}
+
+{# Set the border class. If none specified use no border #}
+{% if content.field_csk_display_border.0 is not null %}
+  {% if content.field_csk_display_border.0['#markup'] == 'On' %}
+    {% set display_border = 'display-border' %}
+  {% else %}
+    {% set display_border = 'hide-border' %}
+  {% endif %}
+{% else %}
+  {% set display_border = 'hide-border' %}
+{% endif %}
+
+{# Set background color. If none specified use white. #}
+{% if content.field_csk_background_color.0 is not null %}
+  {% set bg_class = 'bg-color-' ~ content.field_csk_background_color.0['#title']|lower|replace({' ': '-'}) %}
+{% else %}
+  {% set bg_class = 'bg-color-white' %}
+{% endif %}
+
+{# Set the top padding. If none specified use 60px. #}
+{% if content.field_csk_padding_top.0 is not null %}
+  {% set padding_top = content.field_csk_padding_top.0['#markup'] %}
+{% else %}
+  {% set padding_top = 'padding-top-60' %}
+{% endif %}
+
+{# Set the bottom padding. If none specified use 60px. #}
+{% if content.field_csk_padding_bottom.0 is not null %}
+  {% set padding_bottom = content.field_csk_padding_bottom.0['#markup'] %}
+{% else %}
+  {% set padding_bottom = 'padding-bottom-60' %}
+{% endif %}
+
+{# Set the gutter. If none specified use 40px. #}
+{% if content.field_csk_column_gutter.0 is not null %}
+  {% set column_gutter = content.field_csk_column_gutter.0['#markup'] %}
+{% else %}
+  {% set column_gutter = 'column-gutter-40' %}
+{% endif %}
+
+{# Set the column width. If none specified use 40px. #}
+{% if content.field_csk_column_widths.0 is not null %}
+  {% set column_widths = content.field_csk_column_widths.0['#markup'] %}
+{% else %}
+  {% set column_widths = 'column-widths-50-50' %}
+{% endif %}
+
+{# Set the container width. If none specified use full.  #}
+{% if content.field_csk_width.0 is not null %}
+  {% set container_width = content.field_csk_width.0['#markup'] %}
+{% else %}
+  {% set container_width = 'width-full' %}
+{% endif %}
+
+{# Set the box layout. If none specified use no-box-layout. #}
+{% if content.field_csk_box_layout.0 is not null %}
+  {% set box_layout = content.field_csk_box_layout.0['#markup'] %}
+{% else %}
+  {% set box_layout = 'no-box-layout' %}
+{% endif %}
+
+{% if box_layout != 'no-box-layout' %}
+  {# Set inner background color. If none specified use white. #}
+  {% if content.field_csk_inner_background_color.0 is not null %}
+    {% set inner_bg_class = 'bg-color-' ~ content.field_csk_inner_background_color.0['#title']|lower|replace({' ': '-'}) %}
+  {% else %}
+    {% set inner_bg_class = 'bg-color-white' %}
+  {% endif %}
+
+  {# Set the inner padding top. If none specified use 20px. #}
+  {% if content.field_csk_inner_padding_top.0 is not null %}
+    {% set inner_padding_top = content.field_csk_inner_padding_top.0['#markup'] %}
+  {% else %}
+    {% set inner_padding_top = 'padding-top-20' %}
+  {% endif %}
+
+  {# Set the inner padding left. If none specified use 20px. #}
+  {% if content.field_csk_inner_padding_left.0 is not null %}
+    {% set inner_padding_left = content.field_csk_inner_padding_left.0['#markup'] %}
+  {% else %}
+    {% set inner_padding_left = 'padding-left-20' %}
+  {% endif %}
+
+  {# Set the inner padding right. If none specified use 20px. #}
+  {% if content.field_csk_inner_padding_right.0 is not null %}
+    {% set inner_padding_right = content.field_csk_inner_padding_right.0['#markup'] %}
+  {% else %}
+    {% set inner_padding_right = 'padding-right-20' %}
+  {% endif %}
+
+  {# Set the inner padding bottom. If none specified use 20px. #}
+  {% if content.field_csk_inner_padding_bottom.0 is not null %}
+    {% set inner_padding_bottom = content.field_csk_inner_padding_bottom.0['#markup'] %}
+  {% else %}
+    {% set inner_padding_bottom = 'padding-bottom-20' %}
+  {% endif %}
+{% else %}
+  {% set inner_bg_class = '' %}
+  {% set inner_padding_top = '' %}
+  {% set inner_padding_left = '' %}
+  {% set inner_padding_right = '' %}
+  {% set inner_padding_bottom = '' %}
+{% endif %}
+
+{%
+  set classes = [
+    'block',
+    'block-two-column-container',
+    'block-' ~ configuration.provider|clean_class,
+    'block-' ~ plugin_id|clean_class,
+    bg_class,
+    padding_top,
+    padding_bottom,
+    column_gutter,
+    column_widths,
+    display_border,
+    box_layout
+  ]
+%}
+
+{% if content.field_csk_anchor_link.0 is not null %}
+  {% set anchor = content.field_csk_anchor_link.0['#context'].value|lower|replace({' ': '-'}) %}
+  <div id="{{ anchor }}" anchor-link="{{content.field_csk_anchor_link.0['#context'].value}}" {{ attributes.addClass(classes, 'anchor-link') }}>
+{% else %}
+  <div{{ attributes.addClass(classes) }}>
+{% endif %}
+
+  {% block content %}
+    {{ title_prefix }}{{ title_suffix }}
+
+    {% if box_layout == 'single-box-layout' %}
+      <div class="block-two-column-container-inner all-column-container {{ container_width }} {{ inner_bg_class }} {{ inner_padding_top }} {{ inner_padding_left }} {{ inner_padding_right }} {{ inner_padding_bottom }}">
+    {% else %}
+      <div class="block-two-column-container-inner all-column-container {{ container_width }}">
+    {% endif %}
+    
+      {# Set the column vertical alignment. #}
+      {% if content.field_csk_column_1_vertical_alig.0 is not null %}
+        {% set column_1_vertical_alignment = content.field_csk_column_1_vertical_alig.0['#markup'] %}
+      {% else %}
+        {% set column_1_vertical_alignment = 'align-middle' %}
+      {% endif %}
+
+      <div class="single-column column-1 {{ column_1_vertical_alignment }}">
+        {% if box_layout == 'individual-box-layout' %}
+          <div class="single-column-inner column-1-inner {{ inner_bg_class }} {{ inner_padding_top }} {{ inner_padding_left }} {{ inner_padding_right }} {{ inner_padding_bottom }}">
+        {% else %}
+          <div class="single-column-inner column-1-inner">
+        {% endif %}
+          {{ content.field_csk_column_1_components }}
+        </div>
+      </div>
+
+      {# Set the column vertical alignment. #}
+      {% if content.field_csk_column_2_vertical_alig.0 is not null %}
+        {% set column_2_vertical_alignment = content.field_csk_column_2_vertical_alig.0['#markup'] %}
+      {% else %}
+        {% set column_2_vertical_alignment = 'align-middle' %}
+      {% endif %}
+
+      <div class="single-column column-2 {{ column_2_vertical_alignment }}">
+        {% if box_layout == 'individual-box-layout' %}
+          <div class="single-column-inner column-2-inner {{ inner_bg_class }} {{ inner_padding_top }} {{ inner_padding_left }} {{ inner_padding_right }} {{ inner_padding_bottom }}">
+        {% else %}
+          <div class="single-column-inner column-2-inner">
+        {% endif %}
+          {{ content.field_csk_column_2_components }}
+        </div>
+      </div>
+    </div>
+  {% endblock %}
+</div>

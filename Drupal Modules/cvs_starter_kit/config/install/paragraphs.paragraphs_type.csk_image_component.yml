@@ -1,0 +1,12 @@
+uuid: a04e8a1d-953c-4de5-88ce-beba6220c0cb
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: cZTdzZaP-9cmRA0VaetpHRYGbX7j2Gerrgb0hGkdhmM
+id: csk_image_component
+label: 'CSK Image Component'
+icon_uuid: null
+icon_default: null
+description: 'A reusable Image Component with Media Library.'
+behavior_plugins: {  }

@@ -1,0 +1,21 @@
+uuid: 64e8faba-e18f-4896-a9f7-13dc83af41fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_screen_reader_override
+    - paragraphs.paragraphs_type.csk_statistic_component
+_core:
+  default_config_hash: p3iDB0_p_cfM36FXrUVbVIjdlYUpj8SpTNjKhwxxy2I
+id: paragraph.csk_statistic_component.field_csk_screen_reader_override
+field_name: field_csk_screen_reader_override
+entity_type: paragraph
+bundle: csk_statistic_component
+label: 'Screen Reader Override'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

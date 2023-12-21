@@ -1,0 +1,8 @@
+uuid: 0c6027a7-1fb4-4aaf-b60e-ab29aeef574a
+langcode: en
+status: true
+dependencies: {  }
+id: csk_five_column_container
+label: 'CSK Five Column Container'
+revision: 0
+description: "Content arranged in a five columns column. Side by side at desktop and one after another on mobile. Each column contain an arbitrary amount of images/text/videos.\t"

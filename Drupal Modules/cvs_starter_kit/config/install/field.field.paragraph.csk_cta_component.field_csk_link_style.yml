@@ -1,0 +1,25 @@
+uuid: f2354e16-68bc-4a22-8386-3c02211c220a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_link_style
+    - paragraphs.paragraphs_type.csk_cta_component
+  module:
+    - options
+_core:
+  default_config_hash: 6IM75RHCJbydeouRUCtnVo-Z6TSEOozDuStR6Ou8gys
+id: paragraph.csk_cta_component.field_csk_link_style
+field_name: field_csk_link_style
+entity_type: paragraph
+bundle: csk_cta_component
+label: 'Link Style'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: adaptive_btn
+default_value_callback: ''
+settings: {  }
+field_type: list_string

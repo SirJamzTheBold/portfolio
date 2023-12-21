@@ -1,0 +1,12 @@
+uuid: 320a1bc8-60dd-4892-a818-7463f79df64f
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: QCNjKx3FmCK2JRKtg3kge8nk2fkHzqgN_MAUA-ycaqY
+id: csk_text_component
+label: 'CSK Text Component'
+icon_uuid: null
+icon_default: null
+description: 'A reusable Text Component with WYSIWYG editor.'
+behavior_plugins: {  }

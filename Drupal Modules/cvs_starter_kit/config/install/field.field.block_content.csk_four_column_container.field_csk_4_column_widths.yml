@@ -1,0 +1,25 @@
+uuid: fdd6794a-f157-4f95-9a8b-b5472451c43e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_four_column_container
+    - field.storage.block_content.field_csk_4_column_widths
+  module:
+    - options
+_core:
+  default_config_hash: dklcPPhKPqbD_qc1SMMwGyADZyS0LUNMRtRZD2I5sNQ
+id: block_content.csk_four_column_container.field_csk_4_column_widths
+field_name: field_csk_4_column_widths
+entity_type: block_content
+bundle: csk_four_column_container
+label: 'Column Widths'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: column-widths-25-25-25-25
+default_value_callback: ''
+settings: {  }
+field_type: list_string

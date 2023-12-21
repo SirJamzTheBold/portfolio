@@ -1,0 +1,70 @@
+/// Define global colors
+// doesn't matter if you're...
+$black: #000000; // background and copy
+// ...or...
+$white: #FFFFFF; // background and copy
+
+/// “What makes a man turn neutral? Lust for gold? Power? Or were you just born
+/// with a heart full of neutrality?” —— Zapp Brannigan
+// neutral colors
+$cvs-gray-dark:         #505050;
+$cvs-grey-medium-dark:  #4F4F4F;
+$cvs-grey-medium:       #767676;
+$cvs-radio-outline:     #8C8C8C;
+$cvs-grey-menu-active:  #8B8B8B;
+$cvs-gray-menu-medium:  #757575;
+$cvs-gray-medium-light: #D1CCCC;
+$cvs-gray-light:        #E9E9E9;
+$cvs-gray-lightest:     #F2F2F2;
+$cvs-grey-alternative:  #CCCCCC;
+
+// semitransparent colors
+$cvs-modal-gray: rgba(0, 0, 0, 0.40);
+
+/// CVS colors
+// red red red
+$cvs-red:       #CC0000;
+$cvs-red-light: #EB0000;
+$cvs-red-dark:  #A1050D;
+// and blue
+$cvs-focus-outline: #80BFFE;
+$cvs-dark-blue: #09A7E3;
+$cvs-blue: #77D8E8;
+$cvs-light-blue: #B8E3EB;
+
+//ACO Blue
+$aco-blue: #E7EEF4;
+
+//Form Error BG color
+$cvs-form-error: #FFCCCC;
+
+// Background color for use when font-color is black
+$cvs-light-blue: #B8E3EB;
+$cvs-yellow:     #FFD216;
+$cvs-orange:     #EA7600;
+$cvs-navy-light: #0A4B8C;
+$cvs-navy:       #0B315E;
+$cvs-navy-dark:  #021F42;
+$cvs-teal:       #37BAAB;
+$cvs-pink:       #FB7096;
+$cvs-purple:     #93277E;
+$cvs-green:      #A7CE39;
+
+// WCAG-compliant background colors to use instead of the above colors
+// when font color is white instead of black
+$cvs-wcag-teal:   #1EA192;
+$cvs-wcag-pink:   #EE6389;
+$cvs-wcag-green:  #749A05;
+$cvs-wcag-orange: #E67300;
+$cvs-wcag-purple: #93277D;
+
+// AETNA-specific colors
+$aetna-red:         #BE2D4F;
+$aetna-maroon:      #9D261D;
+$aetna-purple-link: #7F4199;
+$aetna-purple:      #7D3F98;
+$aetna-lt-purple:   #A44990;
+$aetna-text-dark:   #333333;
+$aetna-border-dark: #CCCCCC;
+$aetna-medium-gray: #DDDDDD;
+$aetna-light-gray:  #EEEEEE;

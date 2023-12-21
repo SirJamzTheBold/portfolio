@@ -1,0 +1,23 @@
+uuid: edda882b-e59d-45dc-a7ae-ee3ff8be8886
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_padding_bottom
+    - paragraphs.paragraphs_type.csk_vimeo_video
+  module:
+    - options
+id: paragraph.csk_vimeo_video.field_csk_padding_bottom
+field_name: field_csk_padding_bottom
+entity_type: paragraph
+bundle: csk_vimeo_video
+label: 'Padding Bottom'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: padding-bottom-0
+default_value_callback: ''
+settings: {  }
+field_type: list_string

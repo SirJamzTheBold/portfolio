@@ -1,0 +1,23 @@
+uuid: ba74adf1-fdf7-4a28-abf1-9cda294a1a86
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_list
+    - field.storage.block_content.field_csk_list_type
+  module:
+    - options
+id: block_content.csk_list.field_csk_list_type
+field_name: field_csk_list_type
+entity_type: block_content
+bundle: csk_list
+label: 'List Type'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: ordered-list
+default_value_callback: ''
+settings: {  }
+field_type: list_string

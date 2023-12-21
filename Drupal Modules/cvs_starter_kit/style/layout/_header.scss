@@ -1,0 +1,57 @@
+header {
+  z-index: 2; // So breadcrumb sits behind this
+
+  .anchor-container {
+    float: right;
+    margin-top: 20px;
+    margin-right: 20px;
+
+    a {
+      margin-left: 20px;
+      color: $black;
+    }
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+  .region-header {
+    .block-cvs-common-header {
+      .spacing-if-no-menu {
+        height: 0px;
+      }
+
+      #cvs-common-header {
+        #cvs-common-header-inner {
+          .desktop-menu,
+          .mobile-menu {
+            .main-menu {
+              ul.menu-level-0 {
+                li.menu-item {
+                  a  {
+                    text-decoration: none;
+                    color: $black;
+                  }
+              
+                  a:hover {
+                    text-decoration: underline;
+                    color: $cvs-red;
+                  }
+                }
+              }
+            }
+          }
+
+          .site-logo-container {
+            a.site-logo-link {
+              img.site-logo {
+                padding: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+} // end header

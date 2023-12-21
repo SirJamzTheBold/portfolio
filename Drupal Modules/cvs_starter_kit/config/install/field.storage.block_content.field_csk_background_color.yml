@@ -1,0 +1,22 @@
+uuid: f6b44368-9dd7-43ce-953c-db0cda4297c9
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - taxonomy
+_core:
+  default_config_hash: XsN_-BgFCW1O6RqUmCgFpHfHJOs0yKfGb-js2wIbfbQ
+id: block_content.field_csk_background_color
+field_name: field_csk_background_color
+entity_type: block_content
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

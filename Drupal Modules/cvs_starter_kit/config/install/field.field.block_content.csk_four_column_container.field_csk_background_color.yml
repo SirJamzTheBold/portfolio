@@ -1,0 +1,31 @@
+uuid: 64a04309-d339-4c78-b5bc-fd82d53bdb70
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_four_column_container
+    - field.storage.block_content.field_csk_background_color
+    - taxonomy.vocabulary.csk_background_colors
+_core:
+  default_config_hash: Fl7pS7xWcEt4LjCXrE5A8diKx3ghYR4zHd6gNEZ9gwA
+id: block_content.csk_four_column_container.field_csk_background_color
+field_name: field_csk_background_color
+entity_type: block_content
+bundle: csk_four_column_container
+label: 'Background Color'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      csk_background_colors: csk_background_colors
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

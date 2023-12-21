@@ -1,0 +1,839 @@
+body {
+  overflow-y: scroll
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+// If there is no secondary/utility menu, this class is added and adds spacing
+.spacing-if-no-menu {
+  height: 55px;
+
+  @media screen and (max-width: 1049px) {
+    height: 0;
+  }
+}
+
+.show-menu {
+  display: block !important;
+}
+.hide-menu {
+  display: none !important;
+}
+
+// 'display: block' activates when secondary menus expand
+.cvs-common-header-shadow {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  opacity: .4;
+  background-color: $black;
+  z-index: 1;
+  position: fixed;
+}
+
+// Search Pop Up
+.search-popup-container {
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);;
+  position: fixed;
+  top: 0px;
+  z-index: 5;
+
+  .search-popup {
+    @media screen and (min-width: 1600px) {
+      margin-left: calc((100vw - 1480px) / 2);
+    }
+
+    max-width: 1480px;
+    width: calc(100vw - 120px);
+    max-height: calc(100vh - 220px);
+    margin-left: 60px;
+    margin-top: 80px;
+    padding-top: 160px;
+    padding-bottom: 160px;
+    background-color: $white;
+    overflow-y: scroll;
+
+    .search-popup-close {
+      @media screen and (min-width: 1600px) {
+        right: calc((100vw - 1400px) / 2)
+      }
+
+      position: absolute;
+      top: 120px;
+      right: 100px;
+      background-image: url('/modules/add/cvs_common_header/images/menu-close.svg');
+      width: 20px;
+      height: 20px;
+      border: 0px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+    }
+
+    .search-popup-inner {
+      width: 800px;
+      max-width: calc(100% - 40px);
+      margin: auto;
+
+      input[type="search"] {
+        width: 590px;
+        margin-right: 17px;
+        padding: 15px 20px;
+      }
+
+      input[type="submit"] {
+        width: 144px;
+        padding: 15px 20px;
+        background-color: $red;
+        color: $white;
+        border: solid 1px $red;
+      }
+
+      input[type="submit"]:hover {
+        color: $white;
+        background-color: $black;
+        border: solid 1px $black;
+      }
+
+      select {
+        cursor: pointer;
+      }
+    }
+  }
+} // End Search Pop Up
+
+@media screen and (max-width: 1000px) {
+  .search-popup-container {
+    background-color: $white;
+
+    .search-popup {
+      max-width: 100vw;
+      width: 100vw;
+      margin: 0px;
+      height: 100vh;
+      margin-top: 50px;
+
+      .search-popup-close {
+        right: 25px;
+        top: 70px;
+      }
+
+      .search-popup-inner {
+        input[type="search"] {
+          width: calc(100% - 60px);
+          margin-right: 0px;
+          margin-bottom: 20px;
+        }
+
+        input[type="submit"] {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// COMMON HEADER MENUS
+#cvs-common-header {
+  height: fit-content;
+  min-height: 100px;
+  position: relative;
+  background-color: $white;
+  z-index: 4;
+  width: 100%;
+  margin: auto;
+
+  // Shadow underneath common header
+  &:after {
+    content: '';
+    width: 100%;
+    height: 5px;
+    background-color: #0000001A;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+  }
+
+  // Start Search Menu
+  .search-menu {
+    .search-button-wrapper {
+      display: flex;
+      align-items: baseline;
+
+      button.open-search {
+        border: 0;
+        background: transparent;
+        font-size: 14px;
+        line-height: 12px;
+        color: $darkgray;
+        width: auto;
+        margin-left: 24px;
+        font-weight: 400;
+        padding: initial;
+    
+        /* IE11 only fix, the "inital" value is not supported in IE for some reason https://caniuse.com/css-initial-value */
+        @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+          padding: 0px;
+        }
+    
+        &:hover,
+        &:focus {
+          color: $lightred;
+          text-decoration: underline;
+          cursor: pointer;
+        }
+      }
+    }
+  } // End Search Menu
+
+  // Start Desktop Styles
+  #cvs-common-header-inner {
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+    min-height: 100px;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 60px;
+    padding-right: 60px;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (max-width: 1100px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
+    // Start Site Logo - Desktop
+    .site-logo-container {
+
+      a.site-logo-link {
+        display: block;
+
+        img.site-logo {
+          display: block;
+          height: 100%;
+          max-height: 60px;
+          width: auto;
+        }
+      }
+    } // End Site Logo - Desktop
+
+    // Start Desktop Menu
+    .desktop-menu {    
+      display: flex;
+      flex-wrap: wrap;
+
+      // Start Utility Menu
+      .utility-menu {
+        width: 100%;
+        order: 0;
+        display: flex;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        align-items: baseline;
+        justify-content: flex-end;
+
+        ul.menu-level-0 {
+          list-style-type: none;
+          display: flex;
+          justify-content: flex-end;
+          margin: 0;
+          padding: 0;
+          margin: auto;
+          flex-wrap: wrap;
+
+          li.menu-item {
+            @include verne-fluid-margin-left(12px, 30px);
+
+            .no-link-link, a, button {
+              font-size: 14px;
+              line-height: 12px;
+              font-weight: 400;
+              color: $darkgray;
+              text-decoration: none;
+
+              &:hover,
+              &:focus {
+                color: $lightred;
+                text-decoration: underline;
+                cursor: pointer;
+              }
+            }
+          }
+
+          ul.menu-level-1 {
+            @media screen and (max-width: 1300px) {
+              overflow-y: auto;
+              overflow-x: hidden;
+            }
+
+            .menu-expanded {
+              height: auto;
+            }
+          }
+        }
+      } // End Utility Menu
+
+      // Start Main Menu
+      .main-menu {
+        width: 100%;
+        order: 1;
+        margin-bottom: 10px;
+
+        ul.menu-level-0 {
+          list-style-type: none;
+          display: flex;
+          justify-content: flex-end;
+          margin: 0;
+          padding: 0;
+          margin: auto;
+          flex-wrap: wrap;
+
+          li.menu-item {
+            @include verne-fluid-margin-left(10px, 30px);
+
+            button {
+              @include verne-fluid-type(14px, 18px, 36px, 36px);
+              font-weight: 500;
+              color: $black;
+              border: none;
+              background-color: transparent;
+              padding: 0px;
+              text-decoration: none;
+
+              &.menu-expand-button {
+                margin-right: 0px;
+                text-align: left;
+
+                &:after {
+                  content: url('/modules/add/cvs_common_header/images/carat-black-down.svg');
+                }
+
+                &:hover,
+                &:focus {
+                  color: $lightred;
+                  text-decoration: underline;
+
+                  &:after {
+                    content: url('/modules/add/cvs_common_header/images/carat-red-down.svg');
+                  }
+                }
+
+                &.menu-expand-button-current-url {
+                  color: $lightred;
+                  text-decoration: underline;
+
+                  &:after {
+                    content: url('/modules/add/cvs_common_header/images/carat-red-down.svg');
+                  }
+                }
+              }
+
+              &.menu-expand-button-expanded {
+                text-decoration: underline;
+                color: $lightred;
+                margin-right: 0px;
+
+                &:hover,
+                &:focus {
+                  color: $lightred;
+                }
+
+                &:after {
+                  content: url('/modules/add/cvs_common_header/images/carat-red-down.svg');
+                }
+              }
+            }
+
+            .no-link-link, a {
+              @include verne-fluid-type(14px, 18px, 36px, 36px);
+              padding-top: 0px;
+              font-weight: 500;
+              color: $black;
+              text-decoration: none;
+
+              &:hover,
+              &:focus {
+                color: $lightred;
+                text-decoration: underline;
+              }
+
+              &.menu-flat-current-url {
+                color: $lightred;
+                text-decoration: underline;
+              }
+            }
+
+            button, .no-link-link, a {
+              line-height: 38px;
+            }
+
+            &.menu-item--collapsed {
+
+              // Hide ::marker before
+              list-style-type: none;
+              list-style-image: none;
+
+              // Overall menu
+              ul.menu {
+                display: none;
+                position: absolute;
+                background-color: $white;
+                padding-top: 80px;
+                padding-bottom: 80px;
+                margin-left: 0px;
+              }
+
+              // Sub Menu Level 1
+              ul.menu-level-1 {
+                left: calc((100% - 1480px) / 2);
+                margin-top: 16px;
+                max-width: 1480px;
+                width: calc(100% - 60px);
+                height: auto; // No extra height around content in Safari
+                max-height: calc(100vh - 200px);
+                margin-left: 0px;
+                padding-left: 130px;
+                overflow-y: auto;
+                top: 84px;
+
+                @media screen and (max-width: 1540px) {
+                  left: 30px;
+                }
+        
+                @media screen and (max-width: 1300px) {
+                  overflow-y: auto;
+                  overflow-x: hidden;
+                }
+
+                li.menu-item {
+                  opacity: 0;
+                  margin-top: 24px;
+                  width: 275px;
+                  margin-left: 0;
+
+                  &:first-child {
+                    margin-top: 0;
+                  }
+
+                  .no-link-link, a {
+                    font-size: 18px;
+                    line-height: 36px;
+                    font-weight: 500;
+                    color: $black;
+
+                    &:hover,
+                    &:focus {
+                      color: $lightred;
+                      text-decoration: underline;
+                    }
+
+                    &.menu-flat-current-url {
+                      color: $lightred;
+                      text-decoration: underline;
+                    }
+                  }
+
+                  button {
+                    font-size: 18px;
+                    line-height: 36px;
+                    font-weight: 500;
+                    color: $black;
+                    margin-left: 0;
+
+                    &.menu-expand-button {
+                      margin-right: 0px;
+      
+                      &:after {
+                        content: url('/modules/add/cvs_common_header/images/carat-black-right.svg');
+                      }
+      
+                      &:hover,
+                      &:focus {
+                        color: $lightred;
+                        text-decoration: underline;
+      
+                        &:after {
+                          content: url('/modules/add/cvs_common_header/images/carat-red-right.svg');
+                        }
+                      }
+
+                      &.menu-expand-button-current-url {
+                        color: $lightred;
+                        text-decoration: underline;
+      
+                        &:after {
+                          content: url('/modules/add/cvs_common_header/images/carat-red-right.svg');
+                        }
+                      }
+
+                      &.menu-expand-button-expanded {
+                        text-decoration: underline;
+                        color: $lightred;
+                        margin-right: 0px;
+        
+                        &:hover,
+                        &:focus {
+                          color: $lightred;
+                        }
+        
+                        &:after {
+                          content: url('/modules/add/cvs_common_header/images/carat-red-right.svg');
+                        }
+                      }
+                    }
+                  }
+
+                  // Sub Menu Level 2
+                  ul.menu-level-2 {
+                    width: 275px;
+                    left: 445px;
+                    top: 0px;
+
+                    @media screen and (max-width: 1000px) {
+                      left: 405px;
+                    }
+
+                    .no-link-link, a, button {
+                      font-weight: normal;
+
+                      &:hover,
+                      &:focus {
+                        color: $lightred;
+                        text-decoration: underline;
+                      }
+
+                      &.menu-flat-current-url {
+                        color: $lightred;
+                        text-decoration: underline;
+                      }
+                    }
+                  }
+                }
+
+                // Featured Article
+                .featured-article-container {
+                  width: 380px;
+                  // display: none;
+                  position: absolute;
+                  right: 130px;
+                  top: 80px;
+                  padding-bottom: 55px;
+          
+                  @media screen and (max-width: 1300px) {
+                    left: 130px;
+                    top: 450px;
+                    right: 0px;
+        
+                    .featured-article-inner {
+                      margin-left: 0px;
+        
+                      .featured-article-image-link {
+                        .featured-article-image {
+                          margin-top: 0px;
+                        }
+                      }
+                    }
+                  }
+                
+                  .featured-article-container-inner {
+                    img {
+                      max-width: 100%;
+                      height: auto;
+                      margin-bottom: 1rem;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      } // End Main Menu
+    } // End Desktop Menu
+  } // End Desktop Styles and cvs-common-header-inner
+
+  // Set all mobile menu items to display: none
+  .open-mobile-menu,
+  .mobile-back-button,
+  .mobile-menu,
+  .close-mobile-menu {
+    display: none;
+  }
+
+  // Start Mobile Menu
+  &.mobile-cvs-common-header {
+    min-height: 60px;
+    padding-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    #cvs-common-header-inner {
+      min-height: 60px;
+      padding-left: 20px;
+      padding-right: 20px;
+      position: absolute;
+      top: 0;
+      background-color: $white;
+
+      // Start Site Logo - Mobile
+      .site-logo-container {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+  
+        a.site-logo-link {
+          display: block;
+
+          img.site-logo {
+            display: block;
+            height: 100%;
+            max-height: 44px;
+            width: auto;
+          }
+        }
+      } // End Site Logo - Mobile
+    }
+
+    // Mobile Menu Button
+    .open-mobile-menu {
+      padding-right: 30px;
+      margin-left: calc(100% - 44px);
+      position: absolute;
+      top: 20px;
+      padding: 0px;
+      background-color: transparent;
+      border: none;
+      display: block;
+
+      .open-mobile-menu-inner {
+        width: 24px;
+        height: 18px;
+        background-image: url('/modules/add/cvs_common_header/images/menu-open.svg');
+      }
+    }
+
+    .close-mobile-menu {
+      margin-left: calc(100% - 44px);
+      position: absolute;
+      top: 20px;
+      padding: 0px;
+      background-color: transparent;
+      border: none;
+      display: none;
+
+      .close-mobile-menu-inner {
+        width: 20px;
+        height: 20px;
+        background-image: url('/modules/add/cvs_common_header/images/menu-close.svg');
+      }
+    }
+
+    .mobile-back-button {
+      display: none;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: $black;
+      text-decoration: none;
+      font-size: 16px;
+      line-height: 16px;
+      background-image: url(/modules/add/cvs_common_header/images/carat-black-left.svg);
+      background-position: left;
+      background-repeat: no-repeat;
+      background-color: transparent;
+      padding: 15px 40px 16px 30px;
+      border: none;
+      font-weight: normal;
+      max-width: calc(100% - 20px);
+      max-height: 48px;
+      margin-top: 1px;
+
+      &:hover {
+        color: $lightred;
+        text-decoration: underline;
+        background-image: url(/modules/add/cvs_common_header/images/carat-red-left.svg);
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+      height: calc(100vh - 110px);
+      width: 100%;
+      overflow-y: auto;
+      margin-top: 60px;
+      
+
+      .featured-article-container {
+        display: none;
+      }
+
+      // Shared styles b/w utility and main menu
+      .utility-menu,
+      .main-menu {
+        padding: 0 20px;
+
+        ul.menu {
+          li.menu-item {
+            width: 100%;
+            margin-bottom: 15px;
+          }
+        }
+
+        ul.menu-level-0 {
+          display: block;
+          margin: auto;
+
+          ul.menu {
+            position: absolute;
+            height: calc(100vh - 110px);
+            top: 60px;
+            left: 0px;
+            width: 100vw;
+            margin: 0px;
+            background: $white;
+            overflow-y: auto;
+            padding-bottom: 10px;
+            padding-right: 20px;
+            padding-left: 20px;
+            padding-top: 30px;
+
+            .menu-level-2 {
+              top: 0px;
+              left: 0px;
+              display: none;
+              top: 0px;
+              padding-top: 30px;
+              height: calc(100vh - 110px);
+
+              a {
+                font-weight: normal;
+              }
+            }
+          }
+        }
+      } // End Shared styles b/w utility and main menu
+      
+      // Start Main Menu - Mobile
+      .main-menu {
+        margin-top: 40px;
+        
+        ul.menu {
+          li.menu-item {
+            width: 100%;
+            margin-bottom: 15px;
+          }
+        }
+
+        ul.menu-level-0 {
+          display: block;
+          width: 100%;
+          margin: auto;
+
+          li.menu-item {
+
+            button {
+              font-size: 18px;
+              line-height: 36px;
+              font-weight: 500;
+              color: $black;
+              border: none;
+              background-color: transparent;
+              padding: 0px;
+              text-decoration: none;
+              text-align: left;
+
+              &.menu-expand-button {
+                margin-right: 0px;
+
+                &:after {
+                  content: url('/modules/add/cvs_common_header/images/carat-black-right.svg');
+                }
+
+                &:focus {
+                  text-decoration: underline;
+                }
+
+                &:hover {
+                  color: $lightred;
+
+                  &:after {
+                    content: url('/modules/add/cvs_common_header/images/carat-red-right.svg');
+                  }
+                }
+              }
+            }
+
+            .no-link-link, a {
+              font-size: 18px;
+              line-height: 36px;
+              font-weight: 500;
+              color: $black;
+              text-decoration: none;
+
+              &:focus {
+                text-decoration: underline;
+              }
+
+              &:hover {
+                color: $lightred;
+                text-decoration: underline;
+              }
+            }
+
+            ul.menu-level-1 {
+              display: none;
+            }
+          }
+        }
+      } // End Main Menu - Mobile
+
+      // Start Utility Menu - Mobile
+      .utility-menu {
+        margin-bottom: 0px;
+        margin-top: 40px;
+
+        ul.menu-level-0 {
+          li.menu-item {
+            margin-bottom: 20px;
+
+            .no-link-link, a, button {
+              font-size: 16px;
+              line-height: 20px;
+              font-weight: 400;
+              color: $darkgray;
+              text-decoration: none;
+
+              &:hover {
+                color: $lightred;
+                text-decoration: underline;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      } // End Utility Menu - Mobile
+
+      // Start Search Menu
+      .search-menu {
+        height: 50px;
+
+        .search-button-wrapper {
+          button.open-search {
+            font-size: 16px;
+            line-height: 20px;
+            margin-left: 20px;
+          }
+        }
+      } // End Search Menu
+    }
+  } // End Mobile Menu
+}

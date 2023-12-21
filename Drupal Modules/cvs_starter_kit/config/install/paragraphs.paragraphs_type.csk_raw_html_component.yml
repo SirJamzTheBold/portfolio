@@ -1,0 +1,12 @@
+uuid: 0138628c-8652-4dfc-861d-f94e9ed09b9b
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: BLqadux_7iDpmG67QSYHuwoNFG7UTxChckchNX26aiE
+id: csk_raw_html_component
+label: 'CSK Raw HTML Component'
+icon_uuid: null
+icon_default: null
+description: 'A place to add raw HTML.'
+behavior_plugins: {  }

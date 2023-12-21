@@ -1,0 +1,90 @@
+button,
+a.button,
+input.button {
+  display: inline-block;
+  border: 2px solid transparent;
+  font-weight: 500;
+  padding: 10px 26px; // spec's 14px/30px, minus 2px borders on all edges
+  text-align: center;
+  text-decoration: none;
+
+  // Add focus outline as per spec (kinda; can't do white in between element and
+  // blue outline in spec)
+  &:focus {
+    outline: 4px solid $cvs-focus-outline;
+  }
+
+  // Display as block-level element (required for CHB banner link, etc.)
+  &.block {
+    display: block;
+  }
+
+  // Baseline settings for all button hover/active
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+
+  // Primary buttons
+  &.primary {
+    background-color: $cvs-red;
+    border-color: $cvs-red;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+      border-color: $cvs-red;
+      color: $cvs-red;
+    }
+
+  } // END: &.primary
+
+  // Secondary buttons
+  &.secondary {
+    background-color: $black;
+    border-color: $black;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+      border-color: $black;
+      color: $black;
+    }
+
+  } // END: &.secondary
+
+  // Outline buttons
+  &.outline {
+    background-color: transparent;
+    border-color: $cvs-red;
+    color: $cvs-red;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $cvs-red;
+      border-color: $cvs-red;
+      color: $white;
+    }
+
+  } // END: &.outline
+
+  // Secondary Outline Buttons
+  &.secondary-outline {
+    background-color: transparent;
+    border-color: $black;
+    color: $black;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $black;
+      border-color: $black;
+      color: $white;
+    }
+
+  } // END: &.secondary-outline
+
+} // END: button, a.button

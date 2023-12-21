@@ -1,0 +1,23 @@
+uuid: 6206590a-f415-42a8-92a1-27fea6631f81
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_text
+    - paragraphs.paragraphs_type.csk_statistic_component
+  module:
+    - text
+_core:
+  default_config_hash: JGb4i9oCGtULpo_EzeZpDDW8hCDuOqaqkY6NHOSHI6g
+id: paragraph.csk_statistic_component.field_csk_text
+field_name: field_csk_text
+entity_type: paragraph
+bundle: csk_statistic_component
+label: Text
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

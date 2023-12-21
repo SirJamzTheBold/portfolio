@@ -1,0 +1,21 @@
+uuid: 8323096e-abed-4aed-b4c0-e0bfe1ad3fa7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_one_column_container
+    - field.storage.block_content.field_csk_anchor_link
+_core:
+  default_config_hash: skmAph800wDuwFAm5kxY23iT_7CAx99M-LJNGXLOGSA
+id: block_content.csk_one_column_container.field_csk_anchor_link
+field_name: field_csk_anchor_link
+entity_type: block_content
+bundle: csk_one_column_container
+label: 'Anchor Link'
+description: 'Enter the ID you would like to use for the anchor link.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

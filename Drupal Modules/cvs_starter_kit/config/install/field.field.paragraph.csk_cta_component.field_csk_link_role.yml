@@ -1,0 +1,25 @@
+uuid: eab88538-5fed-4d8f-a496-8e4e2cc36731
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_link_role
+    - paragraphs.paragraphs_type.csk_cta_component
+  module:
+    - options
+_core:
+  default_config_hash: EXNJ9Gte9rP9C8UnDK0e1LIPY_u44U2MHigNg_tiB08
+id: paragraph.csk_cta_component.field_csk_link_role
+field_name: field_csk_link_role
+entity_type: paragraph
+bundle: csk_cta_component
+label: 'Link Role'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: link
+default_value_callback: ''
+settings: {  }
+field_type: list_string

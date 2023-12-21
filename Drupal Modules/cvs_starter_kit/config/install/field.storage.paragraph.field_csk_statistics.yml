@@ -1,0 +1,22 @@
+uuid: 6258afb0-4c02-4bcf-be41-474247e40763
+langcode: en
+status: true
+dependencies:
+  module:
+    - entity_reference_revisions
+    - paragraphs
+_core:
+  default_config_hash: 4DZelrbN9d1FaPTzRPhA5E0F89eVkXFHAG1ujKu2Yu0
+id: paragraph.field_csk_statistics
+field_name: field_csk_statistics
+entity_type: paragraph
+type: entity_reference_revisions
+settings:
+  target_type: paragraph
+module: entity_reference_revisions
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,12 @@
+uuid: ec8be3a7-bad8-4cfc-b480-545a0e9cb4df
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: HFdqxh5K8h2Y9OUgIw4DUo9BRjPvku7rixZSY2DKEmU
+id: csk_cta_component
+label: 'CSK CTA Component'
+icon_uuid: null
+icon_default: null
+description: 'A component that consists of a single link, either a plain link, or a full CTA button.'
+behavior_plugins: {  }

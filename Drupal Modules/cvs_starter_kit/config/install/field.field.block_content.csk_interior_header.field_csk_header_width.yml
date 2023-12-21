@@ -1,0 +1,23 @@
+uuid: b8c38c8c-1353-414b-9f0c-ed548055c177
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_interior_header
+    - field.storage.block_content.field_csk_header_width
+  module:
+    - options
+id: block_content.csk_interior_header.field_csk_header_width
+field_name: field_csk_header_width
+entity_type: block_content
+bundle: csk_interior_header
+label: 'Header Width'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: width-fullscreen
+default_value_callback: ''
+settings: {  }
+field_type: list_string

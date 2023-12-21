@@ -1,0 +1,23 @@
+uuid: 6e3b9349-b088-47df-8945-29e696b6f927
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_homepage_header
+    - field.storage.block_content.field_csk_header_width
+  module:
+    - options
+id: block_content.csk_homepage_header.field_csk_header_width
+field_name: field_csk_header_width
+entity_type: block_content
+bundle: csk_homepage_header
+label: 'Header Width'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: width-fullscreen
+default_value_callback: ''
+settings: {  }
+field_type: list_string

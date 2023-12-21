@@ -1,0 +1,23 @@
+uuid: 024ead52-e1b7-41c1-b43b-c411718bc61b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_one_column_container
+    - field.storage.block_content.field_csk_width
+  module:
+    - options
+id: block_content.csk_one_column_container.field_csk_width
+field_name: field_csk_width
+entity_type: block_content
+bundle: csk_one_column_container
+label: Width
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: width-full
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,23 @@
+uuid: 9c56ea17-a2f3-4d10-8de6-41c09ac25d83
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+_core:
+  default_config_hash: GibcE_A2Mq_zvzFbQpt7Wxk58CDH4MWQ32p4NNsNpMI
+id: block_content.field_csk_copyright
+field_name: field_csk_copyright
+entity_type: block_content
+type: string
+settings:
+  max_length: 255
+  case_sensitive: false
+  is_ascii: false
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: c99c413b-f218-4c8c-980b-aa7bc1f908d3
+langcode: en
+status: true
+dependencies: {  }
+id: csk_list
+label: 'CSK List'
+revision: 0
+description: 'An ordered or un-ordered list on content.'

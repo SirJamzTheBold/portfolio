@@ -1,0 +1,56 @@
+uuid: 7ceea4ed-9347-403a-98ab-11702743e687
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+_core:
+  default_config_hash: Ow8kAZaWFSjEdZYhR9OKOjtsz_3MbDveB8AC7W0hqRE
+id: block_content.field_csk_padding_bottom
+field_name: field_csk_padding_bottom
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: padding-bottom-0
+      label: 0px
+    -
+      value: padding-bottom-20
+      label: 20px
+    -
+      value: padding-bottom-25
+      label: 25px
+    -
+      value: padding-bottom-40
+      label: 40px
+    -
+      value: padding-bottom-60
+      label: 60px
+    -
+      value: padding-bottom-80
+      label: 80px
+    -
+      value: padding-bottom-100
+      label: 100px
+    -
+      value: padding-bottom-120
+      label: 120px
+    -
+      value: padding-bottom-140
+      label: 140px
+    -
+      value: padding-bottom-160
+      label: 160px
+    -
+      value: padding-bottom-180
+      label: 180px
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

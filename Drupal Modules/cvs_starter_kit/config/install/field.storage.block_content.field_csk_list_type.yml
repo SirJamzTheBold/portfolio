@@ -1,0 +1,27 @@
+uuid: e872105d-c6ba-4ac8-af67-0dc45dac06f8
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_csk_list_type
+field_name: field_csk_list_type
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ordered-list
+      label: 'Ordered List'
+    -
+      value: unordered-list
+      label: 'Unordered List'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

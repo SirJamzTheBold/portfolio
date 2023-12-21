@@ -1,0 +1,12 @@
+name: 'CVS Starter Kit'
+type: module
+description: 'Defines and styles the recurring blocks for CVS sites.'
+core_version_requirement: ^8.8 || ^9 || ^10
+version: 1.1.10
+package: 'CVS'
+libraries:
+  - cvs_starter_kit/csk-css
+  - cvs_starter_kit/csk-js
+dependencies:
+  - twig_tweak:twig_tweak
+  - paragraphs:paragraphs

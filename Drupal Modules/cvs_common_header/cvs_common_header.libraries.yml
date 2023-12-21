@@ -1,0 +1,11 @@
+cvs_common_header:
+  version: 1.3.13
+  css:
+    theme:
+      dist/css/cvs_common_header.css: {}
+  js:
+    scripts/vendor/jquery.actual.min.js: {}
+    dist/js/cvs_common_header.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once

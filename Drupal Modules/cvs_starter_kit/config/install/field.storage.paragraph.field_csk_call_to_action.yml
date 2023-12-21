@@ -1,0 +1,21 @@
+uuid: e841b091-f55c-42a6-a8cf-1b5b94132506
+langcode: en
+status: true
+dependencies:
+  module:
+    - link
+    - paragraphs
+_core:
+  default_config_hash: dUgjF8j-WyWsLhDsL8lf37CkdLgm29bljL_uWrTJrZ4
+id: paragraph.field_csk_call_to_action
+field_name: field_csk_call_to_action
+entity_type: paragraph
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

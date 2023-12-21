@@ -1,0 +1,23 @@
+uuid: c2077073-9d4a-4ec3-9a03-4b8253bb9fe4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_one_column_container
+    - field.storage.block_content.field_csk_inner_padding_right
+  module:
+    - options
+id: block_content.csk_one_column_container.field_csk_inner_padding_right
+field_name: field_csk_inner_padding_right
+entity_type: block_content
+bundle: csk_one_column_container
+label: 'Inner Padding Right'
+description: 'Only has effect for Individual Box Layout and Single Box Layout.'
+required: false
+translatable: false
+default_value:
+  -
+    value: padding-right-20
+default_value_callback: ''
+settings: {  }
+field_type: list_string

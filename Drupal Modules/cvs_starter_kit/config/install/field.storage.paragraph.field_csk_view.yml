@@ -1,0 +1,22 @@
+uuid: 51fce58f-8fa3-44bd-a02e-d1bd7b365f8b
+langcode: en
+status: true
+dependencies:
+  module:
+    - paragraphs
+    - views
+_core:
+  default_config_hash: u4uT_Dtk3YfAXLiI5zKB6gp5-Qu6HT8racCLHAtgRJs
+id: paragraph.field_csk_view
+field_name: field_csk_view
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: view
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

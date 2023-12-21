@@ -1,0 +1,23 @@
+uuid: 816d5a06-5014-4cb5-b3e7-1f28ec9bbc81
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_five_column_container
+    - field.storage.block_content.field_csk_padding_bottom
+  module:
+    - options
+id: block_content.csk_five_column_container.field_csk_padding_bottom
+field_name: field_csk_padding_bottom
+entity_type: block_content
+bundle: csk_five_column_container
+label: 'Padding Bottom'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: padding-bottom-60
+default_value_callback: ''
+settings: {  }
+field_type: list_string

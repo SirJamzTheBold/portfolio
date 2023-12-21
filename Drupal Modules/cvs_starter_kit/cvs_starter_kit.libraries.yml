@@ -1,0 +1,12 @@
+csk-css:
+  css:
+    theme:
+      dist/css/cvs_starter_kit.css: {}
+
+csk-js:
+  js:
+    dist/js/cvs_starter_kit.js: {}
+  dependencies:
+    - core/jquery
+    - core/modernizr
+

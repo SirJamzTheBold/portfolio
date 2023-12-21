@@ -1,0 +1,32 @@
+uuid: 61e21805-d839-47e6-95fe-afc566769f94
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+_core:
+  default_config_hash: f3xKvTzDEZcQDGaGmRfm0aMmaM82CBfNsaH3HgBR5ZY
+id: paragraph.field_csk_text_align
+field_name: field_csk_text_align
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: align-left
+      label: Left
+    -
+      value: align-center
+      label: Center
+    -
+      value: align-right
+      label: Right
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,55 @@
+uuid: 0a9f60f5-16e8-4e1a-be0e-642fbf471103
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csk_statistic_component.field_csk_image
+    - field.field.paragraph.csk_statistic_component.field_csk_screen_reader_override
+    - field.field.paragraph.csk_statistic_component.field_csk_stat
+    - field.field.paragraph.csk_statistic_component.field_csk_text
+    - paragraphs.paragraphs_type.csk_statistic_component
+  module:
+    - media
+    - text
+_core:
+  default_config_hash: d2kPSkiH86yKSbcAe-XSSbea7ElgQuzRHZOJ7v9RexQ
+id: paragraph.csk_statistic_component.default
+targetEntityType: paragraph
+bundle: csk_statistic_component
+mode: default
+content:
+  field_csk_image:
+    type: media_thumbnail
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_csk_screen_reader_override:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_csk_stat:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_csk_text:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+hidden: {  }

@@ -1,0 +1,22 @@
+uuid: a6caa9f7-ff89-43db-ae7a-3eb53af294db
+langcode: en
+status: true
+dependencies:
+  module:
+    - media
+    - paragraphs
+_core:
+  default_config_hash: 0041_zBLVpFtBHWCbnxS7SsBZuWdR-tKntuCaSJt7LE
+id: paragraph.field_csk_image
+field_name: field_csk_image
+entity_type: paragraph
+type: entity_reference
+settings:
+  target_type: media
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

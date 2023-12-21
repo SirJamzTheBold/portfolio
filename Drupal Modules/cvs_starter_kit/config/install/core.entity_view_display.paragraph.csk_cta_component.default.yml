@@ -1,0 +1,97 @@
+uuid: 60cb3014-d547-4056-b7d6-013c20878dd9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csk_cta_component.field_csk_call_to_action
+    - field.field.paragraph.csk_cta_component.field_csk_link_role
+    - field.field.paragraph.csk_cta_component.field_csk_link_style
+    - field.field.paragraph.csk_cta_component.field_csk_open_in_new_tab
+    - field.field.paragraph.csk_cta_component.field_csk_padding_bottom
+    - field.field.paragraph.csk_cta_component.field_csk_padding_left
+    - field.field.paragraph.csk_cta_component.field_csk_padding_right
+    - field.field.paragraph.csk_cta_component.field_csk_padding_top
+    - field.field.paragraph.csk_cta_component.field_csk_text_align
+    - paragraphs.paragraphs_type.csk_cta_component
+  module:
+    - link
+    - options
+_core:
+  default_config_hash: wdPQYlvruwHO_oP0IhOZkp4nOdNeqg4NjC9JUAVk2t8
+id: paragraph.csk_cta_component.default
+targetEntityType: paragraph
+bundle: csk_cta_component
+mode: default
+content:
+  field_csk_call_to_action:
+    type: link_separate
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_csk_link_role:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_csk_link_style:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_csk_open_in_new_tab:
+    type: boolean
+    label: hidden
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_csk_padding_bottom:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_csk_padding_left:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_csk_padding_right:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_csk_padding_top:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_csk_text_align:
+    type: list_key
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 7
+    region: content
+hidden: {  }

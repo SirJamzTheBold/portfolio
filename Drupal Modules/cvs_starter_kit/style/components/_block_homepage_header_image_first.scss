@@ -1,0 +1,15 @@
+.block-homepage-header-image-first {
+  display: flex;
+  flex-wrap: wrap;
+
+  .homepage-header-text {
+    order: 2;
+    width: 100%;
+  }
+
+  .field--name-field-csk-image {
+    order: 1;
+    width: 100%;
+    margin-bottom: -7px;
+  }
+}

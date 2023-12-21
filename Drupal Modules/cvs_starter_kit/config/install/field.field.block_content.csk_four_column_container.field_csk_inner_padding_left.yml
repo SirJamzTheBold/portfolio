@@ -1,0 +1,23 @@
+uuid: 413d438e-ae1e-4403-886f-3d63987686fd
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.csk_four_column_container
+    - field.storage.block_content.field_csk_inner_padding_left
+  module:
+    - options
+id: block_content.csk_four_column_container.field_csk_inner_padding_left
+field_name: field_csk_inner_padding_left
+entity_type: block_content
+bundle: csk_four_column_container
+label: 'Inner Padding Left'
+description: 'Only has effect for Individual Box Layout and Single Box Layout.'
+required: false
+translatable: true
+default_value:
+  -
+    value: padding-left-20
+default_value_callback: ''
+settings: {  }
+field_type: list_string

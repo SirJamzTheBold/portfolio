@@ -1,0 +1,55 @@
+uuid: c88425c4-8b5f-4b43-b6e7-b51eaf185af1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.csk_text_component.field_csk_padding_bottom
+    - field.field.paragraph.csk_text_component.field_csk_padding_left
+    - field.field.paragraph.csk_text_component.field_csk_padding_right
+    - field.field.paragraph.csk_text_component.field_csk_padding_top
+    - field.field.paragraph.csk_text_component.field_csk_text
+    - paragraphs.paragraphs_type.csk_text_component
+  module:
+    - text
+_core:
+  default_config_hash: 7PXSI2Pe9f6DcPtpl5RuYvKGJKtuhP9WU5ronOahzv8
+id: paragraph.csk_text_component.default
+targetEntityType: paragraph
+bundle: csk_text_component
+mode: default
+content:
+  field_csk_padding_bottom:
+    type: options_select
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csk_padding_left:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csk_padding_right:
+    type: options_select
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csk_padding_top:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_csk_text:
+    type: text_textarea
+    weight: 4
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

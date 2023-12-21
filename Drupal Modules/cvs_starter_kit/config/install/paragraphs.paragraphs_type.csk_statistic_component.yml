@@ -1,0 +1,12 @@
+uuid: 4f437d6a-3cdc-450b-9b0d-599b0bc65342
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: lI70-_aG5dgiP9heDz2oXuZpqa92xTLISKm-t2OO55s
+id: csk_statistic_component
+label: 'CSK Statistic Component'
+icon_uuid: null
+icon_default: null
+description: 'A single Statistic with a Stat, an image, an accessible override, and a short description.'
+behavior_plugins: {  }

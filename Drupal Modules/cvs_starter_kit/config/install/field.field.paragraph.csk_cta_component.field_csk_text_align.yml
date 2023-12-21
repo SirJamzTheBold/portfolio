@@ -1,0 +1,25 @@
+uuid: 2fd97282-76ac-4f0b-839d-022019054fe2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_csk_text_align
+    - paragraphs.paragraphs_type.csk_cta_component
+  module:
+    - options
+_core:
+  default_config_hash: N4olU2fKPCtbnuAcAhi0lxLKF1HI7l0KSKSdEd3bfKM
+id: paragraph.csk_cta_component.field_csk_text_align
+field_name: field_csk_text_align
+entity_type: paragraph
+bundle: csk_cta_component
+label: 'Text Align'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: align-left
+default_value_callback: ''
+settings: {  }
+field_type: list_string
