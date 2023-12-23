@@ -10,128 +10,9 @@ window.onload = function () {
 };
 
 $(document).ready(function () {
-  var $particles = $("#particles"),
-    frame = {},
-    content = { start: 0 },
-    count = 100,
-    min_particle_size = 4,
-    max_particle_size = 120,
-    particle_distribution_pow = 9,
-    particles = [],
-    max_y = frame.height,
-    scroll_top = window.scrollY,
-    header_fixed = false,
-    light_opacity1 = 0.6,
+  var light_opacity1 = 0.6,
     light_opacity2 = 0.6,
     light_opacity3 = 0.6,
-    toolbar_offset = $("#toolbar").length ? 60 : 0,
-    /**
-     * Adjusts the opacity of the Mask as you scroll down.
-     *
-     * @return void
-     */
-    updateMask = function () {
-      $("#sea-mask").css({ opacity: "" + (0.1 + (0.4 / 3000) * scroll_top) });
-    },
-    /**
-     * Adjusts the header as you scroll down.
-     *
-     * @return void
-     */
-    updateHeader = function () {
-      scroll_top = window.scrollY;
-
-      if (scroll_top > 280 && !header_fixed) {
-        $("#header").addClass("header-fixed");
-        header_fixed = true;
-        $(".header-container").fadeOut();
-      }
-
-      if (scroll_top <= 280 && header_fixed) {
-        $("#header").removeClass("header-fixed");
-        header_fixed = false;
-        $(".header-container").show();
-      }
-
-      if (!header_fixed) {
-        $("#header").css({
-          "font-size": 46 - (23 / 315) * scroll_top + "px",
-          width: 35 - (20 / 315) * scroll_top + "%",
-          padding: "20px " + (0 + (2.5 / 315) * scroll_top) + "%",
-          top: "300px",
-          left: "" + (32.5 + (7.5 / 315) * scroll_top) + "%",
-          position: "absolute",
-        });
-      }
-
-      if (header_fixed) {
-        $("#header").css({
-          position: "fixed",
-          "font-size": "23px",
-          padding: "20px 2.5%",
-          width: "15%",
-          top: "" + (20 + toolbar_offset) + "px",
-          left: "40%",
-        });
-      }
-    },
-    /**
-     * Updates the dimensions of the page.
-     *
-     * @return void
-     */
-    updateDimensions = function () {
-      frame.width = document.documentElement.offsetWidth;
-      frame.height = document.documentElement.offsetHeight;
-      max_y = frame.height;
-    },
-    /**
-     * Create the particles that float in front of the screen.
-     *
-     * @return void
-     */
-    generateParticles = function () {
-      particles.length = 0;
-
-      var elements = [],
-        $el,
-        zoom,
-        size,
-        x,
-        y,
-        zIndex;
-
-      // Particles
-      for (var i = 0; i < count; i++) {
-        $el = $("<li/>");
-        zoom = Math.pow(Math.random(), particle_distribution_pow) * 0.99 + 0.01;
-        size = Math.max(min_particle_size, max_particle_size * zoom);
-
-        x = Math.random() * (frame.width - size);
-        y = Math.random() * (max_y - size) - zoom;
-        zIndex = Math.round(zoom * 100);
-
-        // Adjust dot size
-        $el
-          .css({
-            width: Math.round(size),
-            height: Math.round(size),
-            zIndex: zIndex,
-            opacity: 1 - zoom,
-            left: Math.round(x),
-            top: Math.round(y),
-          })
-          .attr(
-            "data-scrollax",
-            "properties: { 'translateY': '" + (zIndex - zIndex * 50) + "px' }"
-          );
-
-        // Add to particles
-        elements.push($el[0]);
-      }
-
-      $particles.empty().append(elements);
-    },
     /**
      * Update the flickering lights.
      *
@@ -176,6 +57,7 @@ $(document).ready(function () {
 
   updateLights();
 
+  /** Handle all paralax animations */
   const seaMask = basicScroll.create({
     elem: document.querySelector("#sea-mask"),
     from: 0,
