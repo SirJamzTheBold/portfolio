@@ -15,4 +15,4 @@ For additional examples of my work you can take a look at:
   recapd.com, 
   workshop.frameweld.com, 
   pattan.net, 
-  frameweld.com
+  and frameweld.com
