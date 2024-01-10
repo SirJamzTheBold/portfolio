@@ -1,0 +1,59 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+  max-width: 1600px;
+  width: calc(100% - 40px);
+  margin: auto;
+}
+
+.phone-page-input {
+  width: 13px;
+}
+
+.phone-page-2 .phone-page-input {
+  margin-left: 11px;
+}
+
+.phone-page-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.phone-page-spacer {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.phone-page-confirm-buttons,
+.phone-page-confirm-buttons-reversed {
+  display: flex;
+}
+
+.phone-page-confirm-buttons .confirm-btn {
+  order: 0;
+}
+
+.phone-page-confirm-buttons .deny-btn {
+  order: 1;
+}
+
+.phone-page-confirm-buttons-reversed .confirm-btn {
+  order: 1;
+}
+
+.phone-page-confirm-buttons-reversed .deny-btn {
+  order: 0;
+}
